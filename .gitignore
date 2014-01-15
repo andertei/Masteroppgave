@@ -22,6 +22,7 @@
 *.nav
 *.nlo
 *.out
+*.pdf
 *.pdfsync
 *.ps
 *.snm
@@ -30,3 +31,14 @@
 *.vrb
 *.xdy
 *.tdo
+!InterruptionAirMediumVoltageLoadBreakSwitch.pdf
+!Mediumvoltagelaboratory.pdf
+!gasBlastBreak.pdf
+!grunnlagHøyspen1.pdf
+!grunnlagHøyspen2.pdf
+!grunnlagHøyspen3.pdf
+!miljøSF6.pdf
+!kaldLuftSim.pdf
+!compact-substation.pdf
+!SF6conduct.pdf
+!SF6Green.pdf
