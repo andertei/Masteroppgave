@@ -80,7 +80,10 @@ disp('Time shifting data sections: OK!');
 disp('Starting: Plotting data');
 fflush(stdout);
 %Plotting the data
+figure(1);
 plot(test_ONE(:,1),output_ONE,'r');
+xlabel('Time [us]');
+ylabel('Arcing voltage [kV]');
 hold on
 plot(test_TWO(:,1),output_TWO,'b');
 hold on
@@ -89,6 +92,34 @@ hold on
 plot(test_FOUR(:,1),output_FOUR,'g');
 hold on
 plot(test_FIVE(:,1),output_FIVE,'m');
+hold off;
 disp('Plotting data: OK!');
+disp('Starting: Calculating average');
 fflush(stdout);
+
+%Calculating average of the five data sections IKKE FERDIG
+
+r=1;
+for r=1000:(length(output_ONE)-1000)
+	average_Output(r)=(output_ONE(r)+output_TWO(r+(p-l))+output_THREE(r+(z-l))+output_FOUR(r+(x-l))+output_FIVE(r+(c-l)))./5;
+end
+disp('Calculating average: OK!');
+fflush(stdout);
+
+%Plotting the average
+disp('Starting: Plotting voltage average');
+fflush(stdout);
+r=1;
+g=1000;
+for r=1:length(average_Output)
+	testTime(r)=test_ONE(g,1);
+g=g+1;
+end
+figure(2);
+plot(testTime,average_Output,'b');
+xlabel('Time [us]');
+ylabel('Average arcing voltage [kV]');
+disp('Plotting voltage average: OK!');
+fflush(stdout);
+
 disp('END');
