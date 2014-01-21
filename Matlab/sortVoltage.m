@@ -3,7 +3,8 @@ clear all
 format long
 
 %For å bytte ut komma: sed -i.backup 's/[,]/./g' filnavnetditt.txt
-
+%If this script is run in matlab, comment out fflush. in Octave use the
+%fflyuh function to write out run info on the screen.
 %Loading the different data sections
 disp('Starting: Loading data');
 fflush(stdout);
@@ -82,7 +83,7 @@ fflush(stdout);
 %Plotting the data
 figure(1);
 plot(test_ONE(:,1),output_ONE,'r');
-xlabel('Time [us]');
+xlabel('Time [s]');
 ylabel('Arcing voltage [kV]');
 hold on
 plot(test_TWO(:,1),output_TWO,'b');
@@ -111,13 +112,14 @@ disp('Starting: Plotting voltage average');
 fflush(stdout);
 r=1;
 g=1000;
+testTime=1:length(average_Output);
 for r=1:length(average_Output)
 	testTime(r)=test_ONE(g,1);
 g=g+1;
 end
 figure(2);
 plot(testTime,average_Output,'b');
-xlabel('Time [us]');
+xlabel('Time [s]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
 fflush(stdout);
