@@ -30,9 +30,9 @@ disp('Staring: Derivate data sections');
 fflush(stdout);
 diffV1=diff(output_ONE);
 diffV2=diff(output_TWO);
-diffV3=diff(output_ONE);
-diffV4=diff(output_TWO);
-diffV5=diff(output_ONE);
+diffV3=diff(output_THREE);
+diffV4=diff(output_FOUR);
+diffV5=diff(output_FIVE);
 disp('Derivate data sections: OK!');
 disp('Starting: Calculating extremal points');
 fflush(stdout);
@@ -98,7 +98,7 @@ disp('Plotting data: OK!');
 disp('Starting: Calculating average');
 fflush(stdout);
 
-%Calculating average of the five data sections IKKE FERDIG
+%Calculating average of the five data sections
 
 r=1;
 for r=1000:(length(output_ONE)-1000)
@@ -115,10 +115,132 @@ g=1000;
 testTime=1:length(average_Output);
 for r=1:length(average_Output)
 	testTime(r)=test_ONE(g,1);
-g=g+1;
+	g=g+1;
 end
 figure(2);
 plot(testTime,average_Output,'b');
+xlabel('Time [s]');
+ylabel('Average arcing voltage [kV]');
+disp('Plotting voltage average: OK!');
+fflush(stdout);
+
+%Loading the different data sections
+disp('Starting: Loading data 2');
+fflush(stdout);
+test_ONE_OK=load('10_400_d4_D8_OK.lvm');
+test_TWO_OK=load('12_400_d4_d8_Ok.lvm');
+test_THREE_OK=load('13_400_d4_D8_OK.lvm');
+test_FOUR_OK=load('103_d3_D8_OK.lvm');
+test_FIVE_OK=load('15_400_d4_d8_OK.lvm');
+disp('Loading data 2: OK!');
+fflush(stdout);
+
+%Smoothing the datas, wnd decides the grade og smoothing. wnd=500 lit for grov, men funker ok når den bryter.
+disp('Starting: Smoothing data sections');
+fflush(stdout);
+wnd = 500;output_ONE_OK = filter(ones(wnd, 1)/wnd, 1, test_ONE_OK(:,2));
+wnd = 500;output_TWO_OK = filter(ones(wnd, 1)/wnd, 1, test_TWO_OK(:,2));
+wnd = 500;output_THREE_OK = filter(ones(wnd, 1)/wnd, 1, test_THREE_OK(:,2));
+wnd = 500;output_FOUR_OK = filter(ones(wnd, 1)/wnd, 1, test_FOUR_OK(:,2));
+wnd = 500;output_FIVE_OK = filter(ones(wnd, 1)/wnd, 1, test_FIVE_OK(:,2)); 
+disp('Smoothing data sections: OK!');
+fflush(stdout);
+
+%Findes the derivatives of the data section
+disp('Staring: Derivate data sections');
+fflush(stdout);
+diffV1=diff(output_ONE_OK);
+diffV2=diff(output_TWO_OK);
+diffV3=diff(output_THREE_OK);
+diffV4=diff(output_FOUR_OK);
+diffV5=diff(output_FIVE_OK);
+disp('Derivate data sections: OK!');
+disp('Starting: Calculating extremal points');
+fflush(stdout);
+[m,f]=max(diffV1); 
+[m,d]=max(diffV2);
+[m,h]=max(diffV3); 
+[m,y]=max(diffV4);
+[m,t]=max(diffV5);
+
+%Findes where the max and min peak of the data section are
+[m,k]=max(output_ONE_OK);
+[m,o]=max(output_TWO_OK);
+[m,q]=max(output_THREE_OK);
+[m,w]=max(output_FOUR_OK);
+[m,a]=max(output_FIVE_OK);
+
+[m,l]=min(output_ONE_OK);
+[m,p]=min(output_TWO_OK);
+[m,z]=min(output_THREE_OK);
+[m,x]=min(output_FOUR_OK);
+[m,c]=min(output_FIVE_OK);
+disp('Calculating extremal points:OK!');
+
+disp('Starting: Time shifting data sections');
+fflush(stdout);
+%Time shifts the graphs, so that the CZ occures at the same moment. Different methodes can be used by changing the %.
+%Time shifts ONE and TWO
+test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(f,1)-test_TWO_OK(d,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+%test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(k,1)-test_TWO_OK(o,1)); %tidsforskyver, med hensyn på topppunkt
+%test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(l,1)-test_TWO_OK(p,1)); %tidsforskyver, med hensyn på minpunkt
+
+%Time shifts ONE and THREE
+test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(f,1)-test_THREE_OK(h,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+%test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(k,1)-test_THREE_OK(q,1)); %tidsforskyver, med hensyn på topppunkt
+%test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(l,1)-test_THREE_OK(z,1)); %tidsforskyver, med hensyn på minpunkt
+
+%Time shifts ONE and FOUR
+test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(f,1)-test_FOUR_OK(y,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+%test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(k,1)-test_FOUR_OK(w,1)); %tidsforskyver, med hensyn på topppunkt
+%test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(l,1)-test_FOUR_OK(x,1)); %tidsforskyver, med hensyn på minpunkt
+
+%Time shifts ONE and FIVE
+test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(f,1)-test_FIVE_OK(t,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+%test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(k,1)-test_FIVE_OK(a,1)); %tidsforskyver, med hensyn på topppunkt
+%test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(l,1)-test_FIVE_OK(c,1)); %tidsforskyver, med hensyn på minpunkt
+disp('Time shifting data sections: OK!');
+disp('Starting: Plotting data');
+fflush(stdout);
+%Plotting the data
+figure(3);
+plot(test_ONE_OK(:,1),output_ONE_OK,'r');
+xlabel('Time [s]');
+ylabel('Arcing voltage [kV]');
+hold on
+plot(test_TWO_OK(:,1),output_TWO_OK,'b');
+hold on
+plot(test_THREE_OK(:,1),output_THREE_OK,'y');
+hold on
+plot(test_FOUR_OK(:,1),output_FOUR_OK,'g');
+hold on
+plot(test_FIVE_OK(:,1),output_FIVE_OK,'m');
+hold off;
+disp('Plotting data: OK!');
+disp('Starting: Calculating average');
+fflush(stdout);
+
+%Calculating average of the five data sections
+
+r=1;
+for r=25000:(length(output_ONE_OK)-25000)
+	average_Output_OK(r)=(output_ONE_OK(r)+output_TWO_OK(r+(d-f))+output_THREE_OK(r+(h-f))+output_FOUR_OK(r+(y-f))+output_FIVE_OK(r+(t-f)))./5;
+end
+disp('Calculating average: OK!');
+fflush(stdout);
+
+%Plotting the average
+disp('Starting: Plotting voltage average');
+fflush(stdout);
+r=1;
+g=25000;
+testTime=1:length(average_Output_OK);
+for r=1:length(average_Output_OK)
+	testTime(r)=test_ONE(g,1);
+	g=g+1;
+end
+figure(4);
+plot(testTime,average_Output_OK,'b');
 xlabel('Time [s]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
