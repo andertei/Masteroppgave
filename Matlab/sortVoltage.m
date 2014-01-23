@@ -11,18 +11,18 @@ fflush(stdout);
 test_ONE=load('128_d4_D10_TR.lvm');
 test_TWO=load('116_d4_D10_TR.lvm');
 test_THREE=load('118_d4_D10_TR.lvm');
-test_FOUR=load('128_d4_D10_TR.lvm');
+test_FOUR=load('143_d4_D10_TR.lvm');
 test_FIVE=load('125_d4_D10_TR.lvm');
 disp('Loading data: OK!');
 fflush(stdout);
 %Smoothing the datas, wnd decides the grade og smoothing. wnd=500 lit for grov, men funker ok når den bryter.
 disp('Starting: Smoothing data sections');
 fflush(stdout);
-wnd = 100;output_ONE = filter(ones(wnd, 1)/wnd, 1, test_ONE(:,2));
-wnd = 100;output_TWO = filter(ones(wnd, 1)/wnd, 1, test_TWO(:,2));
-wnd = 100;output_THREE = filter(ones(wnd, 1)/wnd, 1, test_THREE(:,2));
-wnd = 100;output_FOUR = filter(ones(wnd, 1)/wnd, 1, test_FOUR(:,2));
-wnd = 100;output_FIVE = filter(ones(wnd, 1)/wnd, 1, test_FIVE(:,2)); 
+wnd = 200;output_ONE = filter(ones(wnd, 1)/wnd, 1, test_ONE(:,2));
+wnd = 200;output_TWO = filter(ones(wnd, 1)/wnd, 1, test_TWO(:,2));
+wnd = 200;output_THREE = filter(ones(wnd, 1)/wnd, 1, test_THREE(:,2));
+wnd = 200;output_FOUR = filter(ones(wnd, 1)/wnd, 1, test_FOUR(:,2));
+wnd = 200;output_FIVE = filter(ones(wnd, 1)/wnd, 1, test_FIVE(:,2)); 
 disp('Smoothing data sections: OK!');
 fflush(stdout);
 %Findes the derivatives of the data section
@@ -124,6 +124,37 @@ ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
 fflush(stdout);
 
+%Calculating the spread of data
+disp('Starting: Calcultaing standard deviation');
+p_1=0.02; %this value  must be adjusted by looking at the plot
+p_2=p_1+0.0035; %the length of the area to integrate
+x_1=find(test_ONE(:,1)==p_1);
+x_2=find(test_ONE(:,1)==p_2);
+m=1;
+summer=1:5;
+sumAverage_Output=0;
+for k=1:length(summer)
+	summer(k)=0;
+end
+for m=x_1(1):x_2(1)
+	summer(1)=summer(1)+output_ONE(m);
+	summer(2)=summer(2)+output_TWO(m);
+	summer(3)=summer(3)+output_THREE(m);
+	summer(4)=summer(4)+output_FOUR(m);
+	summer(5)=summer(5)+output_FIVE(m);
+	sumAverage_Output=sumAverage_Output+average_Output(m);
+end
+
+summer=abs(summer);
+sumAverage_Output=abs(sumAverage_Output);
+%Standard deviation
+Spread=0;
+Spread=sqrt(((summer(1)-sumAverage_Output)^2+(summer(2)-sumAverage_Output)^2+(summer(3)-sumAverage_Output)^2+(summer(4)-sumAverage_Output)^2+(summer(5)-sumAverage_Output)^2)/4);
+
+disp(Spread);
+
+disp('Calcultaing standard deviation: OK!');
+
 %Loading the different data sections
 disp('Starting: Loading data 2');
 fflush(stdout);
@@ -138,11 +169,11 @@ fflush(stdout);
 %Smoothing the datas, wnd decides the grade og smoothing. wnd=500 lit for grov, men funker ok når den bryter.
 disp('Starting: Smoothing data sections');
 fflush(stdout);
-wnd = 500;output_ONE_OK = filter(ones(wnd, 1)/wnd, 1, test_ONE_OK(:,2));
-wnd = 500;output_TWO_OK = filter(ones(wnd, 1)/wnd, 1, test_TWO_OK(:,2));
-wnd = 500;output_THREE_OK = filter(ones(wnd, 1)/wnd, 1, test_THREE_OK(:,2));
-wnd = 500;output_FOUR_OK = filter(ones(wnd, 1)/wnd, 1, test_FOUR_OK(:,2));
-wnd = 500;output_FIVE_OK = filter(ones(wnd, 1)/wnd, 1, test_FIVE_OK(:,2)); 
+wnd = 200;output_ONE_OK = filter(ones(wnd, 1)/wnd, 1, test_ONE_OK(:,2));
+wnd = 200;output_TWO_OK = filter(ones(wnd, 1)/wnd, 1, test_TWO_OK(:,2));
+wnd = 200;output_THREE_OK = filter(ones(wnd, 1)/wnd, 1, test_THREE_OK(:,2));
+wnd = 200;output_FOUR_OK = filter(ones(wnd, 1)/wnd, 1, test_FOUR_OK(:,2));
+wnd = 200;output_FIVE_OK = filter(ones(wnd, 1)/wnd, 1, test_FIVE_OK(:,2)); 
 disp('Smoothing data sections: OK!');
 fflush(stdout);
 
@@ -245,5 +276,36 @@ xlabel('Time [s]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
 fflush(stdout);
+
+%Calculating the spread of data
+disp('Starting: Calcultaing standard deviation');
+p_1=0.0147; %this value  must be adjusted by looking at the plot
+p_2=p_1+0.0035; %the length of the area to integrate
+x_1=find(test_ONE(:,1)==p_1);
+x_2=find(test_ONE(:,1)==p_2);
+m=1;
+summer=1:5;
+sumAverage_Output=0;
+for k=1:length(summer)
+	summer(k)=0;
+end
+for m=x_1(1):x_2(1)
+	summer(1)=summer(1)+output_ONE_OK(m);
+	summer(2)=summer(2)+output_TWO_OK(m);
+	summer(3)=summer(3)+output_THREE_OK(m);
+	summer(4)=summer(4)+output_FOUR_OK(m);
+	summer(5)=summer(5)+output_FIVE_OK(m);
+	sumAverage_Output=sumAverage_Output+average_Output_OK(m);
+end
+
+summer=abs(summer);
+sumAverage_Output=abs(sumAverage_Output);
+%Standard deviation
+Spread=0;
+Spread=sqrt(((summer(1)-sumAverage_Output)^2+(summer(2)-sumAverage_Output)^2+(summer(3)-sumAverage_Output)^2+(summer(4)-sumAverage_Output)^2+(summer(5)-sumAverage_Output)^2)/4);
+
+disp(Spread);
+
+disp('Calcultaing standard deviation: OK!');
 
 disp('END');
