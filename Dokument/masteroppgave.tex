@@ -12,6 +12,7 @@
 \usepackage{multirow}
 \usepackage{verbatim} %for å kommentere ut ting
 \usepackage[nottoc,numbib]{tocbibind}
+\usepackage[parfill]{parskip} %for avsnitt
 
 \raggedbottom
 
@@ -145,7 +146,52 @@
 
 \cleardoublepage
 
-\section{Method} \label{sec:Method}
+\section{Method}
+
+\subsection{Test circuit}
+
+Figure \ref{fig:testSwitchRiggEq} illustrates the physical appearance of the test switch. The numbered parts are: 1. Compressed air reservoir (connected to the high voltage supply circuit), 2. Tulip contact, 3. Nozzle, 4. Pin contact, 5. Connection to load circuit, 6. Spring drive mechanism, 7. Electromagnet release mechanism, and 8. Position transducer.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.5]{Bilder/Method/switchTest.png}
+\caption{The physical appearance of the test switch \cite{bib:AFIMVLBA}.} \label{fig:testSwitchRiggEq}
+\end{figure}
+
+Figure \ref{fig:testCurcuit} displays the laboratory test circuit used for the interruption tests. The circuit is designed to supply a 50 Hz / 13.8 kV current. It is possible to shape the TRV by tuning the parameters: L$_1$, L$_s$, R$_1$, R$_d$, and C. The systems' short circuit parameters are R$_{sc}$ and L$_{sc}$. The TRV generated during interruption is set to simulate the standard for a 24 kV / 630 A class from the International Electrotechnical Commission (IEC), which corresponds to:
+
+\begin{itemize}
+\item The initial part of the TRV has a rate of rise in recovery voltage (RRRV) of 71 - 73 V / $\mu$s.
+	\begin{itemize}
+		\item Voltage difference is measured over the first 20 $\mu$s after CZ.
+	\end{itemize}
+\item The first voltage peak is between 7.0 and 7.4 kV, with a rise time of approximately 96 $\mu$s.
+\end{itemize}
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.35]{Bilder/Method/circuit.png}
+\caption{Circuit used for the interruption test \cite{bib:AFIMVLBA}.} \label{fig:testCurcuit}
+\end{figure}
+
+In table \ref{tab:testParameters}, the value of the different test circuit parameters and the corresponding current can be observed. The test is done at currents with an RMS value of 400 A and 630 A. In the entire test the TRV is kept constant up to and including the first voltage peak. In the case of a failed interruption, thermal re-ignition occurs within a few microseconds after CZ.
+
+\begin{table}[H]
+\center
+\caption{Circuit Parameters and Resulting Current \cite{bib:AFIMVLBA}. }
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A] \\ 
+\hline 
+14.5 & 138.4 & 35.5 & 74 & 248 & 400 \\ 
+\hline 
+6.9 & 86.2 & 22.1 & 102 & 198 & 630 \\ 
+\hline 
+\end{tabular} 
+\label{tab:testParameters}
+\end{table}
+
+A resistive transducer is measuring the contact position while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar. The test switch is displayed in figure \ref{fig:testSwitchRiggEq}.
 
 \subsection{The switch and contact geometry}
 
