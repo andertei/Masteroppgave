@@ -191,7 +191,7 @@ L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A]
 \label{tab:testParameters}
 \end{table}
 
-A resistive transducer is measuring the contact position while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar. The test switch is displayed in figure \ref{fig:testSwitchRiggEq}.
+A resistive transducer is measuring the contact position while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar.
 
 \subsection{The switch and contact geometry}
 
@@ -199,8 +199,21 @@ A resistive transducer is measuring the contact position while a Hall Effect cur
 
 \newpage
 \subsection{Procedure}
+Interruption tests with CZ occuring both inside and outside the nozzle are carried out. Previous work with a similar setup found that the interruption capability is better outside the nozzle. The first and second CZ is included in this study to provide as much data as possible.
 
+"Inside nozzle" is defined as contact position x = [5?, 25?] mm and "outside nozzle" as x = [35?, 60?] mm at first CZ. Results from zero crossings that occurs in the cylindrical part of the nozzle, between the tulip contact and the start of the funnel-shaped nozzle is discarded. Interruption tests with first CZ either in the start of the funnel-shaped nozzle (x $<$ 5? mm) or in the boundary region between inside and outside the nozzle (x = 25?, 35? mm) are not included in the "interruption success rate graphs", but are presented in tables displaying raw data in appendix \ref{app:rawData}. The first CZ occurred within x $<$ 60 mm and the second CZ occurred for x $>$ 60 mm, as the contact speed during all tests was 5.5 mm/ms $\pm$ 0.5 mm/ms.
 
+When testing the interrupting capabilities, the test procedure for each of the four cases was as follows: 
+
+\begin{itemize}
+\item[1.] A pressure level that seems to be in the area of interest is found by performing some initial test interruptions at different pressure levels. This level is kept constant for at least five interruption tests, where the interruptions occurred when the contact pin was outside the nozzle.
+\item[2.] If a pressure level results in less than 100\% successful interruptions, at least five new tests with a higher upstream pressure (next level) are conducted. This is repeated until at least one pressure level with five successful interruptions is found.
+\item[3.] Then, the pressure is stepped down until 60\% or more of the interruption attempts fail or the lowest possible pressure level is tested.
+\end{itemize}
+
+When testing if a connection between the arcing voltage during a successful interruption and an unsuccessful one can be found. A pressure level where the interruption success rate is 50 \% is used. Then five successful interruptions and five unsuccessful interruptions are obtained while the arcing voltage is measured and stored for further use. All the interruptions should occur outside the nozzle. The switching process is filmed by a high speed camera so that the path of the arc can be monitored during the interruption.
+
+The pin is cleaned, polished, and greased between each test to ensure a smooth surface. The contacts and nozzle are replaced regularly to avoid contact wear and nozzle deformation. This is to ensure that the geometry is constant through the whole experiment.
 \cleardoublepage
 
 \section{Results}
