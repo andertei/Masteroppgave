@@ -15,7 +15,7 @@ test_FOUR=load('143_d4_D10_TR.lvm');
 test_FIVE=load('125_d4_D10_TR.lvm');
 disp('Loading data: OK!');
 fflush(stdout);
-%Smoothing the datas, wnd decides the grade og smoothing. wnd=500 lit for grov, men funker ok når den bryter.
+%Smoothing the datas, wnd decides the grade og smoothing. 
 disp('Starting: Smoothing data sections');
 fflush(stdout);
 wnd = 200;output_ONE = filter(ones(wnd, 1)/wnd, 1, test_ONE(:,2));
@@ -97,7 +97,10 @@ hold off;
 disp('Plotting data: OK!');
 disp('Starting: Calculating average');
 fflush(stdout);
-
+%Calculating the sum
+SUM_1=[sum(output_ONE),sum(output_TWO),sum(output_THREE),sum(output_FOUR),sum(output_FIVE)];
+[m,i]=max(SUM_1);
+[n,j]=min(SUM_1);
 %Calculating average of the five data sections
 
 r=1;
@@ -107,7 +110,7 @@ end
 disp('Calculating average: OK!');
 fflush(stdout);
 
-%Plotting the average
+%Plotting the average and the lowest and highest data intevall
 disp('Starting: Plotting voltage average');
 fflush(stdout);
 r=1;
@@ -117,11 +120,97 @@ for r=1:length(average_Output)
 	testTime(r)=test_ONE(g,1);
 	g=g+1;
 end
+r=1;
+g=1000;
+for r=1:length(average_Output)
+	testTime2(r)=test_TWO(g,1);
+	g=g+1;
+end
+r=1;
+g=1000;
+for r=1:length(average_Output)
+	testTime3(r)=test_THREE(g,1);
+	g=g+1;
+end
+r=1;
+g=1000;
+for r=1:length(average_Output)
+	testTime4(r)=test_FOUR(g,1);
+	g=g+1;
+end
+r=1;
+g=1000;
+for r=1:length(average_Output)
+	testTime5(r)=test_FIVE(g,1);
+	g=g+1;
+end
 figure(2);
 plot(testTime,average_Output,'b');
 xlabel('Time [s]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
+hold on
+if i==1
+    for r=1000:(length(output_ONE)-1000)
+	output_ONE_inter(r)=output_ONE(r);
+    end
+    plot(testTime,output_ONE_inter,'r');
+end
+if i==2
+    for r=1000:(length(output_ONE)-1000)
+	output_TWO_inter(r)=output_TWO(r);
+    end
+    plot(testTime2,output_TWO_inter,'r');
+end
+if i==3
+    for r=1000:(length(output_ONE)-1000)
+	output_THREE_inter(r)=output_THREE(r);
+    end
+    plot(testTime3,output_THREE_inter,'r');  
+end
+if i==4
+    for r=1000:(length(output_ONE)-1000)
+	output_FOUR_inter(r)=output_FOUR(r);
+    end
+    plot(testTime4,output_FOUR_inter,'r');
+end
+if i==5
+    for r=1000:(length(output_ONE)-1000)
+	output_FIVE_inter(r)=output_FIVE(r);
+    end    
+    plot(testTime5,output_FIVE_inter,'r');
+end
+if j==1
+    for r=1000:(length(output_ONE)-1000)
+	output_ONE_inter(r)=output_ONE(r);
+    end    
+    plot(testTime,output_ONE_inter,'g');
+end
+if j==2
+    for r=1000:(length(output_ONE)-1000)
+	output_TWO_inter(r)=output_TWO(r);
+    end
+    plot(testTime2,output_TWO_inter,'g');
+end
+if j==3
+    for r=1000:(length(output_ONE)-1000)
+	output_THREE_inter(r)=output_THREE(r);
+    end    
+    plot(testTime3,output_THREE_inter,'g');  
+end
+if j==4
+    for r=1000:(length(output_ONE)-1000)
+	output_FOUR_inter(r)=output_FOUR(r);
+    end    
+    plot(testTime4,output_FOUR_inter,'g');
+end
+if j==5
+    for r=1000:(length(output_ONE)-1000)
+	output_FIVE_inter(r)=output_FIVE(r);
+    end    
+    plot(testTime5,output_FIVE_inter,'g');
+end
+hold off
 fflush(stdout);
 
 %Calculating the spread of data
@@ -250,7 +339,10 @@ hold off;
 disp('Plotting data: OK!');
 disp('Starting: Calculating average');
 fflush(stdout);
-
+%Calculating the sum of the five data sections
+SUM_2=[sum(output_ONE_OK),sum(output_TWO_OK),sum(output_THREE_OK),sum(output_FOUR_OK),sum(output_FIVE_OK)];
+[m,i]=max(SUM_1);
+[n,j]=min(SUM_1);
 %Calculating average of the five data sections
 
 r=1;
@@ -267,7 +359,35 @@ r=1;
 g=25000;
 testTime=1:length(average_Output_OK);
 for r=1:length(average_Output_OK)
-	testTime(r)=test_ONE(g,1);
+	testTime(r)=test_ONE_OK(g,1);
+	g=g+1;
+end
+r=1;
+g=25000;
+testTime2=1:length(average_Output_OK);
+for r=1:length(average_Output_OK)
+	testTime2(r)=test_TWO_OK(g,1);
+	g=g+1;
+end
+r=1;
+g=25000;
+testTime3=1:length(average_Output_OK);
+for r=1:length(average_Output_OK)
+	testTime3(r)=test_THREE_OK(g,1);
+	g=g+1;
+end
+r=1;
+g=25000;
+testTime4=1:length(average_Output_OK);
+for r=1:length(average_Output_OK)
+	testTime4(r)=test_FOUR_OK(g,1);
+	g=g+1;
+end
+r=1;
+g=25000;
+testTime5=1:length(average_Output_OK);
+for r=1:length(average_Output_OK)
+	testTime5(r)=test_FIVE_OK(g,1);
 	g=g+1;
 end
 figure(4);
@@ -275,6 +395,68 @@ plot(testTime,average_Output_OK,'b');
 xlabel('Time [s]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
+hold on
+if i==1
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_ONE_inter_OK(r)=output_ONE_OK(r);
+    end
+    plot(testTime,output_ONE_inter_OK,'r');
+end
+if i==2
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_TWO_inter_OK(r)=output_TWO_OK(r);
+    end
+    plot(testTime2,output_TWO_inter_OK,'r');
+end
+if i==3
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_THREE_inter_OK(r)=output_THREE_OK(r);
+    end
+    plot(testTime3,output_THREE_inter_OK,'r');  
+end
+if i==4
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_FOUR_inter_OK(r)=output_FOUR_OK(r);
+    end
+    plot(testTime4,output_FOUR_inter_OK,'r');
+end
+if i==5
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_FIVE_inter_OK(r)=output_FIVE_OK(r);
+    end    
+    plot(testTime5,output_FIVE_inter_OK,'r');
+end
+if j==1
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_ONE_inter_OK(r)=output_ONE_OK(r);
+    end    
+    plot(testTime,output_ONE_inter_OK,'g');
+end
+if j==2
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_TWO_inter_OK(r)=output_TWO_OK(r);
+    end
+    plot(testTime2,output_TWO_inter_OK,'g');
+end
+if j==3
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_THREE_inter_OK(r)=output_THREE_OK(r);
+    end    
+    plot(testTime3,output_THREE_inter_OK,'g');  
+end
+if j==4
+    for r=25000:(length(output_ONE_OK)-25000)
+	output_FOUR_inter_OK(r)=output_FOUR_OK(r);
+    end    
+    plot(testTime4,output_FOUR_inter_OK,'g');
+end
+if j==5
+    for r=1000:(length(output_ONE_OK)-25000)
+	output_FIVE_inter_OK(r)=output_FIVE_OK(r);
+    end    
+    plot(testTime5,output_FIVE_inter_OK,'g');
+end
+hold off
 fflush(stdout);
 
 %Calculating the spread of data
