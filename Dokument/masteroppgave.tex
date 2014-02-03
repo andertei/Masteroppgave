@@ -13,6 +13,25 @@
 \usepackage{verbatim} %for å kommentere ut ting
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage[parfill]{parskip} %for avsnitt
+\usepackage{listings}
+    \lstset{
+            language=Matlab,                                % choose the language of the code
+    %       basicstyle=10pt,                                % the size of the fonts that are used for the code
+            numbers=left,                                   % where to put the line-numbers
+            numberstyle=\footnotesize,                      % the size of the fonts that are used for the line-numbers
+            stepnumber=1,                                           % the step between two line-numbers. If it's 1 each line will be numbered
+            numbersep=5pt,                                  % how far the line-numbers are from the code
+    %       backgroundcolor=\color{white},          % choose the background color. You must add \usepackage{color}
+            showspaces=false,                               % show spaces adding particular underscores
+            showstringspaces=false,                         % underline spaces within strings
+            showtabs=false,                                         % show tabs within strings adding particular underscores
+    %       frame=single,                                           % adds a frame around the code
+    %       tabsize=2,                                              % sets default tabsize to 2 spaces
+    %       captionpos=b,                                           % sets the caption-position to bottom
+            breaklines=true,                                        % sets automatic line breaking
+            breakatwhitespace=false,                        % sets if automatic breaks should only happen at whitespace
+            escapeinside={\%*}{*)}                          % if you want to add a comment within your code
+    }
 
 \raggedbottom
 
@@ -183,10 +202,10 @@ In table \ref{tab:testParameters}, the value of the different test circuit param
 \hline 
 L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A] \\ 
 \hline 
-14.5 & 138.4 & 35.5 & 74 & 248 & 400 \\ 
-\hline 
 6.9 & 86.2 & 22.1 & 102 & 198 & 630 \\ 
-\hline 
+\hline
+2.9 & 60.2 & 15.1 & 156 & 170 & 880 \\
+\hline   
 \end{tabular} 
 \label{tab:testParameters}
 \end{table}
@@ -194,8 +213,39 @@ L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A]
 A resistive transducer is measuring the contact position while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar.
 
 \subsection{The switch and contact geometry}
+This experiment is conducted using copper-tungsten arcing contacts, polytetraflourelthylene (PTFE) nozzles, and air as interrupting medium. It is an open system, with the surrounding air at atmospheric pressure \textit{p$_0$} and a six-litre tank with a pre-filled upstream overpressure \textit{p$_u$}, used during the interruption process to quench the arc. It is possible to adjust the upstream pressure, contact speed, and position at current zero (CZ) independently, as well as the contact and nozzle geometry. The current and transient recovery voltage (TRV) can be change by changing the parameters of the laboratory test circuit.
 
 
+A simple drawing of the contact and nozzle is displayed in figure \ref{fig:contactAndNozzle}. The length of the nozzle is ?? mm, and the inner diameter is \textit{D}. The geometry is axial symmetric along the x-axis. Two different contact geometries are going to be tested, denoted a and b. The dimensions of the different geometries are illustrated in table \ref{tab:contGeoPara} and, how the different dimensions are defined is given in figure \ref{fig:AreacontactAndNozzle}.
+
+\begin{figure} [h]
+\centering
+\includegraphics[scale=0.3]{Bilder/Method/contactSetUpVmax3.png}
+\caption{The contact and nozzle. The diameter of the contact is \textit{d} and the inner diameter of the nozzle is \textit{D}.} \label{fig:contactAndNozzle}
+\end{figure}
+
+\begin{table}[H]
+\center
+\caption{Contact geometry parameters.}
+ \begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Geometry & D [mm] & d [mm] & $\frac{D}{d}$ & $A_\mathrm{{contact}}$ [mm$^2$] & $A_\mathrm{{ring}}$ [mm$^2$] & $A_\mathrm{{nozzle}}$ [mm$^2$] \\ 
+\hline 
+a & 10.4 & 4.0 & 2.60 & 12.6 & 72.4 & 84.9 \\ 
+\hline 
+b & 8.0 & 3.0 & 2.67 & 7.1 & 43.2 & 50.3 \\ 
+\hline 
+\end{tabular} 
+\label{tab:contGeoPara}
+\end{table}
+
+The contact position \textit{x} is defined as the axial distance between the tulip and the pin contact. At starting position, \textit{x}= -60 mm, the pin contact is acting as a plug for the tank. This is making it possible to pre-set an upstream pressure. The contact is held in place by an electromagnet and is set to motion when the magnet releases a compressed spring. The spring accelerates the pin contact up to a speed of approximately 5.5 m/s at \textit{x}=0. At this position, the spring is unloaded and the pin moves with a constant speed until the contact is fully open at \textit{x}=110 mm.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.2]{Bilder/Theory/kontaktoversiktAnders.png}
+\caption{Overview over how the different areas and diameters are defined.} \label{fig:AreacontactAndNozzle}
+\end{figure}
 
 \newpage
 \subsection{Procedure}
@@ -325,5 +375,7 @@ The pin is cleaned, polished, and greased between each test to ensure a smooth s
 \renewcommand{\thetable}{B.\@arabic\c@table}
 \makeatother
 
+\section{Appendix: Matlab code for sortVoltage.m} %husk å oppdatere denne!!
+\lstinputlisting[language=Matlab]{sortVoltage.m}
 
 \end{document}
