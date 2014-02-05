@@ -167,7 +167,7 @@
 
 \section{Method}
 
-\subsection{Test circuit}
+\subsection{Test circuit} \label{sec:testCir}
 
 Figure \ref{fig:testSwitchRiggEq} illustrates the physical appearance of the test switch. The numbered parts are: 1. Compressed air reservoir (connected to the high voltage supply circuit), 2. Tulip contact, 3. Nozzle, 4. Pin contact, 5. Connection to load circuit, 6. Spring drive mechanism, 7. Electromagnet release mechanism, and 8. Position transducer.
 
@@ -182,7 +182,7 @@ Figure \ref{fig:testCurcuit} displays the laboratory test circuit used for the i
 \begin{itemize}
 \item The initial part of the TRV has a rate of rise in recovery voltage (RRRV) of 71 - 73 V / $\mu$s.
 	\begin{itemize}
-		\item Voltage difference is measured over the first 20 $\mu$s after CZ.
+		\item The voltage difference is measured over the first 20 $\mu$s after CZ.
 	\end{itemize}
 \item The first voltage peak is between 7.0 and 7.4 kV, with a rise time of approximately 96 $\mu$s.
 \end{itemize}
@@ -193,7 +193,7 @@ Figure \ref{fig:testCurcuit} displays the laboratory test circuit used for the i
 \caption{Circuit used for the interruption test \cite{bib:AFIMVLBA}.} \label{fig:testCurcuit}
 \end{figure}
 
-In table \ref{tab:testParameters}, the value of the different test circuit parameters and the corresponding current can be observed. The test is done at currents with an RMS value of 630 A and 880 A. In the entire test the TRV is kept constant up to and including the first voltage peak. In the case of a failed interruption, thermal re-ignition occurs within a few microseconds after CZ.
+In table \ref{tab:testParameters}, the value of the different test circuit parameters and the corresponding current can be observed. The test is conducted at currents with an RMS value of 630 A and 880 A. In the entire experiment the TRV is kept constant up to and including the first voltage peak. In the case of a failed interruption a thermal re-ignition occurs within a few microseconds after CZ.
 
 \begin{table}[H]
 \center
@@ -213,12 +213,12 @@ L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A]
 A resistive transducer is measuring the contact position while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar.
 
 \subsection{The switch and contact geometry}
-This experiment is conducted using copper-tungsten arcing contacts, polytetraflourelthylene (PTFE) nozzles, and air as interrupting medium. It is an open system, with the surrounding air at atmospheric pressure \textit{p$_0$} and a six-litre tank with a pre-filled upstream overpressure \textit{p$_u$}, used during the interruption process to quench the arc. It is possible to adjust the upstream pressure, contact speed, and position at current zero (CZ) independently, as well as the contact and nozzle geometry. The current and transient recovery voltage (TRV) can be change by changing the parameters of the laboratory test circuit.
+This experiment is conducted using copper-tungsten arcing contacts, polytetraflourelthylene (PTFE) nozzles, and air as interrupting medium. It is an open system, with the surrounding air at atmospheric pressure \textit{p$_0$} and a six-litre tank with a pre-filled upstream overpressure \textit{p$_u$}, used during the interruption process to quench the arc. It is possible to adjust the upstream pressure, contact speed, and position at current zero (CZ) independently, as well as the contact and nozzle geometry. The current and transient recovery voltage (TRV) can be change by changing the parameters of the laboratory test circuit, as described in section \ref{sec:testCir}.
 
 
-A simple drawing of the contact and nozzle is displayed in figure \ref{fig:contactAndNozzle}. The length of the nozzle is 20 mm, and the inner diameter is \textit{D}. The geometry is axial symmetric along the x-axis. Two different contact geometries are going to be tested, denoted a and b. The dimensions of the different geometries are given in table \ref{tab:contGeoPara} and, how the different dimensions are defined is illustrated in figure \ref{fig:AreacontactAndNozzle}. The angle $\mathrm{\theta}$ is defined so that $A_\mathrm{{funnel}}=4 \cdot A_\mathrm{{nozzle}}$ for each geometry.
+A simple drawing of the contact and nozzle is displayed in figure \ref{fig:contactAndNozzle}. The length of the nozzle is 20 mm, and the inner diameter is \textit{D}, axial symmetry is present along the x-axis. Two different contact geometries are going to be tested, denoted a and b. The dimensions of the different geometries are given in table \ref{tab:contGeoPara} and, how the different dimensions are defined is illustrated in figure \ref{fig:AreacontactAndNozzle}. The angle $\mathrm{\theta}$ is defined so that $A_\mathrm{{funnel}}=4 \cdot A_\mathrm{{nozzle}}$ for each geometry.
 
-The contact position \textit{x} is defined as the axial distance between the tulip and the pin contact. At starting position, \textit{x}= -60 mm, the pin contact is acting as a plug for the tank. This is making it possible to pre-set an upstream pressure. The contact is held in place by an electromagnet and is set to motion when the magnet releases a compressed spring. The spring accelerates the pin contact up to a speed of approximately 5.5 m/s at \textit{x}=0. At this position, the spring is unloaded and the pin moves with a constant speed until the contact is fully open at \textit{x}=110 mm.
+The contact position \textit{x} is defined as the axial distance between the tulip and the pin contact. At starting position, \textit{x}= -60 mm and the pin contact is acting as a plug for the tank. This is making it possible to pre-set an upstream pressure. The contact is held in place by an electromagnet and is set to motion when the magnet releases a compressed spring. The spring accelerates the pin contact up to a speed of approximately 5.5 m/s at \textit{x}=0. At this position, the spring is unloaded and the pin moves with a constant speed until the contact is fully open at \textit{x}=110 mm.
 
 \begin{figure} [h]
 \centering
@@ -238,9 +238,9 @@ The contact position \textit{x} is defined as the axial distance between the tul
 
 \item $A_\mathrm{{nozzle}}$ is defined as the area of the cylindrical part of the nozzle, when x=[0,10] mm. The area is described by equation \eqref{eq:A_nozzle}.
 
-\item $A_\mathrm{{funnel}}$ is defined as the area at the end of the nozzle, when x=20 mm, where the diameter of the funnel is at its biggest. This area is described by equation \eqref{eq:A_funnel}.
+\item $A_\mathrm{{funnel}}$ is defined as the area at the end of the nozzle, when x=20 mm, and the diameter of the funnel is at its biggest. This area is described by equation \eqref{eq:A_funnel}.
 
-\item $A_\mathrm{{ring}}$ is in table \ref{tab:contGeoPara} defined as the area between the pin contact and the cylindrical part of the nozzle, when x=[0,10] mm and is described by equation \eqref{eq:A_ring_1}. For x=[10,20] mm $A_\mathrm{{ring}}$ is a function of the pins position,(x), inside the nozzle, described by equation \eqref{eq:A_ring_2}.
+\item $A_\mathrm{{ring}}$ is in table \ref{tab:contGeoPara} defined as the area between the pin contact and the cylindrical part of the nozzle, when x=[0,10] mm and is described by equation \eqref{eq:A_ring_1}. For x=[10,20] mm $A_\mathrm{{ring}}$ is a function of the pins position, x, inside the nozzle, described by equation \eqref{eq:A_ring_2}.
 \end{itemize}
 
 \begin{equation} \label{eq:A_contact}
@@ -290,7 +290,7 @@ When testing the interrupting capabilities, the test procedure for each of the f
 \item[3.] Then, the pressure is stepped down until 60\% or more of the interruption attempts fail or the lowest possible pressure level is tested.
 \end{itemize}
 
-When testing if a connection between the arcing voltage during a successful interruption and an unsuccessful one can be found. A pressure level where the interruption success rate is 50 \% is used. Then five successful interruptions and five unsuccessful interruptions are obtained while the arcing voltage is measured and stored for further use. All the interruptions should occur outside the nozzle. The switching process is filmed by a high speed camera so that the path of the arc can be monitored during the interruption.
+When testing for variations in the arcing voltage between a successful and unsuccessful interruption, a pressure level where the interruption success rate is 50 \% is used. Then five successful interruptions and five unsuccessful interruptions are obtained while the arcing voltage is measured and stored for further use. All the interruptions should occur outside the nozzle. The switching process is filmed by a high speed camera so that the path of the arc can be monitored during the interruption.
 
 The pin is cleaned, polished, and greased between each test to ensure a smooth surface. The contacts and nozzle are replaced regularly to avoid contact wear and nozzle deformation. This is to ensure that the geometry is constant through the whole experiment.
 \cleardoublepage
