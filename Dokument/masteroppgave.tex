@@ -178,8 +178,42 @@ Since the main contact opens first and closes last, its main purpose in the swit
 The arcing contacts are designed to withstand the harsh conditions that occur when an arc burns between the contacts. The contact material has to meet strict requirements, and has to tolerate high temperatures and arc erosion, and avoid welding and other stresses that may apply when closing or opening an energized contact. Aluminium and copper are not fit for these tasks, since they will melt or erode from the stresses of an arc. It is common to use composites that consist of metals with good electrical conduction and heat-resistant oxides. For high current and voltage switches, it is possible to use a composite of silver or copper together with tungsten or tungsten carbide. These materials are highly heat-resistant, but they also have a high electrical resistance. The higher electrical resistance in the arcing contact compared to the main contact is, however, not a problem, since the current only flows through the arcing contact for a short period of time.
 
 \subsubsection{The puffer principle}
+To quench the arc several mechanisms and interrupting mediums can be applied. In a compact LBS system based on SF$_6$, the puffer mechanism is often used. To obtain a successful interruption of an arc the arc and interruption medium must be cooled down, as well as blow away charged particles and vaporised metal between the arcing contacts. This is the main purpose with the puffer mechanism. The puffer mechanism is based on a piston to generate a gas flow in the switchgear to extinguish the arc. A typical design of this system consists of using a fixed piston integrated in the contact design. A gas reservoir trapped between the arcing contact and the piston is pushed out as the contact moves apart from each other. Figure \ref{fig:CircutBreakPuff1} displays a typical puffer design.
 
-   
+As SF$_6$ entered the industry in the 1960s, it was in the form of dual pressure breakers. The SF$_6$-based dual pressure breakers had one high pressure chamber, and one low pressure chamber. A valve from a high pressure chamber opened during opening operations, generating a high speed SF$_6$ blast, guided by a nozzle to hit the arc burning between the contacts in the low-pressure chamber. This design has two major disadvantages when using SF$_6$. The switch requires heating to maintain the pressure in the high-pressure chamber to avoid condensation of the SF$_6$ gas. It also uses a compressor to pump the gas from the low-pressure chamber to the high-pressure chamber. This adds to the complexity of the switchgear and may result in more maintenance. The double pressure design was replaced with the newer single pressure design. The single pressure design has only one pressure chamber with low pressure except during interruptions, when the chamber itself becomes a high-pressure chamber.
+
+The single pressure design uses a puffer or the self-blast mechanism to quench the arc, or in some cases a combination of both. The self-blast mechanism is a concept that uses the expansion of the gas to create a pressure difference and a gas flow to cool the arc. Common for both puffer and self-blast mechanisms is that they do not use a compressor to generate the gas flow, but uses the energy stored in the switching mechanisms or generated from the blast itself to interrupt the arc. These mechanisms work the same way for both circuit breakers and load break switches, but will in a load break switch be smaller and less complex. This is because the current amplitudes are smaller and therefore a lower pressure is needed to obtain a successful interruption.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.9]{Bilder/Theory/CircutBreakPuff1.png}
+\caption{Interruption sequence in a breaker using the puffer mechanism \cite{bib:HVEbreak}.} \label{fig:CircutBreakPuff1}
+\end{figure}
+
+Figure \ref{fig:CircutBreakPuff1} displays a typical interruption sequence of breaker based on the puffer design. When the breaker is closed as seen in figure \ref{fig:CircutBreakPuff1}a, there is a gas volume \textit{(V)} trapped between the piston \textit{(P)} and the arcing contact \textit{(8)} and \textit{(6)}. At the moment the movable part of the arcing contact \textit{(8)} is pulled down, the volume decreases because of the fixed piston, and an increase in pressure due to compression of the gas occurs. Figure \ref{fig:CircutBreakPuff1}b illustrates that the main contact is open and that the current now only flows through the arcing contact.
+
+The next stage of the interruption sequence is shown in figure \ref{fig:CircutBreakPuff1}c. The arcing contacts have now separated and an arc \textit{(A)} has ignited between the contacts. The pressurised gas that previously was trapped between the piston and the arcing contact is now released. The gas flow is guided by a nozzle \textit{(9)} that is fixed to the movable arcing contact. The gas flow will cool down the arc and blow away charge carriers between the contact plates. If a sufficient gas flow is obtained, the arc will neither re-ignite after current zero nor extinguish before current zero.
+
+The gas flow is partially dependent on the cross-section of the arc, which again is dependent on the current amplitude. A large current resulting in a large arc may block the hole in the nozzle, preventing a gas flow. This is called current clogging and may occur for certain nozzle designs at high current interruptions. In such an event, the pressure in the gas reservoir will increase further due to compression from mechanical moment of the arcing contact and thermal expansion in the gas because of heating from the arc. When the current amplitude approaches zero, its cross-section will decrease and the clogging effect will end. This will result in a powerful gas blast onto the arc, as indicated in figure \ref{fig:CircutBreakPuff1}d. For smaller current amplitudes, the arc cross-section is smaller and a blocking effect does not occur to the same extent. This generates a less intense gas flow, preventing the current to be interrupted before its natural zero crossing.
+
+The self-blast, or third generation breaker, was developed with the goal of reducing mechanical power of the operating system, making it cheaper and less complex. Figure \ref{fig:selfBlast} illustrates the working principle of a breaker using self-blast to interrupt an arc. The difference between self-blast and puffer mechanism is that the puffer mechanism increases the pressure by reducing the volume, rather than the self-blast design which has a constant volume relying on a raise in temperature to increase the gas pressure \cite{bib:CBAC}. The self-blast design uses the heat generated from an arc burning between the arcing contacts to interrupt the current. The gas expands as it is heated by the burning arc. This increase in pressure leads to a gas flow on the arc, which cools it down, leading to the arc being quenched.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.36]{Bilder/Theory/selfBlast.png}
+\caption{Expulsion chamber in a breaker using the self-blast mechanism \cite{bib:CBAC}.} \label{fig:selfBlast}
+\end{figure}
+
+There are some disadvantages of the self-blast principle when compared to the puffer mechanism. The self-blast has a lower dielectric strength due to hot gas between the contacts after CZ. This gives a higher chance of re-ignition since hot gas has lower ionisation energy than cold gas. The design is also not well suited to break smaller currents. This is because the arc is less intense and therefore does not heat the gas sufficiently to create a strong enough blast. Therefore, it is common to combine self-blast and puffer mechanism in a hybrid design, so that it can handle both small and large currents. A compact LBS design using air as interrupting medium will probably rely on a puffer design. This is because of the small current an LBS is usually facing compared to a circuit breaker.
+
+A good circuit breaker design is considered hard to develop, and the industry needs to optimise the product to meet the demands set by the market, like size and pressures. This is due to high short-circuit current, in the range of 40 kA and large recovery voltages. Therefore, the industry has put a lot of effort into circuit breaker development. Nonetheless, when designing an LBS based on SF$_6$, it is common to take the working principle of a circuit breaker and scale it down to a suitable size for an LBS and then test it, and if it works the LBS might be sold on the market without further alterations. When using air, this development technique is have not been used successfully, since higher demands are set to the interrupting capabilities of the switchgear. This is because SF$_6$ is superior to air as an interrupting medium. However, the same interruption techniques might be used but with more weight on optimisation. In figure \ref{fig:selfBlastandPuffer} the interruption chamber of a load break switch is shown. This is a down scaled version of a circuit breaker and has successfully been used with SF$_6$ gas as interruption medium. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.36]{Bilder/Theory/LBSselfblastandPuffer.png}
+\caption{Schematic of a gas puffer interrupter \cite{bib:CBAC}.} \label{fig:selfBlastandPuffer}
+\end{figure}
+ 
 \subsubsection{Heat transportation in an arc} 
 
 
@@ -379,6 +413,8 @@ The pin is cleaned, polished, and greased between each test to ensure a smooth s
 \bibitem{bib:comSub} amesimpex.com, \url{http://www.amesimpex.com/images/unitised_sub_002.jpg}, 26.9.2013
 
 \bibitem{bib:HVEbreak} M. Runde, "Current interruption in power grids", Trondheim: Norwegian University of Science and Technology, 2013
+
+\bibitem{bib:GFALEAPI} E. Attar, P. Skryten, T. R. Bjortuft, P. Stoller, N. Ranjan, O. Granhaug, M. Schwinne and B. Wuethrich "Gas flow analysis in low energy arc puffer interrupters", \textit{22$^{nd}$ International Conference on Electricity Distribution CIRED, NO. 0410}, June 2013.
 
 \bibitem{bib:CBAC} W. Rieder, "Circuit breakers, physical and engineering problems, III-Arc-medium considerations", \textit{IEEE spectrum, pp. 80-84}, Sept. 1970.
 
