@@ -328,6 +328,51 @@ The static arc characteristic if shown in figure \ref{fig:staticArcChar}. This d
 
 As can be seen from the figure the characteristic is highly non-linear. At low currents, tens of amperes, the voltage drop across the arc decreases with increasing current. Then the voltage is constant, and apparently independent from the current flowing in the arc. How large, and in which current range the constant part of the arcing voltage occurs depends highly on what gas the arc burns in. For currents above this range the arcing voltage starts to increase with the current.
 
+In figure \ref{fig:potDisArc} the potential distribution of an electrical arc is illustrated. An static electrical arc might be regarded as divided into three regions:
+
+\begin{description}
+\item[Cathode region:] The voltage drop, $mathrm{V_c}$, is usually around 20 V.
+\item[Arc column:]	There is a constant electric field in this region, typical 1 V/mm.
+\item[Anode region:] The voltage drop, $mathrm{V_a}$, is usually around 3 V.
+\end{description}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{Bilder/Theory/potentialDistArc.png}
+\caption{Cross-section of a stationary arc and the corresponding potential distribution \cite{bib:HVEbreak}.} \label{fig:potDisArc}
+\end{figure}
+
+The description above is highly general and the voltage distribution will vary between which gas the arc is burning in, as well as the current range and which electrode materials that are used. Therefore the potential distribution across a dynamic arc, that burns in air for a typical current range for a LBS is analysed. The analyse are based on results from previous conducted test performed with the test circuit presented in section \ref{sec:testCir}.
+
+First three interruption test where a thermal re-ignition occurred after the first CZ and the second CZ where chosen. The pressure in the pressure chamber was held constant throughout the whole test, and was set to 1.0 bar upstream pressure. The current was 630 A, while the contact and nozzle geometry was the same for each three tests. In figure \ref{fig:threeTests} the arcing voltage during the three chosen interruption tests are shown.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Bilder/Theory/threeTests.png}
+\caption{Arcing voltage during three interruption tests. The y-axis is arcing voltage in kV and the x-axis is time in seconds from test start.} \label{fig:threeTests}
+\end{figure}
+
+Then an average arcing voltage from these three test was calculated and presented in figure \ref{fig:averageArcingVoltage}. This average arcing voltage was then used to approximate the potential distribution of the burning arc.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Bilder/Theory/averageOfthreeTests.png}
+\caption{Average arcing voltage for three interruption tests. The y-axis is arcing voltage in kV and the x-axis is time in seconds from test start.} \label{fig:averageArcingVoltage}
+\end{figure}
+
+In both figure \ref{fig:threeTests} and \ref{fig:averageArcingVoltage} contact separation occurs at $t \approx 0.0140$ s, the first CZ at $t \approx 0.0235$ and the second CZ at $t \approx 0.0335$ s. The arcing time from contact separation to the first CZ is about the same for each test approximately 9.5 ms.
+
+When the length of the arc is short most of the voltage will be across the electrodes. The length of the arc is determinated by the distance between the contacts, which moves apart with a constant speed of approximately 5 m$/$s. To establish an estimate over the voltage across the electrodes the the average voltage when the contacts was between 0.4 mm and 1.4 mm apart was calculated. Due to distortion of the arcing voltage when the arc ignites, contact gap length less than 0.4 mm was unsuited for this use. Due to the length of the arc, the average arcing voltage can therefore represent an approximation of the voltage across the electrodes, and it was calculated too 33 volt in absolute value.
+
+Then the increase in arcing voltage per length is calculated. Linear regression when the arc is between 23.2 mm and 38.8 mm is used to establish the rate of raise in the arcing voltage, and thereby the increase in voltage per length can be established. This rate of raise was calculated to be 2.7 V$/$mm in absolute value.
+
+The final expression in absolute value for the voltage across the arc, where x is the length of the arc in millimetres, then becomes:
+\begin{equation}
+V(x)=2.7x+33
+\end{equation}
+
+This approximation of the potential distribution across the arc fits well in the region between contact separation and the first CZ. In the region between first and second CZ this model is not suited. It is assumed that the values calculated here will be dependent on both upstream pressure and test current.
+
 
 \subsubsection{Dynamic arcing voltage} \label{sec:dynARC}
 \cleardoublepage
