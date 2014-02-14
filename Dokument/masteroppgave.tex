@@ -233,7 +233,7 @@ When introducing an arc to the system; the measured, and simulated pressures cha
 \caption{Pressure build up for load break tests with different arcing time   \cite{bib:CBAC}.} \label{fig:airPressurePuffer2}
 \end{figure}
 
-\subsection{Interrupting currents}
+\subsection{Properties of the interrupting medium}
 %As an interruption medium air is fairly good, and has been successfully used in the past to interrupt high currents at high voltages, some air-blast breakers are still in use. Dette hører kanskje inn i en innledning.
 \subsubsection{Electrical conductivity in an arc} \label{sec:eleCondArc}
 Gases have the ability to be good insulators as well as good conductors, mainly depending on the gas temperature. This is due to charged particles and electrons created by dissociation and ionisation of the molecules in the gas. Air is a mixture of several gases but might be simplified to consist mostly of nitrogen (N$_2$). In figure \ref{fig:condAir}, the electrical conductivity of air as a function of temperature can be observed.
@@ -310,6 +310,26 @@ In figure \ref{fig:tempDist2}, shows how the temperature distribution varies wit
 \caption{The radial temperature distribution in a plasma channel for different current magnitudes \cite{bib:HVEbreak}.} \label{fig:tempDist2}
 \end{figure}
 
+\subsection{Arcing voltage}
+Most of the information in section \ref{sec:genDes} is collected from \textit{"Current Interruption in Power Grids"} by Magne Runde \cite{bib:HVEbreak} \newline
+
+\subsubsection{Static arcing voltage}
+It is common to distinguish an arc into too two different types of arc. The one an most common is called a dynamic arc, the other one is called a static arc. A static arc can only be established when using DC current after any transients have died out. Therefore static arcs are uncommon and in nearly all switching operations the properties of the arc is best described to be of an dynamic art.
+
+AC currents always generates a dynamic arc, this is because the current alters with time, and thereby the properties of the arc. In cases where DC current is used, but externals factors like the cooling from a puffer varies by time the arc is defined as a dynamic arc. When dealing with AC switchgear with a puffer based interruption method the arc is always a dynamic arc. Due to the complexity of a dynamic arc it is common to regard the arc to behave like a static arc within a certain time interval, and therefore some of the static arc properties will be described in this section. Dynamic arcs will be featured further in section \ref{sec:dynARC}.
+
+The static arc characteristic if shown in figure \ref{fig:staticArcChar}. This describes the relationship between current and arcing voltage in an static arc. The scaling of the axes is only approximate and may vary with gas type and electrode material.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Bilder/Theory/staticArcChar.png}
+\caption{Static arc characteristic  \cite{bib:HVEbreak}.} \label{fig:staticArcChar}
+\end{figure}
+
+As can be seen from the figure the characteristic is highly non-linear. At low currents, tens of amperes, the voltage drop across the arc decreases with increasing current. Then the voltage is constant, and apparently independent from the current flowing in the arc. How large, and in which current range the constant part of the arcing voltage occurs depends highly on what gas the arc burns in. For currents above this range the arcing voltage starts to increase with the current.
+
+
+\subsubsection{Dynamic arcing voltage} \label{sec:dynARC}
 \cleardoublepage
 
 \section{Method}
