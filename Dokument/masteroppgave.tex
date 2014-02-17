@@ -375,6 +375,48 @@ This approximation of the potential distribution across the arc fits well in the
 
 
 \subsubsection{Dynamic arcing voltage} \label{sec:dynARC}
+When the current, or cooling of the arc changes, the arcing voltage no longer follows the static arc characteristics presented in figure \ref{fig:staticArcChar}. This is because the temperature cannot change instantaneously, since it is impossible to use an infinite amount of power to heat or cool a certain mass instantaneously. This gives an arc a certain thermal inertia. During a short time span cooling can be regarded as constant, while the current is set by the input power.
+
+Thermal inertia causes the arc to "remember" for a short time the amplitude of the current that just has passed. If the current follows a step function, the arc voltage will at first take a higher value, and then gradually decrease to the value corresponding to the static arc characteristic, as presented in figure \ref{fig:timeConstantStep}. This is because the arcing voltage is mainly set by the resistant in the arc, which is highly dependent on the temperature. Since the temperature cannot change instantaneously, the arcing voltage will be a function of time with approximately an exponential decay. The time constant of this decay varies from gas to gas. In table \ref{tab:timeConstants} the time constant for some gases is displayed. The time constant for each gas depends on several factors like test method and current magnitude. The variation of the time constant with regard to the current can to a certain degree be compared to the inverse of the thermal conductivity with regard to temperature presented in figure \ref{fig:tempConGas}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Bilder/Theory/staticArcChar.png}
+\caption{Voltage drop of an arc exposed to a current that follows a step function  \cite{bib:HVEbreak}.} \label{fig:timeConstantStep}
+\end{figure}
+
+\begin{table}[H]
+\center
+\caption{Time constants in a 1 A arc burning in a 19 mm tube \cite{bib:HVEbreak}. }
+\begin{tabular}{|c|c|}
+\hline 
+Gas & Time constant [$\mu$s] \\ 
+\hline 
+SF$_6$ & 0.8 \\ 
+\hline
+O$_2$ & 1.5 \\
+\hline
+CO$_2$ & 15 \\
+\hline
+Air & 80 \\
+\hline
+N$_2$ & 210 \\
+\hline
+H$_2$ & 1 \\
+\hline
+\end{tabular} 
+\label{tab:timeConstants}
+\end{table}
+
+A gas with a low time constant is quicker to cool and thereby reduces its electric conductivity faster than an gas with a high time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting inn a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. In figure \ref{fig:arcingVoltageFre} the arcing voltage is shown for a dynamic arc, as illustrated by the figure it varies both with current and frequency.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Bilder/Theory/staticArcChar.png}
+\caption{Static, low and high frequency arc characteristic  \cite{bib:HVEbreak}.} \label{fig:arcingVoltageFre}
+\end{figure}
+
+
 \cleardoublepage
 
 \section{Method}
