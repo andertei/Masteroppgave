@@ -381,7 +381,7 @@ Thermal inertia causes the arc to "remember" for a short time the amplitude of t
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{Bilder/Theory/staticArcChar.png}
+\includegraphics[scale=1]{Bilder/Theory/timeConstants.png}
 \caption{Voltage drop of an arc exposed to a current that follows a step function  \cite{bib:HVEbreak}.} \label{fig:timeConstantStep}
 \end{figure}
 
@@ -408,20 +408,30 @@ H$_2$ & 1 \\
 \label{tab:timeConstants}
 \end{table}
 
-A gas with a low time constant is quicker to cool and thereby reduces its electric conductivity faster than an gas with a high time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting inn a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. In figure \ref{fig:arcingVoltageFre} the arcing voltage is shown for a dynamic arc, as illustrated by the figure it varies both with current and frequency.
+A gas with a low time constant is faster to cool and thereby reduces its electric conductivity faster than an gas with a high time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting in a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. In figure \ref{fig:arcingVoltageFre} the arcing voltage for a dynamic arc is illustrated, as shown by the figure the arcing voltage varies both with current and frequency. In figure \ref{fig:arcingVoltageVSCurrent} the arcing voltage with regard to current for a previously conducted interruption test is shown. As can be observed from this figure, the arcing voltage follows the same pattern as an dynamic arc burning at 50 Hz shown in figure \ref{fig:arcingVoltageFre}. However, some differences are present since the arc in the interruption test is both cooled with a upstream pressure of 1.0 bar as-well as elongated by the separation of the contacts. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{Bilder/Theory/staticArcChar.png}
+\includegraphics[scale=1]{Bilder/Theory/dynamicArcingVoltage.png}
 \caption{Static, low and high frequency arc characteristic  \cite{bib:HVEbreak}.} \label{fig:arcingVoltageFre}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{Bilder/Theory/arcingVoltagevzCurrent2.png}
-\caption{Arcing voltage during a power cycle for test switch FINN PAA EN BEDRE TITTEL.} \label{fig:arcingVoltageVSCurrent}
+\caption{Arcing voltage during a full power cycle in a test interruption.} \label{fig:arcingVoltageVSCurrent}
 \end{figure}
 
+The numbered parts in figure \ref{fig:arcingVoltageVSCurrent} represents different aspects of the interruption sequence, and are described in the list below. The arrows represents the direction of time during the interruption, a full power cycle is plotted in the figure resulting in a time span of 0.02 seconds.
+\begin{description}
+\item[1:] The contacts separates and the arc ignites. As the absolute value of the current increases the arcing voltage follows the same trend as illustrated in figure \ref{fig:arcingVoltageFre}.  
+\item[2:] After the first current peak the arcing voltage is always higher than than the corresponding arcing voltage for the same current magnitude that occurred before the current peak.
+\item[3:] The arcing voltage increases as the current decreases, then at the moment of the first CZ, the arc is quenched and a high voltage peak arises.
+\item[4:] Quickly after CZ a thermal re-ignition occurs and the arc re-ignites. The high voltage peak that occurred during CZ is probably due to the intensive cooling the arc experiences. Some distortion of the arc causes the arcing voltage to drop and the pattern seen in figure \ref{fig:arcingVoltageFre} is disturbed, but the same trend can be observed.
+\item[5:] The arcing voltage rises as the second CZ approaches.
+\item[6:] Almost instantly after CZ the arc reforms as a thermal re-ignition occurs.
+\item[7:] Mainly due to elongation of the arc the arcing voltage is higher in this point than in the start (point 1). If the length of the arc where held constant through out the whole experiment the arcing voltage would be expected to be approximately the same at point 6 and point 1. The arc have now burnt a full power cycle, t=0.02 s, from ignition.
+\end{description}
 \cleardoublepage
 
 \section{Method}
