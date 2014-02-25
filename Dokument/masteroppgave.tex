@@ -307,9 +307,9 @@ Figure \ref{fig:tempDist2} shows how the temperature distribution varies with th
 Most of the information in section \ref{sec:genDes} is collected from \textit{"Current Interruption in Power Grids"} by Magne Runde \cite{bib:HVEbreak} \newline
 
 \subsubsection{Static arcing voltage}
-It is common to distinguish an arc into two different types of arc. The most common is called a dynamic arc, the other one is called a static arc. A static arc can only be established when using DC current, and after any transients have died out. Therefore static arcs are uncommon and in nearly all switching operations the properties of the arc is best described by the dynamic arc model.
+It is common to distinguish an arc into two different types. The most common is called a dynamic arc, the other a static arc. A static arc can only be established when using DC current, and after any transients have died out. Therefore, static arcs are uncommon, and in nearly all switching operations the properties of the arc is best described by the dynamic arc model.
 
-AC currents always generate a dynamic arc, this is because the current alters with time, and thereby the properties of the arc. In cases where DC current is used, but external factors like cooling varies by time, like in a puffer based switchgear the arc is dynamic. When dealing with AC switchgear with a puffer based interruption method the arc is always a dynamic arc. Due to the complexity of a dynamic arc, it is common to regard the arc to behave like a static arc within a certain time interval, and therefore some properties of a static arc will be described in this section. Dynamic arcs will be featured further in section \ref{sec:dynARC}.
+AC currents always generate a dynamic arc. This is because the current alters with time, and thereby the properties of the arc. In cases where DC current is used, but external factors like cooling varies over time, like in a puffer based switchgear, the arc is dynamic. When dealing with AC switchgear with a puffer based interruption method, the arc is always a dynamic arc. Due to the complexity of a dynamic arc, it is common to regard the arc to behave like a static arc within a certain time interval, and therefore some properties of a static arc will be described in this section. Dynamic arcs will be featured further in section \ref{sec:dynARC}.
 
 The static arc characteristic is illustrated in figure \ref{fig:staticArcChar}. This describes the relationship between current and arcing voltage in a static arc. The scaling of the axes is only approximate and may vary with gas type and electrode material.
 
@@ -319,7 +319,7 @@ The static arc characteristic is illustrated in figure \ref{fig:staticArcChar}. 
 \caption{Static arc characteristic  \cite{bib:HVEbreak}.} \label{fig:staticArcChar}
 \end{figure}
 
-As can be seen from figure \ref{fig:staticArcChar}, the characteristic is highly non-linear. At low currents, like tens of amperes, the voltage drop across the arc decreases with increasing current. Then the voltage is constant, and apparently independent from the current flowing in the arc. How large, and in which current range the constant part of the arcing voltage occurs depends highly on what gas the arc burns in. For currents above this range the arcing voltage starts to increase with the current.
+As can be seen from figure \ref{fig:staticArcChar}, the characteristic is highly non-linear. At low currents, like tens of amperes, the voltage drop across the arc decreases with increasing current. Then the voltage is constant, and apparently independent from the current flowing in the arc. How large, and in which current range, the constant part of the arcing voltage occurs depends highly on what gas the arc burns in. For currents above this range, the arcing voltage starts to increase with the current.
 
 In figure \ref{fig:potDisArc} the potential distribution of an electrical arc is illustrated. A static electrical arc might be regarded as divided into three regions:
 
@@ -335,9 +335,9 @@ In figure \ref{fig:potDisArc} the potential distribution of an electrical arc is
 \caption{Cross-section of a stationary arc and the corresponding potential distribution \cite{bib:HVEbreak}.} \label{fig:potDisArc}
 \end{figure}
 
-The description above is highly general and the voltage distribution will vary between which gas the arc is burning in, as well as the current range and which electrode materials that are used. Therefore the potential distribution across a dynamic arc, that burns in air for a typical current range of an LBS is analysed. The analyse are based on results from previously conducted tests performed with the test circuit presented in section \ref{sec:testCir}.
+The description above is highly general, and the voltage distribution will vary depending on which gas the arc is burning in, as well as the current range and the electrode materials being used. Therefore, the potential distribution across a dynamic arc that burns in air for a typical current range of an LBS is analysed. The analyse is based on results from previously conducted tests performed with the test circuit presented in section \ref{sec:testCir}.
 
-Three interruption test where a thermal re-ignition occurred after the first CZ and the second CZ is selected. The pressure in the pressure chamber was held constant throughout the whole test, and was set to 1.0 bar upstream pressure. The RMS value of the current was 630 A, while the contact and nozzle geometry was the same for each three tests. In figure \ref{fig:threeTests} the arcing voltage during the three chosen interruption tests is shown.
+Three interruption test, where a thermal re-ignition occurred after the first CZ and the second CZ, are selected. The pressure in the pressure chamber was held constant throughout the whole test, and was set to 1.0 bar upstream pressure. The RMS value of the current was 630 A, while the contact and nozzle geometry was the same for each of the three tests. In figure \ref{fig:threeTests}, the arcing voltage during the three chosen interruption tests is shown.
 
 \begin{figure}[H]
 \centering
@@ -355,7 +355,7 @@ The average arcing voltage from these three tests is presented in figure \ref{fi
 
 In both figure \ref{fig:threeTests} and \ref{fig:averageArcingVoltage}, contact separation occurs at $t \approx 0.0140$ s. The first CZ occurs at $t \approx 0.0235$ and the second CZ occurs at $t \approx 0.0335$ s. The arcing time, the time from contact separation to the first CZ, is approximately 9.5 ms for all the three tests.
 
-The length of the arc is determined by the distance between the contacts, which moves apart with a constant speed of approximately 5 m$/$s. When the length of the arc is short, most of the arcing voltage will be close to the electrodes. To establish an estimate over the voltage drop in close vicinity of the electrodes the average voltage when the contacts were between 0.4 mm and 1.4 mm apart was calculated. Because of transients in the arcing voltage when the arc ignites, contact gap length less than 0.4 mm was unsuited for this use. Due to the short length of the arc in this time span, the average arcing voltage in this region can represent an approximation of the voltage drop close to the electrodes. This voltage drop is estimated to 33 volts in absolute value, when using the procedure above.
+The length of the arc is determined by the distance between the contacts, which moves apart with a constant speed of approximately 5 m$/$s. When the length of the arc is short, most of the arcing voltage will be close to the electrodes. To establish an estimate over the voltage drop in close vicinity of the electrodes, the average voltage when the contacts were between 0.4 mm and 1.4 mm apart was calculated. Because of transients in the arcing voltage when the arc ignites, a contact gap length less than 0.4 mm was unsuited for this use. Due to the short length of the arc in this time span, the average arcing voltage in this region can represent an approximation of the voltage drop close to the electrodes. This voltage drop is estimated to 33 volts in absolute value, when using the procedure above.
 
 Then the increase in arcing voltage per millimetre is calculated. Linear regression when the arc is between 23.2 mm and 38.8 mm is used to establish the rate of rise in the arcing voltage, and thereby the increase in arcing voltage caused by elongation of the arc can be established. This rate of rise was calculated to be 2.7 V$/$mm in absolute value.
 
@@ -364,13 +364,13 @@ The final expression in absolute value for the voltage across the arc, where x i
 V(x) \approx 2.7x+33 \ \ \ \ x \in [0.4, 40.0] \ \mathrm{mm}
 \end{equation}
 
-This estimation of the arcing voltage fits well in the region between contact separation and the first CZ. In the region between first and second CZ this model is not suited. It is assumed that the values calculated here will be dependent on both upstream pressure and test current.
+This estimation of the arcing voltage fits well in the region between contact separation and the first CZ. In the region between first and second CZ, this model is not suited. It is assumed that the values calculated here will be dependent on both upstream pressure and test current.
 
 
 \subsubsection{Dynamic arcing voltage} \label{sec:dynARC}
-When the current, or cooling of the arc changes with time, the arcing voltage no longer follows the static arc characteristics presented in figure \ref{fig:staticArcChar}. This is because the temperature cannot change instantaneously, since it is impossible to use an infinite amount of power to heat or cool a certain mass instantaneously. This gives an arc a certain thermal inertia. During a short time span cooling can be regarded as constant, while the current is set by the input power.
+When the current, or cooling of the arc changes with time, the arcing voltage no longer follows the static arc characteristics presented in figure \ref{fig:staticArcChar}. This is because the temperature cannot change instantaneously, since it is impossible to use an infinite amount of power to heat or cool a certain mass instantaneously. This gives an arc a certain thermal inertia. During a short time span, cooling can be regarded as constant, while the current is set by the input power.
 
-Thermal inertia causes the arc to "remember" for a short time the amplitude of the current that just has passed. If the current follows a step function, the arc voltage will at first take a higher value, and then gradually decrease to the value corresponding to the static arc characteristic, as presented in figure \ref{fig:timeConstantStep}. This is because the arcing voltage is mainly set by the electrical conductivity of the arc, which is highly dependent on the temperature. Since the temperature cannot change instantaneously, the arcing voltage can be regarded as a function of time with an exponential decay. The time constant of this decay varies from gas to gas. In table \ref{tab:timeConstants} the time constant for some gases is displayed. The time constant for each gas depends on several factors like test method and current magnitude. The variation of the time constant alters with the current, and can to a certain degree be compared to the inverse of the thermal conductivity's dependency of temperature presented in figure \ref{fig:tempConGas}, where the temperature is proportional to the current. 
+Thermal inertia causes the arc to "remember" the amplitude of the current that just has passed for a short time. If the current follows a step function, the arc voltage will at first take a higher value, and then gradually decrease to the value corresponding to the static arc characteristic, as presented in figure \ref{fig:timeConstantStep}. This is because the arcing voltage mainly is set by the electrical conductivity of the arc, which is highly dependent on the temperature. Since the temperature cannot change instantaneously, the arcing voltage can be regarded as a function of time with an exponential decay. The time constant of this decay varies from gas to gas. In table \ref{tab:timeConstants}, the time constant for some gases is displayed. The time constant for each gas depends on several factors, like test method and current magnitude. The variation of the time constant alters with the current, and can to a certain degree be compared to the inverse of the thermal conductivity's dependency of temperature presented in figure \ref{fig:tempConGas}, where the temperature is proportional to the current. 
 
 \begin{figure}[H]
 \centering
@@ -401,14 +401,14 @@ H$_2$ & 1 \\
 \label{tab:timeConstants}
 \end{table}
 
-A gas with a low time constant is faster to cool and thereby reduces its electric conductivity faster than a gas with a high time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting in a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. 
+A gas with a low time constant is faster to cool, and thereby reduces its electric conductivity faster than a gas with a high time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting in a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. 
 
-In figure \ref{fig:arcingVoltageFre} the arcing voltage for a dynamic arc is illustrated, as shown by the figure the arcing voltage varies both with current and frequency. In figure \ref{fig:arcingVoltageVSCurrent} the arcing voltage with regard to current for a previously conducted interruption test is shown. As can be observed from this figure, the arcing voltage follows the same pattern as an dynamic arc burning at 50 Hz shown in figure \ref{fig:arcingVoltageFre}. Some differences in the burning conditions for the arc in figure \ref{fig:arcingVoltageFre} and \ref{fig:arcingVoltageVSCurrent} are present. In figure \ref{fig:arcingVoltageFre} the arc is not cooled and the contacts are stationary with a fixed gap. In figure \ref{fig:arcingVoltageVSCurrent} the arc is cooled with a 1.0 bar upstream pressure, while elongated by the separation of the contacts.
+In figure \ref{fig:arcingVoltageFre}, the arcing voltage for a dynamic arc is illustrated. As shown by the figure, the arcing voltage varies both with current and frequency. In figure \ref{fig:arcingVoltageVSCurrent}, the arcing voltage with regard to current for a previously conducted interruption test is shown. As can be observed from this figure, the arcing voltage follows the same pattern as an dynamic arc burning at 50 Hz shown in figure \ref{fig:arcingVoltageFre}. Some differences in the burning conditions for the arc in figure \ref{fig:arcingVoltageFre} and \ref{fig:arcingVoltageVSCurrent} are present. In figure \ref{fig:arcingVoltageFre}, the arc is not cooled and the contacts are stationary with a fixed gap. In figure \ref{fig:arcingVoltageVSCurrent}, the arc is cooled with a 1.0 bar upstream pressure, while elongated by the separation of the contacts.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=1]{Bilder/Theory/dynamicArcingVoltage.png}
-\caption{Static, low and high frequency arc characteristic  \cite{bib:HVEbreak}.} \label{fig:arcingVoltageFre}
+\caption{Static, low, and high frequency arc characteristic  \cite{bib:HVEbreak}.} \label{fig:arcingVoltageFre}
 \end{figure}
 
 \begin{figure}[H]
@@ -417,15 +417,15 @@ In figure \ref{fig:arcingVoltageFre} the arcing voltage for a dynamic arc is ill
 \caption{Arcing voltage during a full power cycle in a test interruption.} \label{fig:arcingVoltageVSCurrent}
 \end{figure}
 
-The numbered parts in figure \ref{fig:arcingVoltageVSCurrent} represents different aspects of the arc during the interruption sequence, and are described in the list below. The arrows represents the direction of time during the interruption. A full power cycle is plotted in the figure, resulting in a time span of 0.02 seconds.
+The numbered parts in figure \ref{fig:arcingVoltageVSCurrent} represents different aspects of the arc during the interruption sequence, and are described in the list below. The arrows represent the direction of time during the interruption. A full power cycle is plotted in the figure, resulting in a time span of 0.02 seconds.
 \begin{description}
-\item[1:] The contacts separates and the arc ignites. As the absolute value of the current increases the arcing voltage follows the same trend as illustrated in figure \ref{fig:arcingVoltageFre}.  
-\item[2:] After the first current peak the arcing voltage is always higher than than the corresponding arcing voltage for the same current magnitude that occurred before the current peak.
+\item[1:] The contacts separate and the arc ignites. As the absolute value of the current increases, the arcing voltage follows the same trend as illustrated in figure \ref{fig:arcingVoltageFre}.  
+\item[2:] After the first current peak, the arcing voltage is always higher than than the corresponding arcing voltage for the same current magnitude that occurred before the current peak.
 \item[3:] The arcing voltage increases as the current decreases, then at the moment of the first CZ, the arc is quenched and a high voltage peak arises.
-\item[4:] Quickly after CZ a thermal re-ignition occurs and the arc re-ignites. The high voltage peak that occurred during CZ is probably due to the intensive cooling the arc experiences. Some distortion of the arc causes the arcing voltage to drop and the pattern seen in figure \ref{fig:arcingVoltageFre} is disturbed, but the same trend can be observed.
+\item[4:] Quickly after CZ, a thermal re-ignition occurs and the arc re-ignites. The high voltage peak that occurred during CZ is probably due to the intensive cooling the arc experiences. Some distortion of the arc causes the arcing voltage to drop and the pattern seen in figure \ref{fig:arcingVoltageFre} is disturbed, but the same trend can be observed.
 \item[5:] The arcing voltage rises as the second CZ approaches.
-\item[6:] Almost instantly after CZ the arc reforms as a thermal re-ignition occurs.
-\item[7:] Mainly due to elongation of the arc the arcing voltage is higher in this point than in the start (point 1). If the length of the arc where held constant through out the whole experiment the arcing voltage would be expected to be approximately the same at point 7 and point 1. The arc have now burnt a full power cycle, t=0.02 s, from ignition.
+\item[6:] Almost instantly after CZ, the arc reforms as a thermal re-ignition occurs.
+\item[7:] Mainly due to elongation of the arc, the arcing voltage is higher at this point than in the beginning (point 1). If the length of the arc had remained constant throughout the whole experiment, the arcing voltage would be expected to be approximately the same at point 7 and point 1. The arc has now burnt a full power cycle, t=0.02 s, from ignition.
 \end{description}
 \cleardoublepage
 
