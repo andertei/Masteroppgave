@@ -170,7 +170,7 @@ Since the main contact opens first and closes last, its main purpose in the swit
 
 The arcing contacts are designed to withstand the harsh conditions that occur when an arc burns between the contacts. The contact material has to meet strict requirements, and has to tolerate high temperatures and arc erosion, and avoid welding and other stresses that may apply when closing or opening an energized contact. Aluminium and copper are not fit for these tasks, since they will melt or erode from the stresses of an arc. It is common to use composites that consist of metals with good electrical conduction and heat-resistant oxides. For high current and voltage switches, it is possible to use a composite of silver or copper together with tungsten or tungsten carbide. These materials are highly heat-resistant, but they also have a high electrical resistance. The higher electrical resistance in the arcing contact compared to the main contact is, however, not a problem, since the current only flows through the arcing contact for a short period of time.
 
-\subsubsection{The puffer principle}
+\subsubsection{The puffer principle} \label{sec:puffer}
 In order to quench the arc, several mechanisms and interrupting mediums can be applied. In a compact LBS based on SF$_6$, the puffer mechanism is often used. In order to obtain a successful interruption of an arc, the arc and interruption medium must be cooled down, and the charged particles and vaporised metal between the arcing contacts must be blown off. This is the main purpose of the puffer mechanism. The puffer mechanism is based on a piston, and it generates a gas flow in the switchgear in order to extinguish the arc. A typical design of this system consists of a fixed piston integrated inside the movable contact part. A gas reservoir trapped between the arcing contact and the piston is pushed out as the contact move apart from each other. Figure \ref{fig:CircutBreakPuff1} displays a typical puffer design.
 
 When SF$_6$ entered the industry in the 1960s, it was in the form of dual pressure breakers. The SF$_6$-based dual pressure breakers had one high pressure chamber, and one low pressure chamber. A valve from a high pressure chamber opened during opening operations, generating a high speed SF$_6$ blast, guided by a nozzle to hit the arc burning between the contacts in the low-pressure chamber. This design has two major disadvantages when using SF$_6$. The switch requires heating in order to maintain the pressure in the high-pressure chamber for preventing condensation of the SF$_6$ gas. It also uses a compressor for pumping the gas from the low-pressure chamber to the high-pressure chamber. This adds to the complexity of the switchgear, and may result in more maintenance. The double pressure design was replaced with the newer single pressure design. The single pressure design has only one pressure chamber with low pressure, except during interruptions, when the chamber itself becomes a high-pressure chamber.
@@ -427,6 +427,34 @@ The numbered parts in figure \ref{fig:arcingVoltageVSCurrent} represents differe
 \item[6:] Almost instantly after CZ, the arc reforms as a thermal re-ignition occurs.
 \item[7:] Mainly due to elongation of the arc, the arcing voltage is higher at this point than in the beginning (point 1). If the length of the arc had remained constant throughout the whole experiment, the arcing voltage would be expected to be approximately the same at point 7 and point 1. The arc has now burnt a full power cycle, t=0.02 s, from ignition.
 \end{description}
+
+\subsection{Thermal re-ignition considerations}
+As mentioned in section \ref{sec:puffer} the main purpose of the puffer mechanism is to remove charge carriers between the contacts after CZ to avoid re-ignition of the arc. After CZ a strong electrical field rises between the electrodes, represented by the recovery voltage. The charge carriers in the air-gap will be accelerated by the electrical field and the movement of these charge carriers will represent a current called the post-arc current (PAC). During a high current, high voltage interruption for a circuit breaker, the peak of the PAC is usually a few amperes or less, and have a duration for some microseconds. For currents and voltages in the LBS range the current peak of the PAC is expected to be considerably smaller.
+
+A thermal re-ignition is avoided if the PAC have reached zero, since this means that the charge carriers in the air-gap is gone. On the other side, a thermal re-ignition occurs if the PAC rises, an arc ignite, and the current obtains its common sinus form. Figure \ref{fig:PACbreakandreIgnite} shows the PAC for a successful and a unsuccessful interruption. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.7]{Bilder/Theory/failSuccPAC.png}
+\caption{The post-arc current during a successful and unsuccessful interruption \cite{bib:CIHVN}.} \label{fig:PACbreakandreIgnite}
+\end{figure}
+
+The thermal interruption success rate is partly determinated by the amount of stored energy in the arc and in its surroundings. Power is the product of arcing voltage and current. The energy produced by the arc is the area or integral of the power during a certain time span. Research have shown that only the energy dissipated close to CZ have an effect on the interruption capabilities and that the cooling from the air flow mainly effects the arc, with regards to interruption rate, between 50 to 100 microseconds before CZ \cite{bib:CIHVN}.
+
+The parameter $\delta \mathrm{I}/\delta \mathrm{t}$ can be used to describe the energy losses close to CZ. In figure \ref{fig:freqComp} two currents with the same $\delta \mathrm{I}/\delta \mathrm{t}$ close to CZ can be observed.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Bilder/Theory/diffFreq.png}
+\caption{Comparison of 200 Hz and 4000 Hz current wave \cite{bib:CIHVN}.} \label{fig:freqComp}
+\end{figure}
+
+These two currents, even though with completely different frequency and amplitude have proven equally difficult to interrupt \cite{bib:CIHVN}. Therefore it is assumed that the effect of a puffer is most efficient close to CZ where the energy dissipation is almost equal and right after CZ when the PAC is present.
+
+The thermal inertia of the interruption gas, as described with the time constants presented in table \ref{tab:timeConstants} gives a relation over how fast the PAC is reduced. Air which have a large time constant compared to SF$_6$ will probably have a loner time span for the PAC, resulting in a higher re-ignition rate.
+
+As described in this section the thermal re-ignition chance will depend on several factors. The $\delta \mathrm{I}/\delta \mathrm{t}$ close to CZ will give a estimate over the energy dissipation in the arc and the temperature in the plasma. This will both influence the current peak and time of the PAC. The the time constant of the interruption gas gives a indication over how fast the gas responds to changes like cooling. A long time constant might lead to slower cooling of the arc, resulting in higher PAC amplitude and time. The steepness of the recovery voltage is also important as a fast increase in this voltage will accelerate the charge carriers that makes up the PAC, resulting in ionising collisions and a larger re-ignition chance.
+
 \cleardoublepage
 
 \section{Method}
@@ -437,7 +465,7 @@ Figure \ref{fig:testSwitchRiggEq} illustrates the physical appearance of the tes
 
 \begin{figure} [H]
 \centering
-\includegraphics[scale=0.5]{Bilder/Method/switchTest.png}
+\includegraphics[scale=0.4]{Bilder/Method/switchTest.png}
 \caption{The physical appearance of the test switch \cite{bib:AFIMVLBA}.} \label{fig:testSwitchRiggEq}
 \end{figure}
 
@@ -612,6 +640,8 @@ The pin is cleaned, polished, and greased between each test to ensure a smooth s
 \bibitem{bib:IPSF6AQM} W. Hertz, H. Motschmann and H. Wittel, "Investigations of the properties of SF$_6$ as an arc quenching medium", \textit{Proceedings of The IEEE, vol. 59, NO. 4, pp. 485-492}, April 1971.
 
 \bibitem{bib:TDCIGBB} W. Hermann, "Theoretical description of the current interruption in HV gas blast breakers", \textit{IEEE Transactions on Power Apparatus and System, vol. PAS-96, NO. 5, pp. 1546-1555}, Sept./ Oct. 1977.
+
+\bibitem{bib:CIHVN} G. Frind and B. W. Swanson "Current Interruption in High-Voltage Networks", Baden: BBC Brown, Boveri \& Company Limited, 1977
 
 \bibitem{bib:THFD} R. W. Johnson, "The handbook of fluid dynamics", Heidelberg: Springer-Verlag GmbH \& Co. KG, 1998.
 
