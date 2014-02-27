@@ -429,9 +429,9 @@ The numbered parts in figure \ref{fig:arcingVoltageVSCurrent} represents differe
 \end{description}
 
 \subsection{Thermal re-ignition considerations}
-As mentioned in section \ref{sec:puffer} the main purpose of the puffer mechanism is to remove charge carriers between the contacts after CZ to avoid re-ignition of the arc. After CZ a strong electrical field rises between the electrodes, represented by the recovery voltage. The charge carriers in the air-gap will be accelerated by the electrical field and the movement of these charge carriers will represent a current called the post-arc current (PAC). During a high current, high voltage interruption for a circuit breaker, the peak of the PAC is usually a few amperes or less, and have a duration for some microseconds. For currents and voltages in the LBS range the current peak of the PAC is expected to be considerably smaller.
+As mentioned in section \ref{sec:puffer} the main purpose of the puffer mechanism is to remove charge carriers between the contacts after CZ to avoid re-ignition of the arc. After CZ a strong electrical field rises between the electrodes, represented by the recovery voltage. This electrical field will accelerate the charge carriers in the air-gap, and the movement of these will represent a current called the post-arc current (PAC). During a high current, high voltage interruption for a circuit breaker, the peak of the PAC is usually a few amperes or less, and have a duration for some microseconds. For currents and voltages in the LBS range the current peak of the PAC is expected to be considerably smaller.
 
-A thermal re-ignition is avoided if the PAC have reached zero, since this means that the charge carriers in the air-gap is gone. On the other side, a thermal re-ignition occurs if the PAC rises, an arc ignite, and the current obtains its common sinus form. Figure \ref{fig:PACbreakandreIgnite} shows the PAC for a successful and a unsuccessful interruption. 
+A thermal re-ignition is avoided if the PAC has reached zero, since this means that the charge carriers in the air-gap is gone. On the other side, a thermal re-ignition occurs if the PAC rises, an arc ignites, and the current obtains its common sinuous form. Figure \ref{fig:PACbreakandreIgnite} shows the PAC for a successful and an unsuccessful interruption. 
 
 \begin{figure} [H]
 \centering
@@ -439,21 +439,21 @@ A thermal re-ignition is avoided if the PAC have reached zero, since this means 
 \caption{The post-arc current during a successful and unsuccessful interruption \cite{bib:CIHVN}.} \label{fig:PACbreakandreIgnite}
 \end{figure}
 
-The thermal interruption success rate is partly determinated by the amount of stored energy in the arc and in its surroundings. Power is the product of arcing voltage and current. The energy produced by the arc is the area or integral of the power during a certain time span. Research have shown that only the energy dissipated close to CZ have an effect on the interruption capabilities and that the cooling from the air flow mainly effects the arc, with regards to interruption rate, between 50 to 100 microseconds before CZ \cite{bib:CIHVN}.
+The thermal interruption success rate is partly determined by the amount of stored energy in the arc and in its surroundings. Power is the product of arcing voltage and current. The energy produced by the arc is the integral (the area under the power as an function of time graph) of the power during a certain time span. Research has shown that only the energy dissipated close to CZ have an effect on the interruption capabilities and that the cooling from the air flow mainly effects the interruption rate between 50 to 100 microseconds before CZ \cite{bib:CIHVN}.
 
 The parameter $\delta \mathrm{I}/\delta \mathrm{t}$ can be used to describe the energy losses close to CZ. In figure \ref{fig:freqComp} two currents with the same $\delta \mathrm{I}/\delta \mathrm{t}$ close to CZ can be observed.
 
 \begin{figure} [H]
 \centering
-\includegraphics[scale=1]{Bilder/Theory/diffFreq.png}
-\caption{Comparison of 200 Hz and 4000 Hz current wave \cite{bib:CIHVN}.} \label{fig:freqComp}
+\includegraphics[scale=0.6]{Bilder/Theory/diffFreq3.png}
+\caption{Comparison of $\delta \mathrm{I}/\delta \mathrm{t}$ for a 200 Hz and 4000 Hz current wave.} \label{fig:freqComp}
 \end{figure}
 
-These two currents, even though with completely different frequency and amplitude have proven equally difficult to interrupt \cite{bib:CIHVN}. Therefore it is assumed that the effect of a puffer is most efficient close to CZ where the energy dissipation is almost equal and right after CZ when the PAC is present.
+These two currents, even though with completely different frequency and amplitude have proven almost equally difficult to interrupt \cite{bib:CIHVN}. Therefore, it is assumed that the effect of a puffer is most efficient close to CZ where the energy dissipation is almost equal and right after CZ when the PAC is present. The graph in the lower part of the picture in figure \ref{fig:freqComp} shows the a half period of the 200 Hz current besides several periods of the 4000 Hz current, while the upper part of the figure shows both currents 100 $\mu$s before CZ. As can be seen form the figure $\delta \mathrm{I}/\delta \mathrm{t}$ for the 200 Hz and the 4000 Hz current is almost alike for the last 50 $\mu$s before CZ.
 
-The thermal inertia of the interruption gas, as described with the time constants presented in table \ref{tab:timeConstants} gives a relation over how fast the PAC is reduced. Air which have a large time constant compared to SF$_6$ will probably have a loner time span for the PAC, resulting in a higher re-ignition rate.
+The thermal inertia of the interruption gas, as described with the time constants presented in table \ref{tab:timeConstants} gives a relation over how fast the PAC is reduced. Gases with a long time constant will probably have a longer time span for the PAC. Air has a fairly large time constant and problems with thermal re-ignitions can partially be explained by this.
 
-As described in this section the thermal re-ignition chance will depend on several factors. The $\delta \mathrm{I}/\delta \mathrm{t}$ close to CZ will give a estimate over the energy dissipation in the arc and the temperature in the plasma. This will both influence the current peak and time of the PAC. The the time constant of the interruption gas gives a indication over how fast the gas responds to changes like cooling. A long time constant might lead to slower cooling of the arc, resulting in higher PAC amplitude and time. The steepness of the recovery voltage is also important as a fast increase in this voltage will accelerate the charge carriers that makes up the PAC, resulting in ionising collisions and a larger re-ignition chance.
+As described in this section the thermal re-ignition chance will depend on several factors. The $\delta \mathrm{I}/\delta \mathrm{t}$ close to CZ will give an estimate over the energy dissipation in the arc and the temperature in the plasma. This will both influence the current peak and time of the PAC. The time constant of the interruption gas gives an indication over how fast the gas responds to changes from for example cooling. A long time constant might lead to slower cooling of the arc, resulting in a higher amplitude and time span of the PAC. The steepness of the recovery voltage is also important as a fast increase in this voltage will accelerate the charge carriers that makes up the PAC, resulting in a larger re-ignition chance. Further information on this topic can be collected from the book: "Current Interruption In High-Voltage Networks".
 
 \cleardoublepage
 
