@@ -456,8 +456,23 @@ The thermal inertia of the interruption gas, as described with the time constant
 
 As described in this section the thermal re-ignition chance will depend on several factors. The $\delta \mathrm{I}/\delta \mathrm{t}$ close to CZ will give an estimate over the energy dissipation in the arc and the temperature in the plasma. This will both influence the current peak and time of the PAC. The time constant of the interruption gas gives an indication over how fast the gas responds to changes from for example cooling. A long time constant might lead to slower cooling of the arc, resulting in a higher amplitude and time span of the PAC. The steepness of the recovery voltage is also important as a fast increase in this voltage will accelerate the charge carriers that makes up the PAC, resulting in a larger re-ignition chance. Further information on this topic can be collected from the book: "Current Interruption In High-Voltage Networks".
 
-\cleardoublepage
 
+\subsection{Air flow considerations}
+During the interruption processes a puffer based switch uses a piston to drive an air flow to quench the arc. The energy dispatched from the arc is cooled-down by this air flow, the efficiency of the cooling depends on the speed and mass of the air flow as well as how the flow is guided on the arc. In figure \ref{fig:airPressurePuffer2} a typical pressure development in the pressure chamber of an LBS is illustrated during interruption. However, in the test switch presented in section \ref{sec:testSwitchandContact} and used in the interruption tests conducted in this report the pressure is more or less constant throughout the whole interruption process.
+
+The mass flow ($\dot{m}$) of air through the nozzle can in most interruption cases be regarded as conserved and is presented in equation \eqref{eq:massFlow}. The mass density ($\rho$) is dependent on pressure and temperature while the volume flow (\textit{Q}) is dependent on speed and area as presented in equation \eqref{eq:volumeFlow}.
+
+\begin{equation} \label{eq:massFlow}
+\dot{m}=\rho Q
+\end{equation} 
+
+\begin{equation} \label{eq:volumeFlow}
+Q=\int v \ dA
+\end{equation}
+
+In equation \eqref{eq:volumeFlow} the area (\textit{A}) is the cross-section of the nozzle. This will vary from where in the nozzle the volume flow is calculated, as well as the arcing contact's position. The speed of the air flow ($v$) is dependent on the pressure difference ($\Delta p$) between the pressure chamber and the interruption chamber, and it will increase with an increasing pressure difference. An increase in air flow velocity will result in a greater mass flow, which if guided properly will lead to a more efficient cooling of the arc.
+
+\cleardoublepage
 \section{Method}
 
 \subsection{Test circuit} \label{sec:testCir}
@@ -505,7 +520,7 @@ L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A]
 
 A resistive transducer is measuring the contact position, while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar. A "Cheetah 1470", a near-infrared (NIR) high-speed camera, records the opening sequence of the switch and the arc that burns between the contacts with a frame rate of ?? fps.
 
-\subsection{The switch and contact geometry}
+\subsection{The switch and contact geometry} \label{sec:testSwitchandContact}
 This experiment is conducted using copper-tungsten arcing contacts, polytetraflourelthylene (PTFE) nozzles, and air as interrupting medium. Copper-tungsten arcing contacts and a PTFE nozzle is commonly used in commercial LBSes, and is therefore used in this experiment. PTFE is also chemically stable during the arcing time, which prohibits vaporisation products from the nozzle to influence the interruption capabilities of the test switch. As mentioned in section \ref{sec:InterruptCurrent} copper-tungsten is applied because it is highly resistant from stresses from the arc. The system is an open system, with the surrounding air at atmospheric pressure \textit{p$_0$} and a six-litre tank with a pre-filled upstream overpressure \textit{p$_u$}, used during the interruption process to quench the arc. It is possible to adjust the upstream pressure, contact speed, and position at current zero (CZ) independently, as well as the contact and nozzle geometry. The current and TRV can be manipulated by changing the parameters of the laboratory test circuit, as described in section \ref{sec:testCir}.
 
 Two different kinds of nozzle design is going to be tested. The first kind has a short nozzle with a funnel shape at the end. It consists of two different contact geometries which are denoted \textbf{a} and \textbf{b}. The last nozzle design is a longer nozzle that has a cylindrical shape. This contact geometry is denoted \textbf{c}. 
