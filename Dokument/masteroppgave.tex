@@ -372,7 +372,7 @@ This estimation of the arcing voltage fits well in the region between contact se
 \subsubsection{Dynamic arcing voltage} \label{sec:dynARC}
 When the current or cooling of the arc changes with time, the arcing voltage no longer follows the static arc characteristics presented in figure \ref{fig:staticArcChar}. This is because the temperature cannot change instantaneously, since it is impossible to use an infinite amount of power to heat or cool a certain mass instantaneously. This gives an arc a certain thermal inertia.
 
-Thermal inertia causes the arc to "remember" the amplitude of the current that just passed for a short period of time. If the current follows a step function, the arc voltage will at first take a higher value, and then gradually decrease to the value corresponding to the static arc characteristic, as presented in figure \ref{fig:timeConstantStep}. This is because the arcing voltage mainly is set by the electrical conductivity of the arc, which is highly dependent on the temperature. Since the temperature cannot change instantaneously, the arcing voltage can be regarded as a function of time with an exponential decay. The time constant of this decay varies from gas to gas. In table \ref{tab:timeConstants}, the time constant for some gases is displayed. The time constant for each gas depends on several factors, like test method and current magnitude. The variation of the time constant alters with the current, and can to a certain degree be compared to the inverse of the thermal conductivity's dependency of temperature presented in figure \ref{fig:tempConGas}, where the temperature is proportional to the current. 
+Thermal inertia causes the arc to "remember" the amplitude of the current that just passed for a short period of time. If the current follows a step function, the arc voltage will at first take a higher value, and then gradually decrease to the value corresponding to the static arc characteristic, as presented in figure \ref{fig:timeConstantStep}. This is because the arcing voltage mainly is set by the electrical conductivity of the arc, which is highly dependent on the temperature. Since the temperature cannot change instantaneously, the arcing voltage can be regarded as a function of time with approximately an exponential decay. The time constant of this decay varies from gas to gas. In table \ref{tab:timeConstants}, the time constant for some gases is displayed. The time constant for each gas depends on several factors, like test method and current magnitude. The variation of the time constant alters with the current, and can to a certain degree be compared to the inverse of the thermal conductivity's dependency of temperature presented in figure \ref{fig:tempConGas}, where the temperature is proportional to the current. 
 
 \begin{figure}[H]
 \centering
@@ -403,7 +403,7 @@ H$_2$ & 1 \\
 \label{tab:timeConstants}
 \end{table}
 
-A gas with a low time constant is faster to cool, and thereby reduces its electric conductivity faster than a gas with a high time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting in a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. 
+A gas with a low time constant is faster to cool, and thereby reduces its electric conductivity faster than a gas with a large time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting in a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. 
 
 In figure \ref{fig:arcingVoltageFre}, the arcing voltage for a dynamic arc is illustrated. As shown by the figure, the arcing voltage varies both with current and frequency. In figure \ref{fig:arcingVoltageVSCurrent}, the arcing voltage with regard to current for a previously conducted interruption test is shown. As can be observed from this figure, the arcing voltage follows the same pattern as an dynamic arc burning at 50 Hz shown in figure \ref{fig:arcingVoltageFre}. Some differences in the burning conditions for the arc in figure \ref{fig:arcingVoltageFre} and \ref{fig:arcingVoltageVSCurrent} are present. In figure \ref{fig:arcingVoltageFre}, the arc is not cooled, and the contacts are stationary with a fixed gap. In figure \ref{fig:arcingVoltageVSCurrent}, the arc is cooled with a 1.0 bar upstream pressure, while elongated by the separation of the contacts.
 
@@ -416,7 +416,7 @@ In figure \ref{fig:arcingVoltageFre}, the arcing voltage for a dynamic arc is il
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{Bilder/Theory/arcingVoltagevzCurrent3.png}
-\caption{Arcing voltage during a full power cycle in a test interruption.} \label{fig:arcingVoltageVSCurrent}
+\caption{Arcing voltage during a full power cycle for a 50 Hz current in a test interruption.} \label{fig:arcingVoltageVSCurrent}
 \end{figure}
 
 The numbered parts in figure \ref{fig:arcingVoltageVSCurrent} represent different aspects of the arc during the interruption sequence, and are described in the list below. The arrows represent the direction of time during the interruption. A full power cycle is plotted in the figure, resulting in a time span of 0.02 seconds.
@@ -426,7 +426,7 @@ The numbered parts in figure \ref{fig:arcingVoltageVSCurrent} represent differen
 \item[3:] The arcing voltage increases as the current decreases, then at the moment of the first CZ, the arc is quenched and a high voltage peak arises.
 \item[4:] Quickly after CZ, a thermal re-ignition occurs and the arc re-ignites. The high voltage peak that occurred during CZ is probably due to the intensive cooling the arc experiences. Some distortion of the arc causes the arcing voltage to drop and the pattern seen in figure \ref{fig:arcingVoltageFre} is disturbed, but the same trend can be observed.
 \item[5:] The arcing voltage rises as the second CZ approaches.
-\item[6:] Almost instantly after CZ, the arc reforms as a thermal re-ignition occurs.
+\item[6:] Almost instantly after CZ, the arc re-ignites as a thermal re-ignition occurs.
 \item[7:] Mainly due to elongation of the arc, the arcing voltage is higher at this point than in the beginning (point 1). If the length of the arc had remained constant throughout the whole experiment, the arcing voltage would be expected to be approximately the same at point 7 and point 1. The arc has now burnt a full power cycle, t=0.02 s, from ignition.
 \end{description}
 
