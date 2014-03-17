@@ -172,7 +172,9 @@ Since the main contact opens first and closes last, its main purpose in the swit
 The arcing contacts are designed to withstand the harsh conditions that occur when an arc burns between the contacts. The contact material has to meet strict requirements, and has to tolerate high temperatures and arc erosion, and avoid welding and other stresses that may apply when closing or opening an energized contact. Aluminium and copper are not fit for these tasks, since they will melt or erode from the stresses of an arc. It is common to use composites that consist of metals with good electrical conduction and heat-resistant oxides. For high current and voltage switches, it is possible to use a composite of silver or copper together with tungsten or tungsten carbide. These materials are highly heat-resistant, but they also have a high electrical resistance. The higher electrical resistance in the arcing contact compared to the main contact is, however, not a problem, since the current only flows through the arcing contact for a short period of time.
 
 \subsubsection{The puffer principle} \label{sec:puffer}
-In order to quench the arc, several mechanisms and interrupting mediums can be applied. In a compact LBS based on SF$_6$, a puffer mechanism is often used. In order to obtain a successful interruption of an arc, the arc and interruption medium must be cooled down, and the charged particles and vaporised metal between the arcing contacts must be blown away. This is the main purpose of the puffer mechanism. The puffer mechanism is based on a piston, and it generates a gas flow in the switchgear in order to extinguish the arc. A typical design of this system consists of a fixed piston integrated inside the movable contact part. A gas reservoir trapped between the arcing contact and the piston is pushed out as the contact members move apart from each other. Figure \ref{fig:CircutBreakPuff1} displays a typical puffer design.
+This report is focused on LBSs, but most of the available literature is related to circuit breakers. Therefore, the following section presents the working principle of different gas blast mechanisms used in circuit breakers, although, circuit breakers are different from LBSs, the working principle of the gas blast mechanism is somewhat similar for both kinds of switchgear.
+
+In order to quench the arc, several mechanisms and interrupting mediums can be applied. In a compact LBS based on SF$_6$, a puffer mechanism is often used. In order to obtain a successful interruption of an arc, the arc and interruption medium must be cooled down, and the charged particles and vaporised metal between the arcing contacts must be blown away. This is the main purpose of the puffer mechanism. The puffer mechanism is based on a piston, and it generates a gas flow in the switchgear in order to extinguish the arc. A typical design of this system consists of a fixed piston integrated inside the movable contact part. A gas reservoir trapped between the arcing contact and the piston is pushed out as the contact members move apart from each other. Figure \ref{fig:CircutBreakPuff1} displays a typical puffer design in a circuit breaker.
 
 When SF$_6$ entered the industry in the 1960s, it was in the form of dual pressure breakers. The SF$_6$-based dual pressure breakers had one high pressure chamber, and one low pressure chamber. A valve from a high pressure chamber opened during opening operations, generating a high speed SF$_6$ blast, guided by a nozzle to hit the arc burning between the contacts in the low-pressure chamber. This design has two major disadvantages when using SF$_6$. The switch requires heating in order to maintain the pressure in the high-pressure chamber for preventing condensation of the SF$_6$ gas. It also uses a compressor for pumping the gas from the low-pressure chamber to the high-pressure chamber. This adds to the complexity of the switchgear, and may result in more maintenance. The double pressure design was replaced with the newer single pressure design. The single pressure design has only one pressure chamber with low pressure, except during interruptions, when the chamber itself becomes a high-pressure chamber.
 
@@ -198,14 +200,14 @@ The self-blast, or third generation breaker, was developed with the goal of redu
 \caption{Expulsion chamber in a circuit breaker using the self-blast mechanism \cite{bib:CBAC}.} \label{fig:selfBlast}
 \end{figure}
 
-There are some disadvantages of the self-blast principle when compared to the puffer mechanism. The self-blast has a lower dielectric strength, due to hot gas between the contacts after CZ. This gives a higher chance of re-ignition since hot gas has lower ionisation energy than cold gas. The design is also not well suited to break smaller currents. This is because the arc is less intense and therefore does not heat the gas sufficiently to create a strong enough blast. Therefore, it is common to combine self-blast and puffer mechanism in a hybrid design, so that it can handle both small and large currents. A compact LBS design using air as interrupting medium will probably rely on a puffer design. This is because an LBS faces smaller currents than a circuit breaker.
+There are some disadvantages of the self-blast principle when compared to the puffer mechanism. The self-blast has a lower dielectric strength, due to hot gas between the contacts after CZ. This gives a higher chance of re-ignition since hot gas has lower ionisation energy than cold gas. The design is also not well suited to break smaller currents. This is because the arc is less intense and therefore does not heat the gas sufficiently to create a strong enough blast. Therefore, it is common to combine self-blast and puffer mechanism in a hybrid design, so that it can handle both small and large currents. A compact LBS design using air as interrupting medium will probably rely on an active blowing mechanism like the puffer design. This is because an LBS faces smaller currents than a circuit breaker, making the self blast design unsuited.
 
 A good circuit breaker design is difficult to develop, and the industry needs to optimise the product to meet the demands set by the market, such as size and pressure. This is due to high short-circuit currents in the range of 40 kA and large recovery voltages. Because of this, the industry has put a lot of effort into circuit breaker development. Nonetheless, when designing an LBS based on SF$_6$, it is common to take the working principle of a circuit breaker and scale it down to a suitable size for an LBS, and then test it. If it works, the LBS might be sold on the market without further alterations. Air is considered as a replacement for SF$_6$ as an interruption gas, due to the strong greenhouse gas potential of SF$_6$. When using air, this development technique has not been implemented successfully, since higher demands are set to the interrupting capabilities of the switchgear. This is because SF$_6$ is superior to air as an interrupting medium and the physical properties of the arc alters with the current. However, the same interruption techniques might be used, but with an increased focus on optimisation. In figure \ref{fig:selfBlastandPuffer}, the interrupter of a load break switch is shown. This is a down-scaled version of a circuit breaker, which has successfully been used to interrupt load current with SF$_6$ gas as interruption medium. 
 
 \begin{figure} [H]
 \centering
 \includegraphics[scale=0.6]{Bilder/Theory/LBSselfblastandPuffer.png}
-\caption{Schematic of a gas puffer interrupter \cite{bib:CBAC}.} \label{fig:selfBlastandPuffer}
+\caption{Schematic of a medium voltage gas puffer interrupter \cite{bib:CBAC}.} \label{fig:selfBlastandPuffer}
 \end{figure}
 
 As can been seen in figure \ref{fig:selfBlastandPuffer}, the load break switch features many of the same components as a circuit breaker, but the dimensions are scaled down. The interruption technique used is puffer based, and the operation sequence is the same as illustrated in figure \ref{fig:CircutBreakPuff1}. The article "Gas flow analysis in low energy arc puffer interrupters" \cite{bib:CBAC} presents an experiment where the the pressure in the pressure chamber of a LBS is measured during opening operation, and then is simulated, so that a comparison of the theoretical and measured pressures can be presented. In figure \ref{fig:airPressurePuffer}, the measured and simulated gas pressure from the paper are shown during a cold gas opening operation, which means that the switch was unloaded during the test. When certain loss factors have been included in the simulation, the simulation results correspond quite well with the measured pressures.
@@ -293,7 +295,7 @@ The temperature distribution in a plasma channel can be divided into three regio
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{Bilder/Theory/tempZonesArc.png}
-\caption{Radial temperature distribution in a plasma channel \cite{bib:TDCIGBB}.} \label{fig:tempDist1}
+\caption{Radial temperature distribution in a plasma channel (schematically) \cite{bib:TDCIGBB}.} \label{fig:tempDist1}
 \end{figure}
 
 Figure \ref{fig:tempDist2} shows how the temperature distribution varies with the electrical current. Due to radiation losses in the arc, the temperature has an upper limit of about 20 000 K to 30 000 K. At this point the cross-section of the arc will increase, rather than the temperature. However, it is not common for an LBS to experience these temperature ranges, and its temperature distribution will mainly be in the lower current ranges of figure \ref{fig:tempDist2}.
@@ -301,7 +303,7 @@ Figure \ref{fig:tempDist2} shows how the temperature distribution varies with th
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.85]{Bilder/Theory/plasmaChannel1.png}
-\caption{The radial temperature distribution in a plasma channel for different current magnitudes \cite{bib:HVEbreak}.} \label{fig:tempDist2}
+\caption{The radial temperature distribution in a plasma channel for different current magnitudes (schematically) \cite{bib:HVEbreak}.} \label{fig:tempDist2}
 \end{figure}
 
 \newpage
@@ -309,7 +311,7 @@ Figure \ref{fig:tempDist2} shows how the temperature distribution varies with th
 Most of the information in section \ref{sec:genDes} is collected from \textit{"Current Interruption in Power Grids"} by Magne Runde \cite{bib:HVEbreak} \newline
 
 \subsubsection{Static arcing voltage}
-It is common to distinguish an arc into two different types. The most relevant and realistic is called a dynamic arc, the other a static arc. A static arc can only be established when using DC current, and after any transients have died out. Therefore, static arcs are uncommon, and in nearly all switching operations the properties of the arc are best described by the dynamic arc model.
+It is common to distinguish the description of the arc into two different types. The most relevant and realistic is called a dynamic arc, the other a static arc. A static arc can only be established when using DC current, and after any transients have died out. Therefore, static arcs are uncommon, and in nearly all switching operations the properties of the arc are best described by the dynamic arc model.
 
 AC currents always generate a dynamic arc. This is because the current vary with time, and thereby the properties of the arc. In cases where DC current is used, but external factors like cooling varies over time, like in a puffer based switchgear, the arc is dynamic. When dealing with AC switchgear with a puffer based interruption method, the arc is always a dynamic arc. Due to the complexity of a dynamic arc, it is common to regard the arc to behave like a static arc within a certain time interval, and therefore some properties of a static arc will be described in this section. Dynamic arcs will be featured further in section \ref{sec:dynARC}.
 
@@ -326,9 +328,9 @@ As can be seen from figure \ref{fig:staticArcChar}, the characteristic is highly
 In figure \ref{fig:potDisArc}, the potential distribution of an electrical arc is illustrated. A static electrical arc might be regarded as divided into three regions:
 
 \begin{description}
-\item[Cathode region:] The voltage drop, $\mathrm{V_c}$, is usually around 20 V.
+\item[Cathode region:] The voltage drop, $\mathrm{V_c}$, is typically some 20 V.
 \item[Arc column:]	There is a constant electric field in this region, typical 1 V/mm.
-\item[Anode region:] The voltage drop, $\mathrm{V_a}$, is usually around 3 V.
+\item[Anode region:] The voltage drop, $\mathrm{V_a}$, is typically some 3 V.
 \end{description}
 
 \begin{figure}[H]
@@ -337,9 +339,7 @@ In figure \ref{fig:potDisArc}, the potential distribution of an electrical arc i
 \caption{Cross-section of a stationary arc and the corresponding potential distribution \cite{bib:HVEbreak}.} \label{fig:potDisArc}
 \end{figure}
 
-The description above is highly general, and the voltage distribution will vary depending on which gas the arc is burning in, as well as the current range and the electrode materials being used. Therefore, the potential distribution across a dynamic arc that burns in air for a typical current range of an LBS is analysed. The analysis is based on results from previously conducted tests performed with the test circuit presented in section \ref{sec:testCir}.
-
-Three interruption test, where a thermal re-ignition occurred after the first CZ and the second CZ, are selected. The pressure in the pressure chamber was held constant throughout the whole test, and was set to 1.0 bar upstream pressure. The RMS value of the current was 630 A, while the contact and nozzle geometry was the same for each of the three tests. In figure \ref{fig:threeTests}, the arcing voltage during the three chosen interruption tests is shown.
+The description above is highly general, and the voltage distribution will vary depending on which gas the arc is burning in, as well as the current range and the electrode materials being used. Therefore, the potential distribution across a dynamic arc that burns in air for a typical current range of an LBS is analysed. The analysis is based on results from previously conducted tests performed with the test circuit presented in section \ref{sec:testCir}. Three interruption test, where a thermal re-ignition occurred after the first CZ and the second CZ, are selected. The pressure in the pressure chamber was held constant throughout the whole test, and was set to 1.0 bar upstream pressure. The RMS value of the current was 630 A, while the contact and nozzle geometry was the same for each of the three tests. In figure \ref{fig:threeTests}, the arcing voltage during the three chosen interruption tests is shown.
 
 \begin{figure}[H]
 \centering
@@ -377,12 +377,12 @@ Thermal inertia causes the arc to "remember" the amplitude of the current that j
 \begin{figure}[H]
 \centering
 \includegraphics[scale=1]{Bilder/Theory/timeConstants.png}
-\caption{Voltage drop of an arc exposed to a current that follows a step function  \cite{bib:HVEbreak}.} \label{fig:timeConstantStep}
+\caption{Voltage drop of an arc exposed to a current that follows a step function (schematically) \cite{bib:HVEbreak}.} \label{fig:timeConstantStep}
 \end{figure}
 
 \begin{table}[H]
 \center
-\caption{Time constants in a 1 A arc burning in a 19 mm tube \cite{bib:HVEbreak}. }
+\caption{Time constants in a 1 A arc burning in a 19 mm tube (schematically) \cite{bib:HVEbreak}. }
 \begin{tabular}{|c|c|}
 \hline 
 Gas & Time constant [$\mu$s] \\ 
@@ -461,7 +461,7 @@ As described in this section, the probability of thermal re-ignition can depend 
 \subsection{Air flow considerations}
 During the interruption process, a puffer based switch uses a piston to drive an air flow to quench the arc. The energy loss from the arc is transported away by this air flow as described in section \ref{sec:HeatTransport}. The efficiency of the cooling depends on the speed and mass of the air flow, as well as how the flow is guided onto the arc. In figure \ref{fig:airPressurePuffer2}, a typical pressure during interruption in the pressure chamber of an LBS is illustrated. However, in the test switch presented in section \ref{sec:testSwitchandContact} and used in the interruption tests conducted in this report, the pressure is more or less constant throughout the whole interruption process. This is because it uses a large pressure reservoir rather than a piston to drive the air flow.
 
-The mass flow ,$\dot{m}$, of air through the nozzle can in most interruption cases be regarded as conserved, and is presented in equation \eqref{eq:massFlow}. The mass density ,$\rho$, depends on pressure and temperature, while the volume flow ,\textit{Q}, depends on speed and area, as presented in equation \eqref{eq:volumeFlow}.
+The mass flow, $\dot{m}$, of air through the nozzle can in most interruption cases be regarded as conserved, and is presented in equation \eqref{eq:massFlow}. The mass density, $\rho$, depends on pressure and temperature, while the volume flow, \textit{Q}, depends on speed and area, as presented in equation \eqref{eq:volumeFlow}.
 
 \begin{equation} \label{eq:massFlow}
 \dot{m}=\rho Q
@@ -471,7 +471,7 @@ The mass flow ,$\dot{m}$, of air through the nozzle can in most interruption cas
 Q=\int v \ dA
 \end{equation}
 
-In equation \eqref{eq:volumeFlow}, the area ,\textit{A}, is the cross-section area of the nozzle if considering the volume flow rate in a nozzle. This will vary depending on where in the nozzle the volume flow is calculated, as well as the arcing contact's position. The speed of the air flow ,$v$, depends on the pressure difference ,$\Delta p$, between the pressure chamber and the interruption chamber, and it will increase with an increasing pressure difference. An increase in air flow velocity will result in a greater mass flow, which if guided properly will lead to a more efficient cooling of the arc. In the test switch used during the experiments conducted in this report, the efficiency of the cooling can be set by adjusting the pressure in the pressure reservoir before interruption as described in section \ref{sec:testCir}.
+In equation \eqref{eq:volumeFlow}, the area, \textit{A}, is the cross-section area of the nozzle if considering the volume flow rate in a nozzle. This will vary depending on where in the nozzle the volume flow is calculated, as well as the arcing contact's position. The speed of the air flow, $v$, depends on the pressure difference, $\Delta p$, between the pressure chamber and the interruption chamber, and it will increase with an increasing pressure difference. An increase in air flow velocity will result in a greater mass flow, which if guided properly will lead to a more efficient cooling of the arc. In the test switch used during the experiments conducted in this report, the efficiency of the cooling can be set by adjusting the pressure in the pressure reservoir before interruption as described in section \ref{sec:testCir}.
 
 \cleardoublepage
 \section{Method}
