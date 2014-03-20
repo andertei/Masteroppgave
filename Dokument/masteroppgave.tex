@@ -519,7 +519,9 @@ L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A]
 \label{tab:testParameters}
 \end{table}
 
-A resistive transducer is measuring the contact position, while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar. A near-infrared (NIR) high-speed camera produced by Xeneth called Cheetah 1470, records the opening sequence of the switch and the arc that burns between the contacts with a frame rate of ?? fps.
+A resistive transducer is measuring the contact position, while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test with an accuracy of 0.01 bar. 
+
+A near-infrared (NIR) high-speed camera produced by Xeneth called Cheetah 1470, records the opening sequence of the switch and the arc that burns between the contacts with a frame rate of ?? fps, with an integration time of 1.5 $\mu$s and a resolution of $384 \times 120$. The camera lens used is a 75 mm Apochromat Kiroptik Paris Nr. 99585, with an adjustable f-number set to f/16. %In appendix \ref{app:softwareSettings} the relevant software settings for the camera can be seen.??
 
 \subsection{The switch and contact geometry} \label{sec:testSwitchandContact}
 This experiment is conducted using copper-tungsten arcing contacts, polytetraflourelthylene (PTFE) nozzles, and air as interrupting medium. Copper-tungsten arcing contacts and a PTFE nozzle is commonly applied in commercial LBSs, and is therefore used in this experiment. PTFE is also chemically stable during the arcing time, which prohibits vaporisation products from the nozzle to influence the interruption capabilities of the test switch. As mentioned in section \ref{sec:InterruptCurrent} copper-tungsten is applied because it is highly resistant from stresses from the arc. The system is an open system, with the surrounding air at atmospheric pressure, \textit{p$_0$}, and a six-litre tank with a pre-filled upstream overpressure, \textit{p$_u$}, used during the interruption process to quench the arc. It is possible to adjust the upstream pressure, contact speed, and position at current zero (CZ) independently, as well as the contact and nozzle geometry. The current and TRV can be manipulated by changing the parameters of the laboratory test circuit, as described in section \ref{sec:testCir}.
@@ -748,7 +750,7 @@ The pin is cleaned, polished, and greased between each test to ensure a smooth s
 
 
 \cleardoublepage
-\section{Appendix: Previous relevant experiment} \label{app:PrevReleEx}
+\section{Appendix: Software settings for Cheetah 1470} \label{app:softwareSettings}
 \makeatletter 
 \renewcommand{\thefigure}{B.\@arabic\c@figure}
 \makeatother
