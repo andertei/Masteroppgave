@@ -341,8 +341,8 @@ disp('Starting: Calculating average');
 fflush(stdout);
 %Calculating the sum of the five data sections
 SUM_2=[sum(output_ONE_OK),sum(output_TWO_OK),sum(output_THREE_OK),sum(output_FOUR_OK),sum(output_FIVE_OK)];
-[m,i]=max(SUM_1);
-[n,j]=min(SUM_1);
+[m,i]=max(SUM_2);
+[n,j]=min(SUM_2);
 %Calculating average of the five data sections
 
 r=1;
