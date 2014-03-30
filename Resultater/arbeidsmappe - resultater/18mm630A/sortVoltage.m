@@ -11,10 +11,11 @@ disp('Starting: Loading data');
 test_ONE=load('136_pos17_TR_TR.lvm');
 test_TWO=load('073_pos19_TR_TR.lvm');
 test_THREE=load('130_pos18_TR_TR.lvm');
-test_FOUR=load('126_pos18_TR_OK.lvm');
-test_FIVE=load('124_pos18_TR_OK.lvm');
+test_FOUR=load('143_pos18_TR_TR.lvm'); %load('126_pos18_TR_OK.lvm'); %
+test_FIVE=load('080_pos17_TR_TR.lvm'); %load('153_pos17_TR_TR_TR_OK.lvm'); %
 disp('Loading data: OK!');
 %fflush(stdout);
+test_FIVE(:,2)=test_FIVE(:,2).*-1;
 %Smoothing the datas, wnd decides the grade og smoothing. 
 disp('Starting: Smoothing data sections');
 %fflush(stdout);
@@ -41,8 +42,8 @@ disp('Starting: Calculating extremal points');
 [m,h]=max(diffV3); 
 [m,y]=max(diffV4);
 [m,t]=max(diffV5);
-y=y-49125;
-t=t-49100;
+%y=y-49125;
+%t=t-49100;
 
 %Findes where the max and min peak of the data section are
 [m,k]=max(output_ONE);
@@ -72,14 +73,14 @@ test_TWO(:,1)=test_TWO(:,1)+(test_ONE(l,1)-test_TWO(p,1)); %tidsforskyver, med h
 test_THREE(:,1)=test_THREE(:,1)+(test_ONE(l,1)-test_THREE(z,1)); %tidsforskyver, med hensyn på minpunkt
 
 %Time shifts ONE and FOUR
-test_FOUR(:,1)=test_FOUR(:,1)+(test_ONE(i,1)-test_FOUR(y,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+%test_FOUR(:,1)=test_FOUR(:,1)+(test_ONE(i,1)-test_FOUR(y,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
 %test_FOUR(:,1)=test_FOUR(:,1)+(test_ONE(k,1)-test_FOUR(w,1)); %tidsforskyver, med hensyn på topppunkt
-%test_FOUR(:,1)=test_FOUR(:,1)+(test_ONE(l,1)-test_FOUR(x,1)); %tidsforskyver, med hensyn på minpunkt
+test_FOUR(:,1)=test_FOUR(:,1)+(test_ONE(l,1)-test_FOUR(x,1)); %tidsforskyver, med hensyn på minpunkt
 
 %Time shifts ONE and FIVE
-test_FIVE(:,1)=test_FIVE(:,1)+(test_ONE(i,1)-test_FIVE(t,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+%test_FIVE(:,1)=test_FIVE(:,1)+(test_ONE(i,1)-test_FIVE(t,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
 %test_FIVE(:,1)=test_FIVE(:,1)+(test_ONE(k,1)-test_FIVE(a,1)); %tidsforskyver, med hensyn på topppunkt
-%test_FIVE(:,1)=test_FIVE(:,1)+(test_ONE(l,1)-test_FIVE(c,1)); %tidsforskyver, med hensyn på minpunkt
+test_FIVE(:,1)=test_FIVE(:,1)+(test_ONE(l,1)-test_FIVE(c,1)); %tidsforskyver, med hensyn på minpunkt
 
 disp('Time shifting data sections: OK!');
 disp('Starting: Plotting data');
@@ -106,10 +107,10 @@ SUM_1=[sum(output_ONE),sum(output_TWO),sum(output_THREE),sum(output_FOUR),sum(ou
 [m,i]=max(SUM_1);
 [n,j]=min(SUM_1);
 %Calculating average of the five data sections
-
+j=2;
 r=1;
-for r=120000:(length(output_ONE)-120000)
-	average_Output(r)=(output_ONE(r)+output_TWO(r+(p-l))+output_THREE(r+(z-l))+output_FOUR(r+(y-i))+output_FIVE(r+(t-i)))./5;
+for r=50500:(length(output_ONE)-50500)
+	average_Output(r)=(output_ONE(r)+output_TWO(r+(p-l))+output_THREE(r+(z-l))+output_FOUR(r+(x-l))+output_FIVE(r+(c-l)))./5;
 end
 disp('Calculating average: OK!');
 %fflush(stdout);
@@ -118,32 +119,32 @@ disp('Calculating average: OK!');
 disp('Starting: Plotting voltage average');
 %fflush(stdout);
 r=1;
-g=120000;
+g=50500;
 testTime=1:length(average_Output);
 for r=1:length(average_Output)
 	testTime(r)=test_ONE(g,1);
 	g=g+1;
 end
 r=1;
-g=120000;
+g=50500;
 for r=1:length(average_Output)
 	testTime2(r)=test_TWO(g,1);
 	g=g+1;
 end
 r=1;
-g=120000;
+g=50500;
 for r=1:length(average_Output)
 	testTime3(r)=test_THREE(g,1);
 	g=g+1;
 end
 r=1;
-g=120000;
+g=50500;
 for r=1:length(average_Output)
 	testTime4(r)=test_FOUR(g,1);
 	g=g+1;
 end
 r=1;
-g=120000;
+g=50500;
 for r=1:length(average_Output)
 	testTime5(r)=test_FIVE(g,1);
 	g=g+1;
@@ -155,61 +156,61 @@ ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
 hold on
 if i==1
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_ONE_inter(r)=output_ONE(r);
     end
     plot(testTime,output_ONE_inter,'r');
 end
 if i==2
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_TWO_inter(r)=output_TWO(r);
     end
     plot(testTime2,output_TWO_inter,'r');
 end
 if i==3
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_THREE_inter(r)=output_THREE(r);
     end
     plot(testTime3,output_THREE_inter,'r');  
 end
 if i==4
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_FOUR_inter(r)=output_FOUR(r);
     end
     plot(testTime4,output_FOUR_inter,'r');
 end
 if i==5
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_FIVE_inter(r)=output_FIVE(r);
     end    
     plot(testTime5,output_FIVE_inter,'r');
 end
 if j==1
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_ONE_inter(r)=output_ONE(r);
     end    
     plot(testTime,output_ONE_inter,'g');
 end
 if j==2
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_TWO_inter(r)=output_TWO(r);
     end
     plot(testTime2,output_TWO_inter,'g');
 end
 if j==3
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_THREE_inter(r)=output_THREE(r);
     end    
     plot(testTime3,output_THREE_inter,'g');  
 end
 if j==4
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_FOUR_inter(r)=output_FOUR(r);
     end    
     plot(testTime4,output_FOUR_inter,'g');
 end
 if j==5
-    for r=120000:(length(output_ONE)-120000)
+    for r=50500:(length(output_ONE)-50500)
 	output_FIVE_inter(r)=output_FIVE(r);
     end    
     plot(testTime5,output_FIVE_inter,'g');
@@ -251,8 +252,8 @@ disp('Calcultaing standard deviation: OK!');
 %Loading the different data sections
 disp('Starting: Loading data 2');
 %fflush(stdout);
-test_ONE_OK=load('110_pos18_OK.lvm');
-test_TWO_OK=load('115_pos18_Ok.lvm');
+test_ONE_OK=load('115_pos18_Ok.lvm');
+test_TWO_OK=load('110_pos18_OK.lvm');
 test_THREE_OK=load('152_pos18_OK.lvm');
 test_FOUR_OK=load('144_pos17_OK.lvm');
 test_FIVE_OK=load('137_pos19_OK.lvm');
@@ -290,9 +291,13 @@ disp('Starting: Calculating extremal points');
 %Findes where the max and min peak of the data section are
 [m,k]=max(output_ONE_OK);
 [m,o]=max(output_TWO_OK);
+o=o+650;
 [m,q]=max(output_THREE_OK);
+q=q+100;
 [m,w]=max(output_FOUR_OK);
+w=w-100;
 [m,a]=max(output_FIVE_OK);
+a=a-450;
 
 [m,l]=min(output_ONE_OK);
 [m,p]=min(output_TWO_OK);
@@ -305,23 +310,23 @@ disp('Starting: Time shifting data sections');
 %fflush(stdout);
 %Time shifts the graphs, so that the CZ occures at the same moment. Different methodes can be used by changing the %.
 %Time shifts ONE and TWO
-test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(f,1)-test_TWO_OK(d,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
-%test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(k,1)-test_TWO_OK(o,1)); %tidsforskyver, med hensyn på topppunkt
+%test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(f,1)-test_TWO_OK(d,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(k,1)-test_TWO_OK(o,1)); %tidsforskyver, med hensyn på topppunkt
 %test_TWO_OK(:,1)=test_TWO_OK(:,1)+(test_ONE_OK(l,1)-test_TWO_OK(p,1)); %tidsforskyver, med hensyn på minpunkt
 
 %Time shifts ONE and THREE
-test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(f,1)-test_THREE_OK(h,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
-%test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(k,1)-test_THREE_OK(q,1)); %tidsforskyver, med hensyn på topppunkt
+%test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(f,1)-test_THREE_OK(h,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(k,1)-test_THREE_OK(q,1)); %tidsforskyver, med hensyn på topppunkt
 %test_THREE_OK(:,1)=test_THREE_OK(:,1)+(test_ONE_OK(l,1)-test_THREE_OK(z,1)); %tidsforskyver, med hensyn på minpunkt
 
 %Time shifts ONE and FOUR
-test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(f,1)-test_FOUR_OK(y,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
-%test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(k,1)-test_FOUR_OK(w,1)); %tidsforskyver, med hensyn på topppunkt
+%test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(f,1)-test_FOUR_OK(y,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(k,1)-test_FOUR_OK(w,1)); %tidsforskyver, med hensyn på topppunkt
 %test_FOUR_OK(:,1)=test_FOUR_OK(:,1)+(test_ONE_OK(l,1)-test_FOUR_OK(x,1)); %tidsforskyver, med hensyn på minpunkt
 
 %Time shifts ONE and FIVE
-test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(f,1)-test_FIVE_OK(t,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
-%test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(k,1)-test_FIVE_OK(a,1)); %tidsforskyver, med hensyn på topppunkt
+%test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(f,1)-test_FIVE_OK(t,1)); %tidsforskyver, slik at maks derivert kommer på samme plass.
+test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(k,1)-test_FIVE_OK(a,1)); %tidsforskyver, med hensyn på topppunkt
 %test_FIVE_OK(:,1)=test_FIVE_OK(:,1)+(test_ONE_OK(l,1)-test_FIVE_OK(c,1)); %tidsforskyver, med hensyn på minpunkt
 disp('Time shifting data sections: OK!');
 disp('Starting: Plotting data');
@@ -351,7 +356,7 @@ SUM_2=[sum(output_ONE_OK),sum(output_TWO_OK),sum(output_THREE_OK),sum(output_FOU
 
 r=1;
 for r=25000:(length(output_ONE_OK)-25000)
-	average_Output_OK(r)=(output_ONE_OK(r)+output_TWO_OK(r+(d-f))+output_THREE_OK(r+(h-f))+output_FOUR_OK(r+(y-f))+output_FIVE_OK(r+(t-f)))./5;
+	average_Output_OK(r)=(output_ONE_OK(r)+output_TWO_OK(r+(o-k))+output_THREE_OK(r+(q-k))+output_FOUR_OK(r+(w-k))+output_FIVE_OK(r+(a-k)))./5;
 end
 disp('Calculating average: OK!');
 %fflush(stdout);
@@ -394,6 +399,8 @@ for r=1:length(average_Output_OK)
 	testTime5(r)=test_FIVE_OK(g,1);
 	g=g+1;
 end
+j=1;
+i=5;
 figure(4);
 plot(testTime,average_Output_OK,'b');
 xlabel('Time [s]');
