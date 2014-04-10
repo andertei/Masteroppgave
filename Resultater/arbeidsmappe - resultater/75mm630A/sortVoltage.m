@@ -18,11 +18,11 @@ disp('Loading data: OK!');
 %Smoothing the datas, wnd decides the grade og smoothing. 
 disp('Starting: Smoothing data sections');
 %fflush(stdout);
-wnd = 200;output_ONE = filter(ones(wnd, 1)/wnd, 1, test_ONE(:,2));
-wnd = 200;output_TWO = filter(ones(wnd, 1)/wnd, 1, test_TWO(:,2));
-wnd = 200;output_THREE = filter(ones(wnd, 1)/wnd, 1, test_THREE(:,2));
-wnd = 200;output_FOUR = filter(ones(wnd, 1)/wnd, 1, test_FOUR(:,2));
-wnd = 200;output_FIVE = filter(ones(wnd, 1)/wnd, 1, test_FIVE(:,2)); 
+wnd = 100;output_ONE = filter(ones(wnd, 1)/wnd, 1, test_ONE(:,2));
+wnd = 100;output_TWO = filter(ones(wnd, 1)/wnd, 1, test_TWO(:,2));
+wnd = 100;output_THREE = filter(ones(wnd, 1)/wnd, 1, test_THREE(:,2));
+wnd = 100;output_FOUR = filter(ones(wnd, 1)/wnd, 1, test_FOUR(:,2));
+wnd = 100;output_FIVE = filter(ones(wnd, 1)/wnd, 1, test_FIVE(:,2)); 
 disp('Smoothing data sections: OK!');
 %fflush(stdout);
 %Findes the derivatives of the data section
@@ -258,11 +258,11 @@ disp('Loading data 2: OK!');
 %Smoothing the datas, wnd decides the grade og smoothing. wnd=500 lit for grov, men funker ok når den bryter.
 disp('Starting: Smoothing data sections');
 %fflush(stdout);
-wnd = 200;output_ONE_OK = filter(ones(wnd, 1)/wnd, 1, test_ONE_OK(:,2));
-wnd = 200;output_TWO_OK = filter(ones(wnd, 1)/wnd, 1, test_TWO_OK(:,2));
-wnd = 200;output_THREE_OK = filter(ones(wnd, 1)/wnd, 1, test_THREE_OK(:,2));
-wnd = 200;output_FOUR_OK = filter(ones(wnd, 1)/wnd, 1, test_FOUR_OK(:,2));
-%wnd = 200;output_FIVE_OK = filter(ones(wnd, 1)/wnd, 1, test_FIVE_OK(:,2)); 
+wnd = 100;output_ONE_OK = filter(ones(wnd, 1)/wnd, 1, test_ONE_OK(:,2));
+wnd = 100;output_TWO_OK = filter(ones(wnd, 1)/wnd, 1, test_TWO_OK(:,2));
+wnd = 100;output_THREE_OK = filter(ones(wnd, 1)/wnd, 1, test_THREE_OK(:,2));
+wnd = 100;output_FOUR_OK = filter(ones(wnd, 1)/wnd, 1, test_FOUR_OK(:,2));
+%wnd = 100;output_FIVE_OK = filter(ones(wnd, 1)/wnd, 1, test_FIVE_OK(:,2)); 
 disp('Smoothing data sections: OK!');
 %fflush(stdout);
 
