@@ -646,17 +646,41 @@ The pin is cleaned, polished, and greased between each test to ensure a smooth s
 \cleardoublepage
 
 \section{Results}
-\subsection{Interruption tests} 
+\subsection{Interruption tests}
+\subsubsection{Interpretation of interruption results}
+In the following section interruption results from the tests conducted on all the three geometries is presented. For each interruption test there are two final outcomes: success or failure. The end result is determined by the interruption outcome from the first or second CZ. At the first CZ the interruption can succeed or a re-ignition can occur, a re-ignition can be thermal or dielectric. Given a re-ignition in the first CZ, the current can be interrupted at the second CZ or another re-ignition can occur. The outcomes are explained by figure \ref{fig:flowchart}. The most common re-ignition is a thermal re-ignition and experience has also indicated that in practical interruption cases thermal re-ignitions are the most demanding tasks for load break switches in the 24 kV 630 A class \cite{bib:AFIMVLBA}. However, a few dielectric re-ignition was observed for geometry \textbf{a} and \textbf{b} at the first CZ. 
 
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.55]{Bilder/Results/outcomeinterruption.png}
+\caption{Flowchart over different interruption outcomes.} \label{fig:flowchart}
+\end{figure}
+
+In figure \ref{fig:CurrentAndVoltageWaveform}, the current and voltage during an unsuccessful and a successful interruption are shown for a 630 A 24 kV test. The upper plot illustrates a thermal re-ignition, as the plot illustrates; the current is almost unaffected of the interruption attempt and continues as normal after the CZ. The lower plot is illustrating a successful interruption, where the current has stopped flowing after CZ and a TRV has raised between the contact members. In figure \ref{fig:CurrentAndVoltageDRWaveform}, the voltage and current during a dielectric re-ignition are shown for a 880 A 24 kV test. As can be seen from the figure the current stops flowing for more than one millisecond before the electrical field caused by the TRV that has raised between the contact members becomes too strong and causes an electrical breakdown of the air. Then the current continues to flow and will quickly obtain the sinusoidal form set by the supply side of the switch. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.32]{Bilder/Results/differentInterruptions.png}
+\caption{Current and voltage waveforms near CZ for a thermal re-ignition and a successful interruption \cite{bib:AFIMVLBA}.} \label{fig:CurrentAndVoltageWaveform}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Bilder/Results/DRplot2.png}
+\caption{Current and voltage waveforms near CZ for a dielectric re-ignition.} \label{fig:CurrentAndVoltageDRWaveform}
+\end{figure}
 
 \newpage
 \subsection{Arcing voltage}
+\subsubsection{Comparison}
+\subsubsection{Dielectric re-ignition} \label{sec:dielectricReIgnitionResults}
 
 
 \newpage
-\subsection{Durability of the arcing contacts} \label{sec:durability}
+\subsection{Voltage drop} \label{sec:durability}
 
-
+\newpage
+\subsection{Statistical evaluation}
 
 \cleardoublepage
 

@@ -3,20 +3,20 @@ clear all
 format long
 
 %For å bytte ut komma: sed -i.backup 's/[,]/./g' filnavnetditt.txt
-%If this script is run in matlab, comment out fflush. in Octave use the
+%If this script is run in matlab, comment out %fflush. in Octave use the
 %fflyuh function to write out run info on the screen.
 %Loading the different data sections
 
 disp('Starting: Loading data');
-fflush(stdout);
+%fflush(stdout);
 test_TWO=load('125_d4_D10_TR.lvm');
 test_THREE=load('127_d4_D10_TR.lvm');
 test_FOUR=load('128_d4_D10_TR.lvm');
 disp('Loading data: OK!');
-fflush(stdout);
+%fflush(stdout);
 
 disp('Starting: Smoothing data sections');
-fflush(stdout);
+%fflush(stdout);
 wnd = 200;output_TWO = filter(ones(wnd, 1)/wnd, 1, test_TWO(:,2));
 wnd = 200;output_THREE = filter(ones(wnd, 1)/wnd, 1, test_THREE(:,2));
 wnd = 200;output_FOUR = filter(ones(wnd, 1)/wnd, 1, test_FOUR(:,2));
@@ -25,13 +25,13 @@ disp('Smoothing data sections: OK!');
 
 %Findes the derivatives of the data section
 disp('Staring: Derivate data sections');
-fflush(stdout);
+%fflush(stdout);
 diffV2=diff(output_TWO);
 diffV3=diff(output_THREE);
 diffV4=diff(output_FOUR);
 disp('Derivate data sections: OK!');
 disp('Starting: Calculating extremal points');
-fflush(stdout);
+%fflush(stdout);
 [m,j]=max(diffV2);
 [m,h]=max(diffV3); 
 [m,y]=max(diffV4);
@@ -46,7 +46,7 @@ fflush(stdout);
 [m,x]=min(output_FOUR);
 disp('Calculating extremal points:OK!');
 disp('Starting: Time shifting data sections');
-fflush(stdout);
+%fflush(stdout);
 %Time shifts the graphs, so that the CZ occures at the same moment. Different methodes can be used by changing the %.
 
 
@@ -79,11 +79,11 @@ for r=1000:(length(output_TWO)-1000)
 	average_Output(r)=(output_TWO(r)+output_THREE(r+(z-p))+output_FOUR(r+(x-p)))./3;
 end
 disp('Calculating average: OK!');
-fflush(stdout);
+%fflush(stdout);
 
 %Plotting the average
 disp('Starting: Plotting voltage average');
-fflush(stdout);
+%fflush(stdout);
 r=1;
 g=1000;
 testTime=1:length(average_Output);
