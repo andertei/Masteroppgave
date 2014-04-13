@@ -19,11 +19,11 @@ test_FIVE(:,2)=test_FIVE(:,2).*-1;
 %Smoothing the datas, wnd decides the grade og smoothing. 
 disp('Starting: Smoothing data sections');
 %fflush(stdout);
-wnd = 200;output_ONE = filter(ones(wnd, 1)/wnd, 1, test_ONE(:,2));
-wnd = 200;output_TWO = filter(ones(wnd, 1)/wnd, 1, test_TWO(:,2));
-wnd = 200;output_THREE = filter(ones(wnd, 1)/wnd, 1, test_THREE(:,2));
-wnd = 200;output_FOUR = filter(ones(wnd, 1)/wnd, 1, test_FOUR(:,2));
-wnd = 200;output_FIVE = filter(ones(wnd, 1)/wnd, 1, test_FIVE(:,2)); 
+wnd = 150;output_ONE = filter(ones(wnd, 1)/wnd, 1, test_ONE(:,2));
+wnd = 150;output_TWO = filter(ones(wnd, 1)/wnd, 1, test_TWO(:,2));
+wnd = 150;output_THREE = filter(ones(wnd, 1)/wnd, 1, test_THREE(:,2));
+wnd = 150;output_FOUR = filter(ones(wnd, 1)/wnd, 1, test_FOUR(:,2));
+wnd = 150;output_FIVE = filter(ones(wnd, 1)/wnd, 1, test_FIVE(:,2)); 
 disp('Smoothing data sections: OK!');
 %fflush(stdout);
 %Findes the derivatives of the data section
@@ -57,7 +57,9 @@ disp('Starting: Calculating extremal points');
 [m,z]=min(output_THREE);
 z=z+250;
 [m,x]=min(output_FOUR);
+x=x-140;
 [m,c]=min(output_FIVE);
+c=c-220;
 disp('Calculating extremal points:OK!');
 disp('Starting: Time shifting data sections');
 %fflush(stdout);
@@ -263,11 +265,11 @@ disp('Loading data 2: OK!');
 %Smoothing the datas, wnd decides the grade og smoothing. wnd=500 lit for grov, men funker ok når den bryter.
 disp('Starting: Smoothing data sections');
 %fflush(stdout);
-wnd = 200;output_ONE_OK = filter(ones(wnd, 1)/wnd, 1, test_ONE_OK(:,2));
-wnd = 200;output_TWO_OK = filter(ones(wnd, 1)/wnd, 1, test_TWO_OK(:,2));
-wnd = 200;output_THREE_OK = filter(ones(wnd, 1)/wnd, 1, test_THREE_OK(:,2));
-wnd = 200;output_FOUR_OK = filter(ones(wnd, 1)/wnd, 1, test_FOUR_OK(:,2));
-wnd = 200;output_FIVE_OK = filter(ones(wnd, 1)/wnd, 1, test_FIVE_OK(:,2)); 
+wnd = 150;output_ONE_OK = filter(ones(wnd, 1)/wnd, 1, test_ONE_OK(:,2));
+wnd = 150;output_TWO_OK = filter(ones(wnd, 1)/wnd, 1, test_TWO_OK(:,2));
+wnd = 150;output_THREE_OK = filter(ones(wnd, 1)/wnd, 1, test_THREE_OK(:,2));
+wnd = 150;output_FOUR_OK = filter(ones(wnd, 1)/wnd, 1, test_FOUR_OK(:,2));
+wnd = 150;output_FIVE_OK = filter(ones(wnd, 1)/wnd, 1, test_FIVE_OK(:,2)); 
 disp('Smoothing data sections: OK!');
 %fflush(stdout);
 
@@ -291,13 +293,13 @@ disp('Starting: Calculating extremal points');
 %Findes where the max and min peak of the data section are
 [m,k]=max(output_ONE_OK);
 [m,o]=max(output_TWO_OK);
-o=o+650;
+o=o+680;
 [m,q]=max(output_THREE_OK);
-q=q+100;
+q=q+120;
 [m,w]=max(output_FOUR_OK);
-w=w-100;
+w=w-60;
 [m,a]=max(output_FIVE_OK);
-a=a-450;
+a=a-400;
 
 [m,l]=min(output_ONE_OK);
 [m,p]=min(output_TWO_OK);
