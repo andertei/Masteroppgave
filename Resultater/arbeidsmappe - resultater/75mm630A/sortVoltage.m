@@ -511,7 +511,7 @@ hold off
 for i=1:length(average_Output_OK)
     average_Output_2(i)=average_Output(i);
 end
-testTimeAve=testTime+6.500000000000062e-02;
+testTimeAve=testTime+6.700000000000062e-02+4e-3;
 figure(5);
 plot(testTime,average_Output_2,'b');
 xlabel('Time [ms]');
