@@ -310,7 +310,7 @@ Figure \ref{fig:tempDist2} shows how the temperature distribution varies with th
 \subsection{Arcing voltage}
 Most of the information in section \ref{sec:genDes} is collected from \textit{"Current Interruption in Power Grids"} by Magne Runde \cite{bib:HVEbreak} \newline
 
-\subsubsection{Static arcing voltage}
+\subsubsection{Static arcing voltage} \label{sec:staticArcVoltage}
 It is common to distinguish the description of the arc into two different types. The most relevant and realistic is called a dynamic arc, the other a static arc. A static arc can only be established when using DC current, and after any transients have died out. Therefore, static arcs are uncommon, and in nearly all switching operations the properties of the arc are best described by the dynamic arc model.
 
 AC currents always generate a dynamic arc. This is because the current vary with time, and thereby the properties of the arc. In cases where DC current is used, but external factors like cooling varies over time, like in a puffer based switchgear, the arc is dynamic. When dealing with AC switchgear with a puffer based interruption method, the arc is always a dynamic arc. Due to the complexity of a dynamic arc, it is common to regard the arc to behave like a static arc within a certain time interval, and therefore some properties of a static arc will be described in this section. Dynamic arcs will be featured further in section \ref{sec:dynARC}.
@@ -790,6 +790,24 @@ For the 880 A current interruption test, geometry \textbf{c} was considerably be
 
 \newpage
 \subsection{Arcing voltage}
+For geometry \textbf{c} the arcing voltage was monitored during the 630 A interruption tests at an over-pressure of 0.3 bar to see if a difference in arcing voltage could be observed between successful and unsuccessful interruptions. Two test series where conducted, one where the second CZ occurred when the pin's position was at approximately x=75 mm. The data collected for the second test where collected when the pin was inside the nozzle at approximately x=18 mm. The data presented in this section has been processed in matlab, where the arcing voltage has been smoothed to remove measuring noise and aligned so that the CZ occurs at the same time for all the collected data in a test. 
+
+For the test series with a second CZ at x=75 mm, nine interruption tests where performed in total. Five tests had a thermal re-ignition, and four tests successfully interrupted at the CZ. As described in section \ref{sec:staticArcVoltage} the length of the arc influences the arcing voltage, therefore interruption attempts that was not in the area of interest (x=75 $\pm$ 3 mm) were discard. Even though many tests where conducted, five successful interruptions in the region of interests was not obtained. This resulted in that only four successful interruptions where included in the data for the x=75 mm arcing voltage test.
+
+In figure \ref{fig:75mmUnSuccessful} the arcing voltage for five interruption tests at 0.3 bar over-pressure and a current of 630 A is shown. All the five tests experienced a thermal re-ignition at the second CZ, which occurred at approximately  x=75 mm. The four successful interruptions is displayed in figure \ref{fig:75mmSuccessful}. As argued in section \ref{sec:TherMalReConsid} it is the last 100 $\mu$s before the CZ that it the most crucial if a thermal re-ignition is to be avoided. Therefore, the plots shown in the figures below consists of this time span. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6, angle =0 ]{Bilder/Results/ArcingVoltage_75_reIgnition.png}
+\caption{The arcing voltage for five interruption tests at 0.3 bar over-pressure and a current of 630 A. All the five tests experienced a thermal re-ignition at the second CZ, which occurred at approximately  x=75 mm.} \label{fig:75mmUnSuccessful}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6, angle =0 ]{Bilder/Results/ArcingVoltage_75_none_reIgnition.png}
+\caption{The arcing voltage for four interruption tests at 0.3 bar over-pressure and a current of 630 A. All the four tests where interrupted successfully at the second CZ, which occurred at approximately  x=75 mm.} \label{fig:75mmSuccessful}
+\end{figure}
+
 \subsubsection{Comparison}
 \subsubsection{Dielectric re-ignition} \label{sec:dielectricReIgnitionResults}
 
