@@ -14,6 +14,12 @@ test_THREE=load('116_pos22_TR_TR.lvm');
 test_FOUR=load('120_pos22_TR_TR.lvm');
 test_FIVE=load('143_pos18_TR_TR.lvm');
 disp('Loading data: OK!');
+
+test_ONE(:,1)=test_ONE(:,1).*1000;
+test_TWO(:,1)=test_TWO(:,1).*1000;
+test_THREE(:,1)=test_THREE(:,1).*1000;
+test_FOUR(:,1)=test_FOUR(:,1).*1000;
+test_FIVE(:,1)=test_FIVE(:,1).*1000;
 %fflush(stdout);
 %Smoothing the datas, wnd decides the grade og smoothing. 
 disp('Starting: Smoothing data sections');
@@ -45,11 +51,11 @@ disp('Starting: Calculating extremal points');
 %Findes where the max and min peak of the data section are
 [m,k]=max(output_ONE);
 [m,o]=max(output_TWO);
-o=o+30;
+o=o-25;
 [m,q]=max(output_THREE);
-q=q-100;
+q=q-135;
 [m,w]=max(output_FOUR);
-w=w-100;
+w=w-140;
 [m,a]=max(output_FIVE);
 
 [m,l]=min(output_ONE);
@@ -57,7 +63,7 @@ w=w-100;
 [m,z]=min(output_THREE);
 [m,x]=min(output_FOUR);
 [m,c]=min(output_FIVE);
-c=c-50;
+c=c-55;
 disp('Calculating extremal points:OK!');
 disp('Starting: Time shifting data sections');
 %fflush(stdout);
@@ -87,7 +93,7 @@ disp('Starting: Plotting data');
 %Plotting the data
 figure(1);
 plot(test_ONE(:,1),output_ONE,'r');
-xlabel('Time [s]');
+xlabel('Time [ms]');
 ylabel('Arcing voltage [kV]');
 hold on
 plot(test_TWO(:,1),output_TWO,'b');
@@ -150,7 +156,7 @@ for r=1:length(average_Output)
 end
 figure(2);
 plot(testTime,average_Output,'b');
-xlabel('Time [s]');
+xlabel('Time [ms]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
 hold on
@@ -219,32 +225,32 @@ hold off
 
 %Calculating the spread of data
 disp('Starting: Calcultaing standard deviation');
-p_1=0.02; %this value  must be adjusted by looking at the plot
-p_2=p_1+0.0035; %the length of the area to integrate
-x_1=find(test_ONE(:,1)==p_1);
-x_2=find(test_ONE(:,1)==p_2);
-m=1;
-summer=1:5;
-sumAverage_Output=0;
-for k=1:length(summer)
-	summer(k)=0;
-end
-for m=x_1(1):x_2(1)
-	summer(1)=summer(1)+output_ONE(m);
-	summer(2)=summer(2)+output_TWO(m);
-	summer(3)=summer(3)+output_THREE(m);
-	summer(4)=summer(4)+output_FOUR(m);
-	summer(5)=summer(5)+output_FIVE(m);
-	sumAverage_Output=sumAverage_Output+average_Output(m);
-end
+%p_1=0.02; %this value  must be adjusted by looking at the plot
+%p_2=p_1+0.0035; %the length of the area to integrate
+%x_1=find(test_ONE(:,1)==p_1);
+%x_2=find(test_ONE(:,1)==p_2);
+%m=1;
+%summer=1:5;
+%sumAverage_Output=0;
+%for k=1:length(summer)
+%	summer(k)=0;
+%end
+%for m=x_1(1):x_2(1)
+%	summer(1)=summer(1)+output_ONE(m);
+%	summer(2)=summer(2)+output_TWO(m);
+%	summer(3)=summer(3)+output_THREE(m);
+%	summer(4)=summer(4)+output_FOUR(m);
+%	summer(5)=summer(5)+output_FIVE(m);
+%	sumAverage_Output=sumAverage_Output+average_Output(m);
+%end
 
-summer=abs(summer);
-sumAverage_Output=abs(sumAverage_Output);
+%summer=abs(summer);
+%sumAverage_Output=abs(sumAverage_Output);
 %Standard deviation
-Spread=0;
-Spread=sqrt(((summer(1)-sumAverage_Output)^2+(summer(2)-sumAverage_Output)^2+(summer(3)-sumAverage_Output)^2+(summer(4)-sumAverage_Output)^2+(summer(5)-sumAverage_Output)^2)/4);
+%Spread=0;
+%Spread=sqrt(((summer(1)-sumAverage_Output)^2+(summer(2)-sumAverage_Output)^2+(summer(3)-sumAverage_Output)^2+(summer(4)-sumAverage_Output)^2+(summer(5)-sumAverage_Output)^2)/4);
 
-disp(Spread);
+%disp(Spread);
 
 disp('Calcultaing standard deviation: OK!');
 
@@ -259,6 +265,10 @@ test_FOUR_OK=load('126_pos18_TR_OK.lvm');
 disp('Loading data 2: OK!');
 %fflush(stdout);
 
+test_ONE_OK(:,1)=test_ONE_OK(:,1).*1000;
+test_TWO_OK(:,1)=test_TWO_OK(:,1).*1000;
+test_THREE_OK(:,1)=test_THREE_OK(:,1).*1000;
+test_FOUR_OK(:,1)=test_FOUR_OK(:,1).*1000;
 %Smoothing the datas, wnd decides the grade og smoothing. wnd=500 lit for grov, men funker ok når den bryter.
 disp('Starting: Smoothing data sections');
 %fflush(stdout);
@@ -283,7 +293,7 @@ disp('Starting: Calculating extremal points');
 %fflush(stdout);
 [m,f]=max(diffV1); 
 [m,d]=max(diffV2);
-d=d-0;
+d=d-1;
 [m,h]=max(diffV3); 
 [m,y]=max(diffV4);
 %[m,t]=max(diffV5);
@@ -300,7 +310,7 @@ d=d-0;
 [m,z]=min(output_THREE_OK);
 z=z-150;
 [m,x]=min(output_FOUR_OK);
-x=x+60;
+x=x+55;
 %[m,c]=min(output_FIVE_OK);
 disp('Calculating extremal points:OK!');
 
@@ -332,7 +342,7 @@ disp('Starting: Plotting data');
 %Plotting the data
 figure(3);
 plot(test_ONE_OK(:,1),output_ONE_OK,'r');
-xlabel('Time [s]');
+xlabel('Time [ms]');
 ylabel('Arcing voltage [kV]');
 hold on
 plot(test_TWO_OK(:,1),output_TWO_OK,'b');
@@ -400,7 +410,7 @@ end
 %end
 figure(4);
 plot(testTime,average_Output_OK,'b');
-xlabel('Time [s]');
+xlabel('Time [ms]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
 hold on
@@ -468,34 +478,45 @@ hold off
 %fflush(stdout);
 
 %Calculating the spread of data
-disp('Starting: Calcultaing standard deviation');
-p_1=0.0147; %this value  must be adjusted by looking at the plot
-p_2=p_1+0.0035; %the length of the area to integrate
-x_1=find(test_ONE(:,1)==p_1);
-x_2=find(test_ONE(:,1)==p_2);
-m=1;
-summer=1:4; %4=5
-sumAverage_Output=0;
-for k=1:length(summer)
-	summer(k)=0;
-end
-for m=x_1(1):x_2(1)
-	summer(1)=summer(1)+output_ONE_OK(m);
-	summer(2)=summer(2)+output_TWO_OK(m);
-	summer(3)=summer(3)+output_THREE_OK(m);
-	summer(4)=summer(4)+output_FOUR_OK(m);
+%disp('Starting: Calcultaing standard deviation');
+%p_1=0.0147; %this value  must be adjusted by looking at the plot
+%p_2=p_1+0.0035; %the length of the area to integrate
+%x_1=find(test_ONE(:,1)==p_1);
+%x_2=find(test_ONE(:,1)==p_2);
+%m=1;
+%summer=1:4; %4=5
+%sumAverage_Output=0;
+%for k=1:length(summer)
+%	summer(k)=0;
+%end
+%for m=x_1(1):x_2(1)
+%	summer(1)=summer(1)+output_ONE_OK(m);
+%	summer(2)=summer(2)+output_TWO_OK(m);
+%	summer(3)=summer(3)+output_THREE_OK(m);
+%	summer(4)=summer(4)+output_FOUR_OK(m);
 	%summer(5)=summer(5)+output_FIVE_OK(m);
-	sumAverage_Output=sumAverage_Output+average_Output_OK(m);
-end
+%	sumAverage_Output=sumAverage_Output+average_Output_OK(m);
+%end
 
-summer=abs(summer);
-sumAverage_Output=abs(sumAverage_Output);
+%summer=abs(summer);
+%sumAverage_Output=abs(sumAverage_Output);
 %Standard deviation
-Spread=0;
-Spread=sqrt(((summer(1)-sumAverage_Output)^2+(summer(2)-sumAverage_Output)^2+(summer(3)-sumAverage_Output)^2+(summer(4)-sumAverage_Output)^2)/3); %(summer(5)-sumAverage_Output)^2)/4);
+%Spread=0;
+%Spread=sqrt(((summer(1)-sumAverage_Output)^2+(summer(2)-sumAverage_Output)^2+(summer(3)-sumAverage_Output)^2+(summer(4)-sumAverage_Output)^2)/3); %(summer(5)-sumAverage_Output)^2)/4);
 
-disp(Spread);
+%disp(Spread);
 
-disp('Calcultaing standard deviation: OK!');
+%disp('Calcultaing standard deviation: OK!');
 
+for i=1:length(average_Output_OK)
+    average_Output_2(i)=average_Output(i);
+end
+testTimeAve=testTime+6.500000000000062e-02;
+figure(5);
+plot(testTime,average_Output_2,'b');
+xlabel('Time [ms]');
+ylabel('Average arcing voltage [kV]');
+disp('Plotting voltage average: OK!');
+hold on
+plot(testTimeAve,average_Output_OK,'r');
 disp('END');
