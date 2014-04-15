@@ -776,9 +776,9 @@ In figure \ref{fig:results880AgeoC}, the total interruption success rate for the
 
 \subsubsection{Comparison of test results for geometry \textbf{c} and geometry \textbf{d}}
 
-As stated in section \ref{sec:testSwitchandContact} geometry \textbf{c} is going to be compared to a previously tested geometry, denoted \textbf{d}. Geometry \textbf{d} was tested by Nina Sasaki Aanensen and the results was published in the article: "Air flow investigation for a medium voltage load break switch" \cite{bib:AFIMVLBA} (In this article geometry \textbf{d} was denoted as geometry \textbf{a}). However, it seems beneficial to the reader to compare the previously tested geometry \textbf{d} to geometry \textit{c} in the same figure. Therefore, a comparison of the total interruption success rate for geometry \textbf{c} to the previously tested geometry \textbf{d} are shown in figure \ref{fig:compgeoCandDAllcurrents}.
+As stated in section \ref{sec:testSwitchandContact} geometry \textbf{c} is going to be compared to a previously tested geometry, denoted \textbf{d}. Geometry \textbf{d} was tested by Nina Sasaki Aanensen and the results was published in the article: "Air flow investigation for a medium voltage load break switch" \cite{bib:AFIMVLBA} (In that article geometry \textbf{d} was denoted as geometry \textbf{a}). However, it seems beneficial to the reader to present the results from the previously tested geometry \textbf{d} to geometry \textbf{c} in the same figure. Therefore, a comparison of the total interruption success rate for geometry \textbf{c} to the previously tested geometry \textbf{d} are shown in figure \ref{fig:compgeoCandDAllcurrents}.
 
-Figure \ref{fig:compgeoCandDAllcurrents} illustrates that geometry \textbf{d} performed better than geometry \textbf{c} for the 630 A interruption tests. Geometry \textbf{d} interrupted all the tests at 0.3 bar over-pressure, while geometry \textbf{c} had a 100 \% interruption success rate at 0.4 bar over-pressure at 630 A. Geometry \textbf{c} had none successful interruptions at 0.25 bar over-pressure, while geometry \textbf{d} had 0 \% success rate at 0.2 bar over-pressure. The 50 \% interruption success rate for geometry \textbf{c} was at an over-pressure of approximately 0.28 bar over-pressure. Geometry \textbf{d} had a 50 \% interruption success rate at approximately 0.26 bar over-pressure.
+Figure \ref{fig:compgeoCandDAllcurrents} shows that geometry \textbf{d} performed overall better than geometry \textbf{c} for the 630 A interruption tests. Geometry \textbf{d} interrupted all the tests at 0.3 bar over-pressure, while geometry \textbf{c} had a 100 \% interruption success rate at 0.4 bar over-pressure at 630 A. Geometry \textbf{c} had none successful interruptions at 0.25 bar over-pressure, while geometry \textbf{d} had a 0 \% interruption success rate at 0.2 bar over-pressure. The 50 \% interruption success rate for geometry \textbf{c} was at an over-pressure of approximately 0.28 bar over-pressure. Geometry \textbf{d} had a 50 \% interruption success rate at approximately 0.26 bar over-pressure.
 
 For the 880 A current interruption test, geometry \textbf{c} was considerably better than geometry \textbf{d}. Geometry \textbf{c} interrupted all the tests at 0.5 bar over-pressure, which was the same pressure level where geometry \textbf{d} failed all the interruptions. Geometry \textbf{d} had a 100 \% interruption success rate at 0.6 bar over-pressure, and a 50 \% interruption success rate at about 0.55 bar over-pressure. Where geometry \textbf{c} failed all the interruptions at 0.35 bar over-pressure and had a 50 \% interruption success rate at approximately 0.425 bar.
 
@@ -790,9 +790,9 @@ For the 880 A current interruption test, geometry \textbf{c} was considerably be
 
 \newpage
 \subsection{Arcing voltage}
-For geometry \textbf{c} the arcing voltage was monitored during the 630 A interruption tests at an over-pressure of 0.3 bar to see if a difference in arcing voltage could be observed between successful and unsuccessful interruptions. Two test series where conducted, one where the second CZ occurred when the pin's position was at approximately x=75 mm. The data collected for the second test where collected when the pin was inside the nozzle at approximately x=18 mm. The data presented in this section has been processed in matlab, where the arcing voltage has been smoothed to remove measuring noise and aligned so that the CZ occurs at the same time for all the collected data in a test. 
+For geometry \textbf{c} the arcing voltage was monitored and stored during the 630 A interruption tests at an over-pressure of 0.3 bar to see if a difference in arcing voltage could be observed between successful and unsuccessful interruptions. Two test series where conducted, one where the second CZ occurred when the pin's position was at approximately x=75 mm and one where performed when the pin was inside the nozzle at approximately x=18 mm. The data presented in this section has been processed in matlab, where the arcing voltage has been smoothed to remove measuring noise and aligned so that the CZ occurs at the same time for all the collected arcing voltages in a test series. 
 
-For the test series with a second CZ at x=75 mm, nine interruption tests where performed in total. Five tests had a thermal re-ignition, and four tests successfully interrupted at the CZ. As described in section \ref{sec:staticArcVoltage} the length of the arc influences the arcing voltage, therefore interruption attempts that was not in the area of interest (x=75 $\pm$ 3 mm) were discard. Even though many tests where conducted, five successful interruptions in the region of interests was not obtained. This resulted in that only four successful interruptions where included in the data for the x=75 mm arcing voltage test.
+For the test series with a second CZ at x=75 mm, nine interruption tests where performed in total. Five tests had a thermal re-ignition, and four tests successfully interrupted at the second CZ. As described in section \ref{sec:staticArcVoltage} the length of the arc influences the arcing voltage, therefore interruption attempts that was not in the area of interest (x=75 $\pm$ 3 mm) were discard. Even though many tests where conducted, five successful interruptions in the region of interests was not obtained. This resulted in that only four successful interruptions where included in the data for the x=75 mm arcing voltage test.
 
 In figure \ref{fig:75mmUnSuccessful} the arcing voltage for five interruption tests at 0.3 bar over-pressure and a current of 630 A is shown. All the five tests experienced a thermal re-ignition at the second CZ, which occurred at approximately  x=75 mm. The four successful interruptions is displayed in figure \ref{fig:75mmSuccessful}. As argued in section \ref{sec:TherMalReConsid} it is the last 100 $\mu$s before the CZ that it the most crucial if a thermal re-ignition is to be avoided. Therefore, the plots shown in the figures below consists of this time span. 
 
@@ -808,7 +808,26 @@ In figure \ref{fig:75mmUnSuccessful} the arcing voltage for five interruption te
 \caption{The arcing voltage for four interruption tests at 0.3 bar over-pressure and a current of 630 A. All the four tests where interrupted successfully at the second CZ, which occurred at approximately  x=75 mm.} \label{fig:75mmSuccessful}
 \end{figure}
 
-\subsubsection{Comparison}
+Based on the results presented in figure \ref{fig:75mmUnSuccessful} and \ref{fig:75mmSuccessful}, the average arcing voltage for the two data series was calculated and presented in figure \ref{fig:75mmUnSuccessful_ave} and \ref{fig:75mmSuccessful_ave}. The two interruption tests from each of the data sets which had a arcing voltage that varied the most from the average arcing voltage is plotted together with the arcing voltage. The average arcing voltage is represented with a blue line, while the interruption test with the lowest arcing voltage is plotted with a red line. The green line represent the interruption test with the highest arcing voltage. In figure \ref{fig:75mm_both_ave} the two arcing voltages are plotted together. The green line is the average arcing voltage where an thermal re-ignition occurred, while magenta line is the average arcing voltage for the successful interruption.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6, angle =0 ]{Bilder/Results/ArcingVoltage_75_reIgnition_average.png}
+\caption{The average arcing voltage (blue line) for the five interruption tests at 0.3 bar over-pressure and a current of 630 A, together with the lowest (red line) and highest (blue line) arcing voltages obtained during testing. All the five tests experienced a thermal re-ignition at the second CZ, which occurred at approximately  x=75 mm.} \label{fig:75mmUnSuccessful_ave}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6, angle =0 ]{Bilder/Results/ArcingVoltage_75_none_reIgnition_average.png}
+\caption{The average arcing voltage (blue line) for the four interruption tests at 0.3 bar over-pressure and a current of 630 A, together with the lowest (red line) and highest (blue line) arcing voltages obtained during testing.. All the four tests where interrupted successfully at the second CZ, which occurred at approximately  x=75 mm.} \label{fig:75mmSuccessful_ave}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6, angle =0 ]{Bilder/Results/ArcingVoltage_75_both_average.png}
+\caption{The average arcing voltage (blue line) for the four interruption tests at 0.3 bar over-pressure and a current of 630 A, together with the lowest (red line) and highest (blue line) arcing voltages obtained during testing.. All the four tests where interrupted successfully at the second CZ, which occurred at approximately  x=75 mm.} \label{fig:75mm_both_ave}
+\end{figure}
+
 \subsubsection{Dielectric re-ignition} \label{sec:dielectricReIgnitionResults}
 
 
