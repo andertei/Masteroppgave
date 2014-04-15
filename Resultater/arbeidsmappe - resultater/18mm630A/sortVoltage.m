@@ -530,10 +530,10 @@ for r=1:length(average_Output)
 end
 testTimeAve=testTime-0.103;
 figure(5);
-plot(testTime,average_Output,'b');
+plot(testTime,average_Output,'g');
 xlabel('Time [ms]');
 ylabel('Average arcing voltage [kV]');
 disp('Plotting voltage average: OK!');
 hold on
-plot(testTimeAve,average_Output_2,'r');
+plot(testTimeAve,average_Output_2,'m');
 disp('END');
