@@ -2,7 +2,7 @@ close all
 clear all
 format long
 
-arcing_voltage=load('301_pos23_TR.lvm');
+arcing_voltage=load('143_pos18_TR_TR.lvm');
 
 wnd = 20;arcing_voltage_filter = filter(ones(wnd, 1)/wnd, 1, arcing_voltage(:,2));
 

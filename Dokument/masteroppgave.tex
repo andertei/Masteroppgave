@@ -872,9 +872,9 @@ In figure \ref{fig:18mm_both_ave} the two arcing voltages are plotted together. 
 \newpage
 \subsection{Drop in arcing voltage} \label{sec:results_drop_arcing_voltage}
 
-In figure \ref{fig:arcingVoltageDrop} the arcing voltage for a interruption test for geometry \textbf{b} at 880 A is presented. The arc had a thermal re-ignition in all three CZ shown in the figure and a upstream over-pressure of 0.25 bar was used. The red square in figure \ref{fig:arcingVoltageDrop} shows a part of the graph where a sudden drop in the arcing voltage occurred. The area is magnified in figure \ref{fig:arcingVoltageDrop_zoomed}. Both figures have been processed in matlab to filter out measuring noise. The filter used to cancel noise was tuned so that it did not impact the sudden drop in arcing voltage shown in the figures. It is not uncommon for sudden drops in the arcing voltage, like the one presented here, to occur after a CZ and a possible explanation for these drops are going to be discussed in section \ref{sec:disc_drop_arcing_voltage} of this report.
+In figure \ref{fig:arcingVoltageDrop} the arcing voltage for a interruption test for geometry \textbf{b} at 880 A is presented. The arc had a thermal re-ignition in all three CZ shown in the figure and a upstream over-pressure of 0.25 bar was used. The red square in figure \ref{fig:arcingVoltageDrop} shows a part of the graph where a sudden drop in the arcing voltage occurred. The area is magnified in figure \ref{fig:arcingVoltageDrop_zoomed}. Both figures have been processed in matlab to filter out measuring noise. The filter used for noise cancelling was tuned so that it did not impact the sudden drop in arcing voltage shown in the figures. It is not uncommon for sudden drops in the arcing voltage, like the one presented here, to occur after a CZ and a possible explanation for these drops are going to be discussed in section \ref{sec:disc_drop_arcing_voltage} of this report. In section \ref{app:DROP_ImageSequences} in the appendix of this report another example of a sudden voltage drop is presented. 
 
-From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudden drop in arcing voltage occurred after approximately 1.3 ms after the third CZ. The voltage dropped from a peak of 400 V to 200 V using 60 $\mu$s resulting in a voltage drop of 3.33 V$/  \mu$s. Picture 1 to 7 in figure \ref{fig:arcingVoltage_drop_301_blue} shows the thermal re-ignition during the CZ, while picture 8 to 18 shows the arc during time span upto and including the voltage drop. Picture 16 and 17 shows the arc during the sudden drop in arcing voltage.
+From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudden drop in arcing voltage occurred after approximately 1.3 ms after the third CZ. The voltage dropped from a peak of 400 V to 200 V using 60 $\mu$s, resulting in a voltage drop of 3.33 V$/  \mu$s. Picture 1 to 7 in figure \ref{fig:arcingVoltage_drop_301_blue} shows the thermal re-ignition during the CZ, while picture 8 to 18 shows the arc during time span upto and including the voltage drop. Picture 16 and 17 shows the arc during the sudden drop in arcing voltage. 
 
  
 
@@ -911,7 +911,7 @@ From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudd
 \subsection{Arcing voltage considerations}
 
 \subsection{Drop in arcing voltage} \label{sec:disc_drop_arcing_voltage}
-
+Den deriverte er lik for begge eksemplene!
 \subsection{Durability of the arcing contacts} \label{fig:durability}
 
 
@@ -1060,6 +1060,37 @@ From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudd
 \caption{Picture sequence for a successful interruption at the second CZ, which occurred at approximately x=75 mm. The pictures shows the arc corresponding to the green line in figure \ref{fig:75mmSuccessful}. The numbers in the corner of each picture indicates in what order the images where taken.} \label{fig:arcingVoltage_test_114_green_OK}
 \end{figure}
 
+\cleardoublepage
+\section{Appendix: Drop in arcing voltage example} \label{app:DROP_ImageSequences}
+\makeatletter 
+\renewcommand{\thefigure}{C.\@arabic\c@figure}
+\makeatother
+
+\makeatletter 
+\renewcommand{\thetable}{C.\@arabic\c@table}
+\makeatother
+
+In figure \ref{fig:arcingVoltageDrop_2} the arcing voltage for a interruption test for geometry \textbf{c} at 630 A is presented. The arc had a thermal re-ignition in all three CZ shown in the figure and a upstream over-pressure of 0.3 bar was used. The red square in figure \ref{fig:arcingVoltageDrop_2} shows a part of the graph where a sudden drop in the arcing voltage occurred. The area is magnified in figure \ref{fig:arcingVoltageDrop_zoomed_2}. Both figures have been processed in matlab to filter out measuring noise. The filter used for noise cancelling was tuned so that it did not impact the sudden drop in arcing voltage shown in the figures.
+
+From figure \ref{fig:arcingVoltageDrop_zoomed_2}, it can be obtained that the sudden drop in arcing voltage occurred after approximately 1.0 ms after the third CZ. The voltage dropped from a peak of 480 V to 320 V using 50 $\mu$s, resulting in a voltage drop of 3.2 V$/  \mu$s. Picture 1 to 4 in figure \ref{fig:arcingVoltage_drop_301_blue_2} shows the thermal re-ignition during the CZ, while picture 5 to 16 shows the arc during time span upto and including the voltage drop. Picture 14 and 15 shows the arc during the sudden drop in arcing voltage.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6, angle =0 ]{Bilder/Results/overviewArcingVoltageDrop_2.png}
+\caption{Overview over the arcing voltage during an interruption tests spanning over three CZ. A sudden drop in arcing voltage (marked by a red square) occurred after the third CZ.} \label{fig:arcingVoltageDrop_2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6, angle =0 ]{Bilder/Results/zoomArcingVoltageDrop_2.png}
+\caption{The area marked with the red square in figure \ref{fig:arcingVoltageDrop} magnified, showing the sudden drop in voltage.} \label{fig:arcingVoltageDrop_zoomed_2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.67, angle =0 ]{Bilder/Results/301_23_TR_TR_drop_2.png}
+\caption{Picture sequence after a thermal re-ignition in the third CZ. The pictures shows the arc corresponding to the blue line in figure \ref{fig:arcingVoltageDrop_zoomed}, where a sudden voltage drop occured approximatly 1.0 ms after the CZ. The numbers in the corner of each picture indicates in what order the images where taken.} \label{fig:arcingVoltage_drop_301_blue_2}
+\end{figure}
 
 %\section{Appendix: Matlab code for sortVoltage.m} %husk å oppdatere denne!!
 %\lstinputlisting[language=Matlab]{sortVoltage.m}
