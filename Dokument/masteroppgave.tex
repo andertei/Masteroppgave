@@ -14,6 +14,7 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{chngpage} % allows for temporary adjustment of side margins
 \usepackage[parfill]{parskip} %for avsnitt
+\DeclareMathSizes{10}{10}{9}{9}
 \usepackage{listings}
     \lstset{
             language=Matlab,                                % choose the language of the code
@@ -656,7 +657,7 @@ In the following section interruption results from the tests conducted on all th
 \caption{Flowchart over different interruption outcomes.} \label{fig:flowchart}
 \end{figure}
 
-In figure \ref{fig:CurrentAndVoltageWaveform}, the current and voltage during an unsuccessful and a successful interruption are shown for a 630 A 24 kV test. The upper plot illustrates a thermal re-ignition, as the plot illustrates; the current is almost unaffected of the interruption attempt and continues as normal after the CZ. The lower plot is illustrating a successful interruption, where the current has stopped flowing after CZ and a TRV has raised between the contact members. In figure \ref{fig:CurrentAndVoltageDRWaveform}, the voltage and current during a dielectric re-ignition are shown for a 880 A 24 kV test. As can be seen from the figure, the current stops flowing for more than one millisecond before the electrical field caused by the TRV that has raised between the contact members becomes too strong and causes an electrical breakdown of the air. Then the current continues to flow and will quickly obtain the sinusoidal form set by the supply side of the switch. 
+In figure \ref{fig:CurrentAndVoltageWaveform}, the current and voltage during an unsuccessful and a successful interruption are shown for a 630 A 24 kV test. The upper plot illustrates a thermal re-ignition, as the plot illustrates; the current is almost unaffected of the interruption attempt and continues as normal after the CZ. The lower plot is illustrating a successful interruption, where the current has stopped flowing after CZ and a TRV has risen between the contact members. In figure \ref{fig:CurrentAndVoltageDRWaveform}, the voltage and current during a dielectric re-ignition are shown for a 880 A 24 kV test. As can be seen from the figure, the current stops flowing for more than one millisecond before the electrical field caused by the TRV that has risen between the contact members becomes too strong and causes an electrical breakdown of the air. Then the current continues to flow and will quickly obtain the sinusoidal form set by the supply side of the switch. 
 
 \begin{figure}[H]
 \centering
@@ -897,12 +898,40 @@ From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudd
 \end{figure}
 
 \newpage
-\subsection{Dielectric re-ignition} \label{sec:dielectricReIgnitionResults}
+\subsection{Current drop during dielectric re-ignition} \label{sec:dielectricReIgnitionResults}
+
+For geometry \textbf{a} and \textbf{b} a few dielectric re-ignitions occurred mostly when the pin was inside the cylindrical part of the nozzle. In figure \ref{fig:DR_disc_calc} the voltage and current during one of these dielectric re-ignitions. The voltage is described by the black line, and the current by the blue line. The presented data occurred during a 880 A interruption test for geometry \textbf{b}, using an upstream over-pressure of 0.25 bar. The figure has been processed in matlab to filter out measuring noise.
+
+In figure \ref{fig:DR_disc_calc_areas} the same dielectric re-ignition as in figure \ref{fig:DR_disc_calc} is shown but added to the figure are two squares marking two areas of the current. The red square marks an area where the current rises to a peak of about 160 A, and then falls to 40 A, during a time span of 70 $\mu$s. The decline of the current is best described by an exponential decay which is described by equation \eqref{eq:expDecay}. The recovery voltage's peak reaches approximately 7.1 kV before the re-ignition occur. In section \ref{sec:disc_drop_current_DR} in the discussion part of this report this current drop will be investigated further. Some noise in the current measurement were not successfully removed from the figure, this is marked by the green square in figure \ref{fig:DR_disc_calc_areas}.
+
+\begin{equation} \label{eq:expDecay}
+I(t)=160e^{-0.0198t} \mathrm{A} \ \ \ \ \ \ \ \ \ \ t \in [0,70] \mu \mathrm{s}
+\end{equation}
+
+A picture sequence of the arc during the dielectric re-ignition displayed in figure \ref{fig:DR_disc_calc} are shown in figure \ref{fig:DR_TR_305_1} and \ref{fig:DR_TR_305_2}. The picture sequence is split into two figures and some uninteresting frames are removed to shorten the sequence so that each of the figures fits a page. The numbers in each frame tells which order the frames follows within the picture sequence. Frame one illustrates that the arc have just re-ignited after the dielectric re-ignition and the current has started flowing. This corresponds to the start of the red square in figure \ref{fig:DR_disc_calc_areas}. As can be seen the intensity of the arc increases upto and including frame ten. Then the current has passed its peak at 160 A and decreases to approximately 40 A in frame 17. In frame 18 the current starts to rise again, and will quickly obtain its normal sinusoid shape, set by the supply side of the switch.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.7]{Bilder/Results/DRplot_calc.png}
-\caption{Current and voltage waveforms near CZ for a dielectric re-ignition.} \label{fig:DR_disc_example}
+\includegraphics[scale=0.6]{Bilder/Results/DRplot_calc.png}
+\caption{Dielectric re-ignition during a 880 A interruption test for geometry \textbf{b}.} \label{fig:DR_disc_calc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{Bilder/Results/DRplot_calc_areas.png}
+\caption{The same dielectric re-ignition as shown in figure \ref{fig:DR_disc_calc}. The red square marks the area of interesst. The green square marks an area of the current suspected to be wrong due to measuring noise.} \label{fig:DR_disc_calc_areas}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7, angle =0 ]{Bilder/Results/305_75_DR_TR.png}
+\caption{Picture sequence for the dielectric re-ignition shown in figure \ref{fig:DR_disc_calc}. The numbers in the corner of each picture indicates in what order the images where taken.} \label{fig:DR_TR_305_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7, angle =0 ]{Bilder/Results/305_75_DR_TR_2.png}
+\caption{Continuation of the picture sequence in figure \ref{fig:DR_TR_305_1} for the dielectric re-ignition shown in figure \ref{fig:DR_disc_calc}. The numbers in the corner of each picture indicates in what order the images where taken.} \label{fig:DR_TR_305_2}
 \end{figure}
 
 \newpage
@@ -918,6 +947,8 @@ From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudd
 
 \subsection{Drop in arcing voltage} \label{sec:disc_drop_arcing_voltage}
 Den deriverte er lik for begge eksemplene!
+
+\subsection{Drop in current during dielectric re-ignition} \label{sec:disc_drop_current_DR}
 \subsection{Durability of the arcing contacts} \label{fig:durability}
 
 
