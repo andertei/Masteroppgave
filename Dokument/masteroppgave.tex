@@ -647,7 +647,7 @@ The pin is cleaned, polished, and greased between each test to ensure a smooth s
 \cleardoublepage
 
 \section{Results}
-\subsection{Interruption tests}
+\subsection{Interruption tests} \label{sec:interruptionTests}
 \subsubsection{Interpretation of interruption results}
 In the following section interruption results from the tests conducted on all the three geometries are presented. For each interruption test there are two final outcomes: success or failure. The end result is determined by the interruption outcome from the first or second CZ. At the first CZ the interruption can succeed or a re-ignition can occur, a re-ignition can be either thermal or dielectric. Given a re-ignition in the first CZ, the current can be interrupted at the second CZ or another re-ignition can occur. The outcomes are explained by figure \ref{fig:flowchart}. The most common re-ignition is a thermal re-ignition and experience has also indicated that in practical interruption cases thermal re-ignitions are the most demanding tasks for load break switches in the 24 kV 630 A class \cite{bib:AFIMVLBA}. However, a few dielectric re-ignition was observed for geometry \textbf{a} and \textbf{b} at the first CZ. 
 
@@ -675,13 +675,13 @@ In figure \ref{fig:CurrentAndVoltageWaveform}, the current and voltage during an
 
 \subsubsection*{630 A interruption test}
 
-In figure \ref{fig:results630AgeoA}, the total interruption success rate for the 630 A test for geometry \textbf{a} is presented. Each data point consists of 10 tests. For five of the test; the first CZ occurred inside the funnel part of the nozzle, while the remaining five tests occurred outside the nozzle. As seen from figure \ref{fig:results630AgeoA} the 100 \% interruption success rate occurred at a upstream over-pressure of 0.25 bar, while none interruptions where obtained at 0.15 bar upstream over-pressure. The 50 \% interruption success rate can be obtained from the figure, and corresponds to an over-pressure just below 0.2 bar.
+In figure \ref{fig:results630AgeoA}, the total interruption success rate for the 630 A test for geometry \textbf{a} is presented. Each data point consists of 10 tests. For five of the tests; the first CZ occurred inside the funnel part of the nozzle, while the remaining five tests occurred outside the nozzle. As seen from figure \ref{fig:results630AgeoA} the 100 \% interruption success rate occurred at a upstream over-pressure of 0.3 bar, while none interruptions where obtained at 0.15 bar upstream over-pressure. The 50 \% interruption success rate can be obtained from the figure, and corresponds to an over-pressure just below 0.2 bar.
 
 The results when comparing the interruption success rate between tests that occurred inside the funnel and outside the nozzle for the first CZ is presented in figure \ref{fig:results630AgeoAcomp}. In this figure each data point consists of five tests which occurred either "inside funnel" (purple line) or "outside nozzle" (red line). Both tests series have the same 100 \% interruption success rate at an over-pressure of 0.3 bar and 0 \% interruption success rate at 0.15 bar over-pressure. The 50 \% interruption success rate for the two series corresponds to approximately 0.18 bar over-pressure "outside nozzle" and 0.22 bar over-presser for "inside funnel". In total the interruption success rate between "inside funnel" and "outside nozzle" must be considered to be almost alike, even thought there is a difference between the 50 \% interruption rates of the two series, variance like this must be expected when each data point only consists of five tests.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{Bilder/Results/geoA630amp.png}
+\includegraphics[scale=0.45]{Bilder/Results/geoA630amp_riktig.png}
 \caption{Interruption test results for geometry \textbf{a} at 630 A when tests occurring "inside funnel" and "outside nozzle", and the results from the first and second CZ is added together.} \label{fig:results630AgeoA}
 \end{figure}
 
@@ -728,7 +728,7 @@ The results when comparing the interruption success rate between tests that occu
 
 In figure \ref{fig:results880AgeoB}, the total interruption success rate for the 880 A test for geometry \textbf{b} is presented. Each data point consists of 10 tests. For five of the test; the first CZ occurred inside the funnel part of the nozzle, while the remaining five tests occurred outside the nozzle. As seen from figure \ref{fig:results880AgeoB} the 100 \% interruption success rate occurred at a upstream over-pressure of 0.4 bar, while none interruptions where obtained at 0.25 bar upstream over-pressure. The 50 \% interruption success rate can be obtained from the figure, and corresponds to an over-pressure of approximately 0.28 bar.
 
-The results when comparing the interruption success rate between tests that occurred inside the funnel and outside the nozzle for the first CZ is presented in figure \ref{fig:results880AgeoBcomp}. In this figure each data point consists of five tests which occurred either "inside funnel" (purple line) or "outside nozzle" (red line). The 100 \% interruption success rate for tests inside the nozzle is at 0.4 bar over-pressure, while the 100 \% interruption success rate for tests outside the nozzle is at 0.3 bar over-pressure. However, the "outside nozzle" test failed two times at higher pressures for the first CZ. One time at 0.35 bar and one time at 0.4 bar upstream over-pressure. Since each data point only consists of five points, variance like this is expected and it can be assumed that the real 100 \% interruption success rate for the "outside nozzle" test is somewhat above 0.3 bar over-pressure. Both test series obtained none interruptions at 0.25 bar over-pressure. The 50 \% interruption success rate for the two series corresponds to approximately 0.275 bar over-pressure "outside nozzle" and 0.29 bar over-presser for "inside funnel". As can be seen from figure \ref{fig:results880AgeoBcomp} there is only a marginal difference between the interruption results when the first CZ occurs inside the funnel or outside the nozzle. The variance between the two interruption tests might be because of the limited tests at each data points.
+The results when comparing the interruption success rate between tests that occurred inside the funnel and outside the nozzle for the first CZ is presented in figure \ref{fig:results880AgeoBcomp}. In this figure each data point consists of five tests which occurred either "inside funnel" (purple line) or "outside nozzle" (red line). The 100 \% interruption success rate for tests inside the nozzle is at 0.4 bar over-pressure, while the 100 \% interruption success rate for tests outside the nozzle is at 0.3 bar over-pressure. However, the "outside nozzle" test failed two times at higher pressures for the first CZ. One time at 0.35 bar and one time at 0.4 bar upstream over-pressure. Since each data point only consists of five points, variance like this is expected and it can be assumed that the true 100 \% interruption success rate for the "outside nozzle" test is somewhat above 0.3 bar over-pressure. Both test series obtained none interruptions at 0.25 bar over-pressure. The 50 \% interruption success rate for the two series corresponds to approximately 0.275 bar over-pressure "outside nozzle" and 0.29 bar over-presser for "inside funnel". As can be seen from figure \ref{fig:results880AgeoBcomp} there is only a marginal difference between the interruption results when the first CZ occurs inside the funnel or outside the nozzle. The variance between the two interruption tests might be because of the limited tests at each data points.
 
 \begin{figure}[H]
 \centering
@@ -744,11 +744,11 @@ The results when comparing the interruption success rate between tests that occu
 
 \subsubsection{Comparison of test results for geometry \textbf{a} and geometry \textbf{b}}
 
-In figure \ref{fig:compgeoAandBAllcurrents} the results for the total interruption success rate for geometry \textbf{a} and geometry \textbf{b} is presented. As shown in the figure geometry \textbf{b} was somewhat better than geometry \textbf{a} for the 880 A interruption test with a 50 \% interruption success rate of approximately 0.28 bar over-pressure while geometry \textbf{a} had a 50 \% interruption success rate of 0.35 bar over-pressure. However, the 100 \% interruption success rate was equal for both interruption tests at 0.4 bar over-pressure. For the 630 A interruption test geometry \textbf{b} had a better 50 \% interruption success rate than geometry \textbf{a}. However, geometry \textbf{a} interrupted all the tests at 0.25 bar over-pressure, while geometry \textbf{b} had a 100 \% interruption success rate at 0.3 bar over-pressure.
+In figure \ref{fig:compgeoAandBAllcurrents} the results for the total interruption success rate for geometry \textbf{a} and geometry \textbf{b} is presented. As shown in the figure geometry \textbf{b} was better than geometry \textbf{a} for the 880 A interruption test with a 50 \% interruption success rate of approximately 0.28 bar over-pressure while geometry \textbf{a} had a 50 \% interruption success rate of 0.35 bar over-pressure. However, the 100 \% interruption success rate was equal for both interruption tests at 0.4 bar over-pressure. For the 630 A interruption test geometry \textbf{b} had a better 50 \% interruption success rate than geometry \textbf{a}. However, both geometries interrupted all the tests at 0.3 bar over-pressure, and interrupted 90 \% of the test at 0.25 bar over-pressure.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5, angle =90 ]{Bilder/Results/compAllFunnel.png}
+\includegraphics[scale=0.5, angle =90 ]{Bilder/Results/compAllFunnel_riktig.png}
 \caption{Comparison of the total interrutpion success rate for geometry \textbf{a} and geometry \textbf{b} at 630 A and 880 A.} \label{fig:compgeoAandBAllcurrents}
 \end{figure}
 
@@ -935,7 +935,43 @@ A picture sequence of the arc during the dielectric re-ignition displayed in fig
 \end{figure}
 
 \newpage
-\subsection{Statistical evaluation}
+\subsection{Addressing uncertainties}
+\subsubsection{Data collection}
+Due to an unknown latency in the release mechanism of the test switch it was hard to adjust the pin's x-position at the moment of CZ to the right area. Therefore, excessive amounts of tests had to be performed at certain pressure levels. Some of these extra tests have been included in table \ref{tab:successrate1} and \ref{tab:successrate2} as "interruption success rates" where more than ten tests were the basis for the success rate. In table \ref{tab:successrate1} all test that occurred inside of the funnel or outside of the nozzle is included as a base for the "Success rate based on all performed tests". For the results shown in table \ref{tab:successrate2} all the tests that occurred outside of the nozzle is included for the "Success rate based on all performed tests", except those that occurred in the boundary region between outside and inside of the nozzle. The results presented in both tables are interpreted as described by figure \ref{fig:flowchart}, and all the tests are collected for the 630 A interruption test. 
+
+When increasing the number of test at a pressure level the interruption success rate changes from when applying ten tests, as described by the test procedure. Except for the 0.3 bar over-pressure test for geometry \textbf{a} where all the test where successfully interrupted for all performed tests. For geometry \textbf{a} at 0.25 bar there is a difference of 12.2 \% between the success rate for all the performed tests and the first ten tests. This difference is 5 \% for geometry \textbf{c} at 0.3 bar over-pressure. Therefore, the results presented in section \ref{sec:interruptionTests} of this report should not be regarded as absolute limits, since there are uncertainties connected with the obtained numbers, mostly due to a limited numbers of tests performed on each pressure level. However, it is assumed that the 0 \% and 100 \% interruption success rate are more certain than the success rates in between, since these are in the end of sample space.
+
+\begin{table}[H]
+\center
+\caption{Interruption success rate for geometry \textbf{a}. When all tests are included for the 630 A tests.}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Upstream & Number of tests & Success rate based & Success rate based \\ over-pressure [bar] &  performed in total &  on all performed tests [\%] &  on test procedure [\%] \\ 
+\hline 
+0.25 & 18 & 77.8 & 90 \\ 
+\hline 
+0.3 & 18 & 100 & 100 \\ 
+\hline 
+\end{tabular} 
+\label{tab:successrate1}
+\end{table}
+
+\begin{table}[H]
+\center
+\caption{Interruption success rate for geometry \textbf{c}. When all tests are included for the 630 A tests.}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Upstream & Number of tests & Success rate based & Success rate based \\ over-pressure [bar] &  performed in total &  on all performed tests [\%] &  on test procedure [\%] \\ 
+\hline 
+0.3 & 24 & 75 & 80 \\ 
+\hline  
+\end{tabular} 
+\label{tab:successrate2}
+\end{table}
+
+\subsubsection{Voltage measurement}
+
+
 
 \cleardoublepage
 
