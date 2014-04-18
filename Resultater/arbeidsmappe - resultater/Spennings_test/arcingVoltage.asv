@@ -13,7 +13,7 @@ test_TWO=load('258_test_spenningsmaaling.lvm');
 disp('Loading data: OK!');
 %fflush(stdout);
 test_TWO(:,2)=test_TWO(:,2).*1000;
-test_TWO(:,1)=test_TWO(:,1).*1000;
+
 figure(1);
 plot(test_TWO(:,1),test_TWO(:,2),'g');
 ylabel('Voltage [V]');
@@ -25,10 +25,10 @@ disp('Starting: Loading data');
 test_1=load('259_test_spenningsmaaling.lvm');
 disp('Loading data: OK!');
 %fflush(stdout);
-test_1(:,2)=test_1(:,2).*1000;
-test_1(:,1)=test_1(:,1).*1000;
+test_TWO(:,2)=test_TWO(:,2).*1000;
+
 figure(2);
-plot(test_1(:,1),test_1(:,2),'r');
+plot(test_TWO(:,1),test_TWO(:,2),'r');
 ylabel('Voltage [V]');
 xlabel('Time [ms]');
 disp('Plotting data: OK!');

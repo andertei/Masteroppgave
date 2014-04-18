@@ -935,15 +935,18 @@ A picture sequence of the arc during the dielectric re-ignition displayed in fig
 \end{figure}
 
 \newpage
-\subsection{Addressing uncertainties}
-\subsubsection{Data collection}
-Due to an unknown latency in the release mechanism of the test switch it was hard to adjust the pin's x-position at the moment of CZ to the right area. Therefore, excessive amounts of tests had to be performed at certain pressure levels. Some of these extra tests have been included in table \ref{tab:successrate1} and \ref{tab:successrate2} as "interruption success rates" where more than ten tests were the basis for the success rate. In table \ref{tab:successrate1} all test that occurred inside of the funnel or outside of the nozzle is included as a base for the "Success rate based on all performed tests". For the results shown in table \ref{tab:successrate2} all the tests that occurred outside of the nozzle is included for the "Success rate based on all performed tests", except those that occurred in the boundary region between outside and inside of the nozzle. The results presented in both tables are interpreted as described by figure \ref{fig:flowchart}, and all the tests are collected for the 630 A interruption test. 
+%\subsection{Addressing uncertainties}
+%\subsubsection{Data collection}
+\subsection{Uncertainties related to the number of tests in a data point}
+Due to an unknown latency in the release mechanism of the test switch it was hard to adjust the pin's x-position at the moment of CZ to the right area. Therefore, a excessive amounts of tests had to be performed at some pressure levels. Some of these extra tests have been included in table \ref{tab:successrate1} and \ref{tab:successrate2} as "interruption success rates based on all performed tests". These tests include more than just the ten first tests, as described by the test procedure in section \ref{sec:procedure}. This comparison will make it possible to determinate if ten tests at each pressure level is good enough to describe the actual interruption success rate, or if more tests should be conducted. 
 
-When increasing the number of test at a pressure level the interruption success rate changes from when applying ten tests, as described by the test procedure. Except for the 0.3 bar over-pressure test for geometry \textbf{a} where all the test where successfully interrupted for all performed tests. For geometry \textbf{a} at 0.25 bar there is a difference of 12.2 \% between the success rate for all the performed tests and the first ten tests. This difference is 5 \% for geometry \textbf{c} at 0.3 bar over-pressure. Therefore, the results presented in section \ref{sec:interruptionTests} of this report should not be regarded as absolute limits, since there are uncertainties connected with the obtained numbers, mostly due to a limited numbers of tests performed on each pressure level. However, it is assumed that the 0 \% and 100 \% interruption success rate are more certain than the success rates in between, since these are in the end of sample space.
+In table \ref{tab:successrate1} all test that occurred inside of the funnel or outside of the nozzle is included as a base for the "Success rate based on all performed tests". For the results shown in table \ref{tab:successrate2} all the tests that occurred outside of the nozzle is included for the "Success rate based on all performed tests", except those that occurred in the boundary region between outside and inside of the nozzle. The results presented in both tables are interpreted as described by figure \ref{fig:flowchart}, and all the tests are collected using a current of 630 A for the interruption test. 
+
+When increasing the number of test at a pressure level the interruption success rate changes from when applying only ten tests, as described by the test procedure. Except for the 0.3 bar over-pressure test for geometry \textbf{a} where all the test were successfully interrupted for all performed tests. For geometry \textbf{a} at 0.25 bar there is a difference of 12.2 \% between the success rate for all the performed tests and the first ten tests. This difference is 5 \% for geometry \textbf{c} at 0.3 bar over-pressure. Therefore, the results presented in section \ref{sec:interruptionTests} of this report should not be regarded as absolute limits, since there are uncertainties connected with the obtained numbers, mostly due to a limited numbers of tests performed on each pressure level. However, it is assumed that the 0 \% and 100 \% interruption success rate are more certain than the success rates in between, since these are in the end of sample space.
 
 \begin{table}[H]
 \center
-\caption{Interruption success rate for geometry \textbf{a}. When all tests are included for the 630 A tests.}
+\caption{Interruption success rate for geometry \textbf{a}.}
 \begin{tabular}{|c|c|c|c|}
 \hline 
 Upstream & Number of tests & Success rate based & Success rate based \\ over-pressure [bar] &  performed in total &  on all performed tests [\%] &  on test procedure [\%] \\ 
@@ -958,7 +961,7 @@ Upstream & Number of tests & Success rate based & Success rate based \\ over-pre
 
 \begin{table}[H]
 \center
-\caption{Interruption success rate for geometry \textbf{c}. When all tests are included for the 630 A tests.}
+\caption{Interruption success rate for geometry \textbf{c}.}
 \begin{tabular}{|c|c|c|c|}
 \hline 
 Upstream & Number of tests & Success rate based & Success rate based \\ over-pressure [bar] &  performed in total &  on all performed tests [\%] &  on test procedure [\%] \\ 
@@ -969,8 +972,7 @@ Upstream & Number of tests & Success rate based & Success rate based \\ over-pre
 \label{tab:successrate2}
 \end{table}
 
-\subsubsection{Voltage measurement}
-
+%\subsubsection{Voltage measurement} jeg tror jeg dropper dette kappittelet, skjønner ikke helt hva jeg skal få ut av det....
 
 
 \cleardoublepage
