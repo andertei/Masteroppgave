@@ -968,26 +968,28 @@ From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudd
 \newpage
 \subsection{Current drop during dielectric re-ignition} \label{sec:dielectricReIgnitionResults}
 
-For geometry \textbf{a} and \textbf{b} a few dielectric re-ignitions occurred mostly when the pin was inside the cylindrical part of the nozzle. In figure \ref{fig:DR_disc_calc} the voltage and current during one of these dielectric re-ignitions is illustrated. The voltage is shown with the black line, and the current by the blue line. The presented data occurred during a 880 A interruption test for geometry \textbf{b}, using an upstream over-pressure of 0.25 bar. The figure has been processed in matlab to filter out measuring noise.
+For geometry \textbf{a} and \textbf{b} a few dielectric re-ignitions occurred mostly when the pin was inside the cylindrical part of the nozzle. In figure \ref{fig:DR_disc_calc_areas} the voltage and current during one of these dielectric re-ignitions is illustrated. The voltage is shown with the black line, and the current by the blue line. The presented data occurred during a 880 A interruption test for geometry \textbf{b}, using an upstream over-pressure of 0.25 bar. The figure has been processed in matlab to filter out measuring noise.
 
-In figure \ref{fig:DR_disc_calc_areas} the same dielectric re-ignition as in figure \ref{fig:DR_disc_calc} is shown but added to the figure are two squares marking two areas of the current. The red square marks an area where the current rises to a peak of about 160 A, and then falls to 40 A, during a time span of 70 $\mu$s. The decline of the current is best described by an exponential decay which is described by equation \eqref{eq:expDecay}. The recovery voltage's peak reaches approximately 7.1 kV before the re-ignition occur. In section \ref{sec:disc_drop_current_DR} in the discussion part of this report this current drop will be investigated further. Some noise in the current measurement were not successfully removed from the figure, this is marked by the green square in figure \ref{fig:DR_disc_calc_areas}.
+Figure \ref{fig:DR_disc_calc_areas} has two squares marking two areas of the current. The red square marks an area where the current rises to a peak of about 160 A, and then falls to 40 A, during a time span of 70 $\mu$s. The decline of the current is best described by an exponential decay which is described by equation \eqref{eq:expDecay}. The recovery voltage's peak reaches approximately 7.1 kV before the re-ignition occur. Some noise in the current measurement were not successfully removed from the figure, this is marked by the green square in figure \ref{fig:DR_disc_calc_areas}.
 
 \begin{equation} \label{eq:expDecay}
 I(t)=160e^{-0.0198t} \mathrm{A} \ \ \ \ \ \ \ \ \ \ t \in [0,70] \mu \mathrm{s}
 \end{equation}
 
-A picture sequence of the arc during the dielectric re-ignition displayed in figure \ref{fig:DR_disc_calc} are shown in figure \ref{fig:DR_TR_305_1} and \ref{fig:DR_TR_305_2}. The picture sequence is split into two figures and some uninteresting frames are removed to shorten the sequence so that each of the figures fits a page. The numbers in each frame tells which order the frames follows within the picture sequence. Frame one illustrates that the arc have just re-ignited after the dielectric re-ignition and the current has started flowing. This corresponds to the start of the red square in figure \ref{fig:DR_disc_calc_areas}. As can be seen in the pictures the intensity of the arc increases upto and including frame ten. Then the current has passed its peak at 160 A and decreases to approximately 40 A in frame 17. In frame 18 the current starts to rise again, and will quickly obtain its normal sinusoid shape, set by the supply side of the switch.
+A picture sequence of the arc during the dielectric re-ignition displayed in figure \ref{fig:DR_disc_calc_areas} are shown in figure \ref{fig:DR_TR_305_1} and \ref{fig:DR_TR_305_2}. The picture sequence is split into two figures and some uninteresting frames are removed to shorten the sequence so that each of the figures fits a page. The numbers in each frame tells which order the frames follows within the picture sequence. In figure \ref{fig:DR_zoom_and_areas} the red square from figure \ref{fig:DR_disc_calc_areas} is magnified and vertical lines marking four time zones is included in the figure. Each time zone corresponds to different frames in the picture sequence presented below and the current in the arc the moment the picture where taken. Time zone "a" includes approximately frame one to six, where frame one illustrates that the arc have just re-ignited after the dielectric re-ignition and the current has started flowing. In time zone "b" the current is rising, which can be seen in the pictures as an increase in the intensity of the arc upto and including frame ten. Then the current has passed its peak at 160 A and decreases to approximately 40 A in frame 17, this time span represent time zone "c". In frame 18 the current starts to rise again, and will quickly obtain its normal sinusoid shape, set by the supply side of the switch, represented by time zone "d".
+
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{Bilder/Results/DRplot_calc.PNG}
-\caption{Dielectric re-ignition during a 880 A interruption test for geometry \textbf{b}.} \label{fig:DR_disc_calc}
+\includegraphics[scale=0.55]{Bilder/Results/DRplot_calc_areas.png}
+\caption{Dielectric re-ignition during a 880 A interruption test for geometry \textbf{b}. The red square marks the area of interesst. The green square marks an area of the current suspected to be wrong due to measuring noise.} \label{fig:DR_disc_calc_areas}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{Bilder/Results/DRplot_calc_areas.png}
-\caption{The same dielectric re-ignition as shown in figure \ref{fig:DR_disc_calc}. The red square marks the area of interesst. The green square marks an area of the current suspected to be wrong due to measuring noise.} \label{fig:DR_disc_calc_areas}
+\includegraphics[scale=0.55]{Bilder/Results/DRplot2_zoom.png}
+\caption{The same dielectric re-ignition as shown in figure \ref{fig:DR_disc_calc_areas} but with the red area magnified. The vertical lines marks four time zones a, b, c, and d, which corresponds to different frames (a=[1,6], b=[7,10], c=[11,17], d=[18,22]) in the picture sequence in figure \ref{fig:DR_TR_305_1} and \ref{fig:DR_TR_305_2}.}
+\label{fig:DR_zoom_and_areas}
 \end{figure}
 
 \begin{figure}[H]
