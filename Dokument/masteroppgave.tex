@@ -216,7 +216,7 @@ As can been seen in figure \ref{fig:selfBlastandPuffer}, the load break switch f
 
 \begin{figure} [H]
 \centering
-\includegraphics[scale=0.6]{Bilder/Theory/tankPressure.png}
+\includegraphics[scale=0.65]{Bilder/Theory/tankPressure.png}
 \caption{Simulated pressure build up with different refill valve leakage settings compared to experimental results  \cite{bib:CBAC}.} \label{fig:airPressurePuffer}
 \end{figure}
 
@@ -226,7 +226,7 @@ When introducing an arc to the system, the measured and simulated pressures chan
 
 \begin{figure} [H]
 \centering
-\includegraphics[scale=0.6]{Bilder/Theory/tankPressure2.png}
+\includegraphics[scale=0.65]{Bilder/Theory/tankPressure2.png}
 \caption{Pressure build up for load break tests with different arcing time   \cite{bib:CBAC}.} \label{fig:airPressurePuffer2}
 \end{figure}
 
@@ -775,7 +775,7 @@ One possible explanation for the increase in interruption success rate in the cy
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{Bilder/Results/nozzle_cooling_1.png}
-\caption{Two nozzle designs, one wide (upper), and one narrow (lower). Illustrating how the travel distance for the arc will increase when the same volume of hot air (red area) is replaced by cold air (blue area) inside of the two nozzle designs (schematically).} \label{fig:twoNozzleDesignsNarrowandWideRep}
+\caption{Two nozzle designs, one wide (upper), and one narrow (lower). Illustrating how the travel distance for the arc will increase when the same volume of hot air (red area) is replaced by cold air (blue area) inside of the two nozzle designs (not to scale).} \label{fig:twoNozzleDesignsNarrowandWideRep}
 \end{figure}
 
 If the simplified model explained above is extended to including a more realistic air flow scenario it will look like presented in figure \ref{fig:twoNozzleDesignsNarrowandWideRep_MIX}. The viscosity of the air flow is now included in the sketch. As can be seen in the figure two pockets of still, or rotating air can be seen between the tulip contact and nozzle wall, marked by orange areas in the figure. In these regions the air will not be as efficiently replaced as in the rest of the nozzle, resulting in a higher concentrations of ions and charged particles, as well of hotter air in these areas. The degree of air mixing, will depend on how turbulent the flow is, which will increase with increasing pressure. As the figure shows, the travel distance for the arc will be even smaller than as presented in figure \ref{fig:twoNozzleDesignsNarrowandWideRep}. Even thought the theory presented above is highly simplified, it might partially explain why a narrow nozzle is preferable to a wide nozzle. 
@@ -784,20 +784,14 @@ If the simplified model explained above is extended to including a more realisti
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{Bilder/Results/nozzle_cooling_2_only_a.png}
-\caption{The wide nozzle design from figure \ref{fig:twoNozzleDesignsNarrowandWideRep} when the viscosity of air is included (schematically).} \label{fig:twoNozzleDesignsNarrowandWideRep_MIX}
+\caption{The wide nozzle design from figure \ref{fig:twoNozzleDesignsNarrowandWideRep} when the viscosity of air is included (not to scale).} \label{fig:twoNozzleDesignsNarrowandWideRep_MIX}
 \end{figure}
 
-A second possible explanation for the good interruption success rate that might was caused by the narrow cylindrical nozzle section is that it acted as an pressure chamber giving the test switch a self blast function, as explained in section \ref{sec:puffer} of this report. When air gets heated by the arc it expands, if not allowed to freely expand, a pressure build-up will occur. Since the diameter of the contact pin is almost equal that of the nozzle, the pin might partially clog the nozzle while inside the cylindrical part of it and making the cylindrical nozzle section to act as an pressure chamber. Due to this pressure build-up a short air blast might occur when the pin moves outside of the cylindrical part of the nozzle. If the air blast occurs so that it cools the arc when it approaches CZ the chance for re-ignition may be smaller. Thereby, resulting in a lower upstream over-pressure needed to successfully interrupt the current. 
+A second possible explanation for the good interruption success rate experienced for geometry \textbf{a} and \textbf{b} is that the narrow cylindrical nozzle section acted as an pressure chamber giving the test switch a self blast function, as explained in section \ref{sec:puffer}. The diameter of the contact pin is almost equal the diameter of the nozzle, and the pin might partially clog the nozzle while inside the cylindrical part of it. This will make the cylindrical nozzle section to a pressure chamber.  When air gets heated by an arc a pressure build-up will arise, since it expands in a restricted volume. Due to this pressure build-up a short air blast might occur when the pin moves outside of the cylindrical part of the nozzle. If the air blast occurs so that it cools the arc when it approaches CZ the chance for re-ignition might be smaller, due to a more efficient removal of hot air. Thereby, resulting in a lower upstream over-pressure needed to successfully interrupt the current. 
 
-In appendix \ref{app:SelfBlast} a picture sequence of a air blast occurring testing is presented for a 880 A interruption test for geometry \textbf{a}. The pre-set upstream over-pressure used was 0.3 bar. The first frame of the sequence show the moment right before the pin enters the funnel shaped part of the nozzle. Frame 2-14 shows the air blast, in the picture sequence every second frame was removed, so that the sequence would fit in one figure. The sequence was filmed with a frame rate of approximately 10 000 fps which resulted in a 2.5 ms time span for the air blast. After this time it is only the air flow generated by the pre-set pressure in the pressure tank that cools the arc.
+In appendix \ref{app:SelfBlast} a picture sequence of a air blast happening during testing is presented for a 880 A interruption test for geometry \textbf{a}. The pre-set upstream over-pressure used was 0.3 bar. The first frame of the sequence show the moment right before the pin enters the funnel shaped part of the nozzle. Frame 2-14 shows the air blast, in the picture sequence every second frame was removed, so that the sequence would fit in one figure. The sequence was filmed with a frame rate of approximately 10 000 fps which resulted in a 2.5 ms time span for the air blast. After this time it is only the air flow generated by the pre-set pressure in the pressure tank that cools the arc.
 
-Although this self blast effect is seen in the picture sequence, its impact on the arc quenching abilities of the test switch is unknown. The duration of it is short, and for it to have any effect it is assumed that the CZ must occur right after it starts. For geometry \textbf{a} and \textbf{b} this will be when the pin is inside of the funnel part of the nozzle. To understand and evaluate the impact of this self blast effect, more tests with an different nozzle design can be conducted. It is suspected that the effect of the air blast will depend on the RMS value of the current, as well as the volume of the pressure chamber. In figure \ref{fig:selfblastChamber} a sketch of a bellow formed nozzle which might enhance the self blast effect and allow further testing of its effect is presented. It is possible that it exists a optimal volume and shape of the pressure chamber for a given current to maximise the pressure build-up in it, and thereby the self blast effect.
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.45]{Bilder/Results/bellow.png}
-\caption{A bellow formed nozzle, which might be used to further investigation of the self blast effect observed in geometry \textbf{a} and \textbf{b} (schematically).} \label{fig:selfblastChamber}
-\end{figure}
+Although this self blast effect is present in the picture sequence, its impact on the arc quenching abilities of the test switch is unknown. The duration of it is short, and for it to have any effect it is assumed that the CZ must occur right after it starts. For geometry \textbf{a} and \textbf{b} this will be when the pin is inside of the funnel part of the nozzle, but as presented in figure \ref{fig:results630AgeoAcomp}, \ref{fig:results630AgeoBcomp}, and \ref{fig:results880AgeoBcomp} no significant difference in the interruption success rate was found between "inside funnel" and "outside nozzle". To understand and evaluate the impact of this self blast effect, more tests with an different nozzle design can be conducted. It is suspected that the effect of the air blast will depend on the RMS value of the current, as well as the volume of the pressure chamber. If the narrow cylindrical part of the nozzle is replaced with a bellow form, which have the same diameter at each end as the cylindrical part, the effect of the volume in the pressure chamber can be more thoroughly analysed. It is possible that it exists a optimal volume and shape of the pressure chamber for a given current to maximise the pressure build-up in it, and thereby the self blast effect.
 
 \subsubsection{Interruption results for geometry \textbf{c}} \label{sec:intTestGeoC}
 
