@@ -849,7 +849,7 @@ In figure \ref{fig:results880AgeoC}, the total interruption success rate for the
 \caption{Interruption test results for geometry \textbf{c} at 880 A when tests occurring "inside funnel" and "outside nozzle", and the results form the first and second CZ is added together.} \label{fig:results880AgeoC}
 \end{figure}
 
-\subsubsection{Comparison of test results for geometry \textbf{c} and geometry \textbf{d}}
+\subsubsection{Comparison and discussion of the test results for geometry \textbf{c} and \textbf{d}}
 
 As stated in section \ref{sec:testSwitchandContact} geometry \textbf{c} is going to be compared to a previously tested geometry, denoted \textbf{d}. Geometry \textbf{d} was tested by Nina Sasaki Aanensen and the results was published in the article: "Air flow investigation for a medium voltage load break switch" \cite{bib:AFIMVLBA} (In that article geometry \textbf{d} was denoted as geometry \textbf{a}). In this article only the first CZ was included in the presented results and each data point consists of ten interruption tests. To be comparable to geometry \textbf{c} the interruption results for geometry \textbf{d} has been extended, so that the second CZ is included in the interruption results for geometry \textbf{d} in this report. In figure \ref{fig:compgeoCandDAllcurrents} a comparison of the total interruption success rate for geometry \textbf{c} to the previously tests geometry \textbf{d} can be seen.
 
@@ -881,7 +881,24 @@ In table\ref{tab:compgeoCandD} a summary of the performance of geometry \textbf{
 \caption{Comparison of the total interrutpion success rate for geometry \textbf{c} and geometry \textbf{d} at 630 A and 880 A.} \label{fig:compgeoCandDAllcurrents}
 \end{figure}
 
-\subsubsection{Uncertainties related to the number of tests in a data point}
+It was expected that geometry \textbf{c} performed better than geometry \textbf{d} in all the conducted interruption tests. For the 880 A test, the results are more or less as expected and as explained by figure \ref{fig:sketch50Intrate}, it was assumed that a considerably lower pressure was needed to interrupt the current when the contact diameter increases, as between geometry \textbf{c} and \textbf{d}. The same trend where observed between geometry \textbf{a} and \textbf{b} at the 880 A interruption test.
+
+At the 630 A interruption test, geometry \textbf{d} performed some what better than geometry \textbf{c}. This is not as expected considering that the volume flow of air is larger though geometry \textbf{c} at a given upstream over-pressure, which is also the only difference between the two geometries. The volume flow is defined by equation \eqref{eq:volumeFlow} and here it can be seen that the volume flow depends on the velocity of the air flow, as well as the area which it is flowing though. This velocity can be derived from Bernoulli's equation and if the air flow is simplified to be incompressible and inviscid, it will only depend on the over-pressure in the pressure tank. The air velocity found with Bernoulli's equation is the maximum speed of the air flow, which occur in the narrowest part of the geometry. This is inside of the tulip contact, since the pin is outside the nozzle at the moment of interruption for all the tests.
+
+Since the air is considered to be incompressible, it can be assumed that the volume flow of air must be conserved though the tulip contact and the nozzle. Given this assumption the air flow velocity inside the nozzle can be calculated as shown in equation \eqref{nozzle_speed} below.
+
+\begin{equation} \label{nozzle_speed}
+\begin{split}
+Q=v_{nozzle} A_{nozzle}=v_{tulip} A_{contact} \\
+v_{nozzle}=v_{tulip} \left( \frac{d}{D} \right) ^2 \ \ \ \ \ \ \ \ \
+\end{split}
+\end{equation} 
+
+As shown in table \ref{tab:contGeoParaC}, $d/D$ is equal for both geometry \textbf{c} and \textbf{d}. Because of the only difference between the two geometries will be the volume flow of air, which is larger for geometry \textbf{c} and this is considered as an advantage when interruption currents. However, it should be noted that the assumption of the air flow to be an incompressible and inviscid is probably not true, since turbulence, wall effects, and variation in density and temperature is likely to be present. But even with regards to this, it probable that the main difference between the two geometries are the volume flow passing though it.
+
+Given the empirical model from figure \ref{fig:sketch50Intrate}, which is based on previously conducted experiments and that the only difference between geometry \textbf{c} and \textbf{d} are the volume flow, it is resonable to assume that these geometries performed almost equal at 630 A, and that the small difference in the results is due to the limited amount on tests. In section \ref{sec:impactOfTestNumber} the impact on the interruption success rate when increasing the number of tests is more thoroughly investigated.
+
+\subsubsection{Uncertainties related to the number of tests in a data point} \label{sec:impactOfTestNumber}
 Due to an unknown latency in the release mechanism of the test switch it was hard to adjust the pin's x-position to occur in the right area at the moment of CZ. Therefore, a excessive amounts of tests had to be performed at some pressure levels. Some of these extra tests have been included in table \ref{tab:successrate1} and \ref{tab:successrate2} as "interruption success rates based on all performed tests". These tests include more than just the ten first tests, as described by the test procedure in section \ref{sec:procedure}. This will make it possible to determinate if ten tests at each pressure level is good enough to describe the actual interruption success rate, or if more tests should be conducted in future experiments. It will also describe the reliability of the results obtained in this report.
 
 In table \ref{tab:successrate1} all test that occurred inside of the funnel or outside of the nozzle is included as a base for the "Success rate based on all performed tests". For the results shown in table \ref{tab:successrate2} all the tests that occurred outside of the nozzle is included for the "Success rate based on all performed tests", except those that occurred in the boundary region between outside and inside of the nozzle. The results presented in both tables are interpreted as described by figure \ref{fig:flowchart}, and all the tests are collected using a current of 630 A for the interruption test. 
