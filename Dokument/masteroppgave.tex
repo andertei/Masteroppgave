@@ -1020,6 +1020,16 @@ In figure \ref{fig:18mm_both_ave} the two average arcing voltages are plotted to
 \caption{The average arcing voltage for both the successful (magenta line) and unsuccessful (green line) interruption tests.} \label{fig:18mm_both_ave}
 \end{figure}
 
+This arcing voltage experiment was conducted to see if a difference in arcing voltage could be observed between a successful and an unsuccessful interruption. A possible difference in the arcing voltage could be further used to make a simulation model based on this difference to predict the outcome of the interruption. In the paragraphs below, two possible theories to what may cause a difference in arcing voltage between the two interruption outcomes are presented.
+
+In cases were a successful interruption is obtained it is possible that the air flow cools the arc more efficiently then when a thermal re-ignition occur. A more efficient cooling of the arc may cause a temperature decrease in the plasma. As described by figure \ref{fig:condAir} in section \ref{sec:eleCondArc}, the conductivity of air is highly dependent on its temperature, therefore, it is possible that a more efficient cooling will result in a lower conductivity in the air. Since the current is unaffected by the arcing voltage and equal for all conducted tests, and decrease in conductivity will cause an increase in arcing voltage. Therefore, it is possible that if there is a small difference in how the air flow cools the arc when the arc is successfully quenched compared to when a re-ignition occurs it might cause a increase in the arcing voltage for a successful current interruption.
+
+It is also possible that the arcing voltage will be smaller for a successful interruption compared to an unsuccessful one. Because a low arcing voltage will result in lesser dissipated energy. A smaller energy dissipation, especially close to CZ might result in a smaller amount of charge carriers and hot air that needs to be transported away to avoid a thermal re-ignition, and this might be the difference between a successful and unsuccessful interruption.
+
+However, none of the two theories presented above could be confirmed with the two test series conducted in the arcing voltage tests. If the average arcing voltage results from the tests conducted with CZ at the pin position of 75 mm are consulted in figure \ref{fig:75mmSuccessful} and \ref{fig:75mmSuccessful} it can be seen that the variance between each of the arcing voltages in either figure is much larger than the difference between the two average arcing voltages presented in figure \ref{fig:75mm_both_ave}. This also applies to the test series preformed with CZ occurring at x=18 mm which are presented in figure \ref{fig:18mmSuccessful} and \ref{fig:18mmUnSuccessful}. If the picture sequence presented in appendix \ref{app:pictureSeq75mm} is consulted, no clear difference in the arc can be seen in the frames before CZ for the successful and unsuccessful interruptions. If it exists a difference in arcing voltage between a successful and an unsuccessful current interruption more than five tests for each case should be conducted. Because if the number of tests are increased it might be possible to decrease the variance between them, and see a more distinguished difference between the arcing voltages for the two interruption outcomes. However, the test set-up used to perform the arcing voltage tests in this report is not particular suited for this task, since timing the CZ to occur at the right x-position, was time consuming and many tests were discarded due to a wrong length of the arc at the moment of CZ.
+
+Because no clear difference in the arcing voltage between a successful and unsuccessful interruption could be confirmed by the two test series the arcing voltage might not be the best parameter to use in a simulation model which goal is to predict the interruption outcome. If the temperature in the arc could be measured directly, and not via the arcing voltage, it might be possible to find a difference in temperature which is related to the outcome of the interruption, and link this with how the air flow cools the arc. In section \ref{sec:HeatTransport} the heat distribution in an arc is presented, and as pointed out in this section the arc is cooled down by removing the heat in the energy buffer zone around the arc, not by cooling the arc directly with the air flow. When the amount of heat stored in this energy buffer zone is small, the temperature of the arc's core will decrease faster than if a large amount of energy is stored there. Therefore, it is possible that the difference between a successful interruption and an unsuccessful one can be seen by the derivative of the temperature the last microseconds before CZ.
+
 
 \newpage
 \subsection{Drop in arcing voltage} \label{sec:results_drop_arcing_voltage}
@@ -1122,7 +1132,7 @@ Den deriverte er lik for begge eksemplene!
 
 
 \section{Conclusion}
-
+Neither a visual or measurable difference in the arcing voltage can be seen.
 
 \cleardoublepage
 \begin{thebibliography}{10}
@@ -1202,8 +1212,8 @@ Den deriverte er lik for begge eksemplene!
 \renewcommand{\thetable}{B.\@arabic\c@table}
 \makeatother
 
-\subsection*{The 75 mm arcing voltage test} 
-\subsection{Thermal re-ignitions}
+%\subsection*{The 75 mm arcing voltage test} 
+\subsection{Thermal re-ignitions for the 75 mm arcing voltage test}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7, angle =0 ]{Bilder/Results/073_75_TR_TR.png}
@@ -1234,7 +1244,7 @@ Den deriverte er lik for begge eksemplene!
 \caption{Picture sequence for a interruption attemt with a thermal re-ignition at the second CZ, which occurred at approximately x=75 mm. The pictures shows the arc corresponding to the magenta line in figure \ref{fig:75mmUnSuccessful}. The numbers in the corner of each picture indicates in what order the images where taken.} \label{fig:arcingVoltage_test_116_magenta_TR}
 \end{figure}
 
-\subsection{Successful interruptions}
+\subsection{Successful interruptions for the 75 mm arcing voltage test}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7, angle =0 ]{Bilder/Results/124_75_TR_OK.png}
