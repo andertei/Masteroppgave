@@ -1034,9 +1034,11 @@ Because no clear difference in the arcing voltage between a successful and unsuc
 \newpage
 \subsection{Drop in arcing voltage} \label{sec:results_drop_arcing_voltage}
 
-In figure \ref{fig:arcingVoltageDrop} the arcing voltage for an interruption test for geometry \textbf{b} at 880 A is presented. The arc had a thermal re-ignition in all three CZ shown in the figure and a upstream over-pressure of 0.25 bar was used. The red square in figure \ref{fig:arcingVoltageDrop} shows a part of the graph where a sudden drop in the arcing voltage occurred. The area is magnified in figure \ref{fig:arcingVoltageDrop_zoomed}. Both figures have been processed in matlab to filter out measuring noise. The filter used for noise cancelling was tuned so that it did not impact the sudden drop in arcing voltage shown in the figures. It is not uncommon for sudden drops in the arcing voltage, like the one presented here, to occur after a CZ and a possible explanation for these drops are going to be discussed in the following section. In appendix \ref{app:DROP_ImageSequences} in this report another example of a sudden voltage drop is presented. 
+In figure \ref{fig:arcingVoltageDrop} the arcing voltage for an interruption test for geometry \textbf{b} at 880 A is presented. The arc experienced a thermal re-ignition at all three CZ shown in the figure and a upstream over-pressure of 0.25 bar was used. The red square in figure \ref{fig:arcingVoltageDrop} shows a part of the graph where a sudden drop in the arcing voltage occurred. The area is magnified in figure \ref{fig:arcingVoltageDrop_zoomed}. Both figures have been processed in matlab to filter out measuring noise. The filter used for noise cancelling was tuned so that it did not impact the sudden drop in arcing voltage shown in the figure. It is not uncommon for sudden drops in the arcing voltage to occur, and they are most common right after a CZ. In appendix \ref{app:DROP_ImageSequences} another example of a voltage drop like the one presented here is shown. 
 
-From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudden drop in arcing voltage occurred after approximately 1.3 ms after the third CZ. The voltage dropped from a peak of 400 V to 200 V using 60 $\mu$s, resulting in a voltage drop of 3.33 V$/  \mu$s. Picture 1 to 7 in figure \ref{fig:arcingVoltage_drop_301_blue} shows the thermal re-ignition during the CZ, while picture 8 to 18 shows the arc for the time span upto and including the voltage drop. Picture 16 and 17 shows the arc during the sudden drop in arcing voltage. 
+From figure \ref{fig:arcingVoltageDrop_zoomed}, it can be obtained that the sudden drop in arcing voltage occurred after approximately 1.3 ms after the third CZ. The voltage dropped from a peak of 425 V to 200 V using 60 $\mu$s, resulting in a voltage drop of 3.75 V$/  \mu$s. Frame 1 to 7 in the picture sequence from figure \ref{fig:arcingVoltage_drop_301_blue} shows the thermal re-ignition during the CZ, while frame 8 to 18 shows the arc for the time span upto and including the voltage drop. Frame 16 and 17 shows the arc during the steep drop in arcing voltage. 
+
+From the picture sequence in figure \ref{fig:arcingVoltage_drop_301_blue} it is quit clear what the causes the steep drop in arcing voltage. The arc do not burn in a straight line between the electrodes, but winds itself around. This winding is probably mostly cased by the hot air surrounding the arc, which rises and pulls the arc with it. After the CZ in frame 4 it can be seen that hot air near the pin contact have risen, and during the re-ignition in frame 6 the arc re-ignites in this hot air channel, forming a curve. As the current magnitude increases and heating the arc further, the curve is elongated, while the distance between the start of the curve and the pin contact decreases to the point where the curve short circuits between its starting point and the pin contact causing the steep drop in arcing voltage shown in figure \ref{fig:arcingVoltageDrop_zoomed}. This is also observed for the sudden drop in voltage shown in appendix \ref{app:DROP_ImageSequences}.
 
  
 
@@ -1204,6 +1206,8 @@ Neither a visual or measurable difference in the arcing voltage can be seen.
 \cleardoublepage
 
 \section{Appendix: Picture sequences for arcing voltage tests} \label{app:pictureSeq75mm} %\label{app:ImageSequences}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 \makeatletter 
 \renewcommand{\thefigure}{B.\@arabic\c@figure}
 \makeatother
@@ -1272,6 +1276,8 @@ Neither a visual or measurable difference in the arcing voltage can be seen.
 \cleardoublepage
 
 \section{Appendix: Drop in arcing voltage example} \label{app:DROP_ImageSequences}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 \makeatletter 
 \renewcommand{\thefigure}{C.\@arabic\c@figure}
 \makeatother
