@@ -1101,6 +1101,25 @@ A picture sequence of the arc during the dielectric re-ignition displayed in fig
 \caption{Continuation of the picture sequence in figure \ref{fig:DR_TR_305_1} for the dielectric re-ignition shown in figure \ref{fig:DR_TR_305_2}. The numbers in the corner of each picture indicates in what order the images where taken.} \label{fig:DR_TR_305_2}
 \end{figure}
 
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.40]{Bilder/Results/ATPdraw_lab_2.png}
+%\caption{NA.} \label{fig:DR_ATP_OVER}
+%\end{figure}
+
+By using a circuit simulation tool called ATPdraw the test circuit from figure \ref{fig:testCurcuit} was analysed for a current of 880 A with the circuit parameters from table \ref{tab:testParameters} to try to find the cause for the current drop marked with the red square in figure \ref{fig:DR_disc_calc_areas}. ATPdraw do not take the arcing voltage into consideration, and it is set to zero during the arcing time. This removes the effect of the arc from the system, and only the switching transient is analysed. Figure \ref{fig:DR_ATP_OVER} shows the simulation results for the voltage (black line) and current (blue line) during a dielectric re-ignition, with approximately the same time span between CZ and the re-ignition, as the one presented above. In figure \ref{fig:DR_ATP_ZOOM} the current during re-ignition is magnified. As seen from the figure the same form of the current drop can be seen in the simulation results as in the measured results, however, the simulation results predict a considerable smaller current, which have a peak of about 45 A. With the use of ATPdraw it was possible to confirm that the drop in current is caused by the discharge of the capacitor (C), which occurs when the arc re-ignites. Simulations with different circuit parameters were conducted, but the measured drop in current was not possible to recreate. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{Bilder/Results/ATPdraw_Over_CurrentandVoltage_2_label.png}
+\caption{NA.} \label{fig:DR_ATP_OVER}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{Bilder/Results/ATPdraw_ZOOM_CurrentandVoltage_2_label.png}
+\caption{NA.} \label{fig:DR_ATP_ZOOM}
+\end{figure}
 \newpage
 %\subsection{Addressing uncertainties}
 %\subsubsection{Data collection}
