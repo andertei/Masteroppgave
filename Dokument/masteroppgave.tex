@@ -1107,18 +1107,24 @@ A picture sequence of the arc during the dielectric re-ignition displayed in fig
 %\caption{NA.} \label{fig:DR_ATP_OVER}
 %\end{figure}
 
-By using a circuit simulation tool called ATPdraw the test circuit from figure \ref{fig:testCurcuit} was analysed for a current of 880 A with the circuit parameters from table \ref{tab:testParameters} to try to find the cause for the current drop marked with the red square in figure \ref{fig:DR_disc_calc_areas}. ATPdraw do not take the arcing voltage into consideration, and it is set to zero during the arcing time. This removes the effect of the arc from the system, and only the switching transient is analysed. Figure \ref{fig:DR_ATP_OVER} shows the simulation results for the voltage (black line) and current (blue line) during a dielectric re-ignition, with approximately the same time span between CZ and the re-ignition, as the one presented above. In figure \ref{fig:DR_ATP_ZOOM} the current during re-ignition is magnified. As seen from the figure the same form of the current drop can be seen in the simulation results as in the measured results, however, the simulation results predict a considerable smaller current, which have a peak of about 45 A. With the use of ATPdraw it was possible to confirm that the drop in current is caused by the discharge of the capacitor (C), which occurs when the arc re-ignites. Simulations with different circuit parameters were conducted, but the measured drop in current was not possible to recreate. 
+With the use of a circuit simulation tool called ATPdraw a current interruption in the test was simulated using the circuit from figure \ref{fig:testCurcuit} for a current of 880 A obtained with the circuit parameters from table \ref{tab:testParameters}. This simulation was conducted to find a possible cause for the current drop marked with the red square in figure \ref{fig:DR_disc_calc_areas}. The simulation performed in ATPdraw do not take the arcing voltage into consideration, and it is set to zero during the arcing time. This removes the effect of the arc from the system, and only the switching transient is analysed. Figure \ref{fig:DR_ATP_OVER} shows the simulation results for the voltage (black line) and current (blue line) during a dielectric re-ignition, with approximately the same time span between CZ and the re-ignition, as the one presented above. In figure \ref{fig:DR_ATP_ZOOM} the current during the re-ignition is magnified. As seen from the figure the same form of the current drop can be seen in the simulation results as well as in the measured results, however, the simulation results predict a considerable smaller current, which have a peak of about 45 A. With the use of ATPdraw it was possible to confirm that the drop in current is caused by the discharge of the capacitor (C), which occurs when the arc re-ignites. Simulations with different circuit parameters were conducted, but the magnitude of the measured drop in current was not possible to recreate.
+
+The transaction between zero current and a high current, set by the voltage over the capacitor, which occurs when the arc re-ignites, happens over a very short time span ($<$1$\mu$s). Since the sampling rate of the hall effect current transducer used to measure the current is 100 kHz \cite{bib:HallEffect}, it is likely that the transaction occurs to fast to be accurately measured. Furthermore it seems strange that the measured current lowest value is 40 A, while frame 17 in the picture sequence shows that the arc has almost extinguished at the smallest current value after re-ignition.
+
+Since the hall effect current transducer is not suited for a so fast change in current as experienced during a re-ignition, and the intensity of the arc shown in the picture sequence do not correspond well with the magnitude of the measured current, it is possible that the current is measured with a high error rate during this time span. However, since both the measured and the simulated current shows a current drop it is likely that it is present, but that its magnitude is unknown. The magnitude of the current is probably somewhere in-between the simulated and measured values of it. 
+
+It is possible that a more accurate measurement of the current, especially close to CZ, can be obtained by the use of a Rogowski coil. A Rogowski coil is a kind of a transducer which is converting current to voltage. Through Faraday's law the induced voltage in the coil is proportional with the derivative of the current. The magnitude of the current can then be found via integration of the derivative of the current, either with an integration circuit or with post processing of the results. The integration circuit used, must be chosen so that it can handle the steep derivative of the current which occurs during a re-ignition of the arc. A Rogowski coil with an active integrator circuit can measure currents upto 5 MHz with sufficiently accuracy to measure switching impulse current \cite{bib:SwitchingImpulseCurrent}, and might be applied in the test circuit for future current measurement during interruption testing, so that the current drop observed in figure \ref{fig:DR_disc_calc_areas} can be better analysed.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{Bilder/Results/ATPdraw_Over_CurrentandVoltage_2_label.png}
-\caption{NA.} \label{fig:DR_ATP_OVER}
+\caption{Simulated recovery voltage and current during a dielectric re-ignition.} \label{fig:DR_ATP_OVER}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{Bilder/Results/ATPdraw_ZOOM_CurrentandVoltage_2_label.png}
-\caption{NA.} \label{fig:DR_ATP_ZOOM}
+\caption{Simulated recovery voltage and current during a dielectric re-ignition, when the current right after CZ is magnified.} \label{fig:DR_ATP_ZOOM}
 \end{figure}
 \newpage
 %\subsection{Addressing uncertainties}
@@ -1190,6 +1196,10 @@ Neither a visual or measurable difference in the arcing voltage can be seen.
 \bibitem{bib:AFIMVLBA} N. S. Aanensen, E. Jonsson, and M. Runde "Air flow investigation for a medium voltage load break switch", to be published.
 
 \bibitem{bib:CIAMVLBS} E. Jonsson, N. S. Aanensen and M. Runde, "Current interruption in air for a medium voltage load break switch", \textit{IEEE Trans. Power Delivery}, in press.
+
+\bibitem{bib:HallEffect} lem.com, \url{http://www.lem.com/docs/products/lt\%202000-s\%20sp42\%20e.pdf}, 14.5.2014
+
+\bibitem{bib:SwitchingImpulseCurrent} W. Limcharoen and P. Yutthagowith, "Rogowski Coil with an Active Integrator for Measurement of Switching Impulse Current", \textit{10th International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology, pp. 1-4}, May 2013.
 
 \end{thebibliography}
 
