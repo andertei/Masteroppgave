@@ -123,6 +123,23 @@
 \cleardoublepage
 
 \section{Introduction}
+The compact substation design is one of the most commonly applied designs in the medium-voltage distribution system. In figure \ref{fig:compactSubstation} a compact substation with a LBS visible through its front panel is shown. The LBS design shown in the figure is a compact design, and can when applied in a compact substation be detached and removed through a side panel. This is making both maintenance and installation of the switchgear relatively easy. However, the main advantage for the compact LBS design is its space saving properties. The small dimensions of a compact LBS is usually obtained through the use of SF$_6$ or vacuum-based switchgear technology, which up until now, have been dominating the medium-voltage LBS market.
+
+\begin{figure} [h]
+\centering
+\includegraphics[scale=0.5]{Bilder/Introduction/general_substation.jpg}
+\caption{Compact substation with open front panel, showing the LBS installed inside of it \cite{bib:comSub}.} \label{fig:compactSubstation}
+\end{figure}
+
+SF$_6$ has been the main choice of interruption gas in switchgear since its discovery in the 1960s, due to its excellent heat transfer properties and high break-down voltage. SF$_6$ based switchgear tends to be cheap to produce relative to other designs, especially vacuum-based switchgear, and the gas itself is also affordable at today's prices. The main disadvantage with SF$_6$ is that it is one of the strongest greenhouse gases, and atmospheric releases of it should be minimised. In Norway most of the atmospheric releases of SF$_6$ is caused by the electric power industry \cite{bib:StatSF6}. Therefore, the development of equipment using air, or other "green" gases instead of SF$_6$ is of interest to the industry.
+
+This report is a part of a larger research project, which goal is to explore the possibility of using air to interrupt load currents in a medium-voltage system. Little research has been done at using air as interrupting gas in LBSes, and due to the efficiency of SF$_6$, optimising SF$_6$ based designs have not been in focus, since they tends to work easily. To be able to develop air based compact switchgear strong demands are put on optimisation to avoid usage of unnecessary space. Accordingly a test switch has been developed which allows adjustment of design parameters such as nozzle and contact geometry, contact movement speed, and upstream gas-pressure. Previously related work on air interruption using this test switch have been conducted by Erik Jonsson and Nina Sasaki Aanensen and are, among other, published in the articles "Current interruption in air for a medium voltage load break switch" \cite{bib:CIAMVLBS} and "Air flow investigation for a medium voltage load break switch" \cite{AFIMVLBA}. Results from these two articles will often be referred to for general comparison of the results obtained in this report.
+
+The experimental work in this report consists of interruption tests, arcing voltage monitoring and some miscellaneous observation obtained through filming the current interruption with a high-speed camera.
+
+For the interruption test two nozzle designs are going to be tested at 630 A and 880 A, and the chance for successfully interrupting the current at a given upstream over-pressure is recorded. One of the nozzle designs are short, narrow and funnel shaped at the end. This nozzle design is never tested before, but are expected to perform well due to the narrow nozzle. For the funnel shaped nozzle design two contact areas are going to be tested. The other nozzle design is longer, wider than the funnel shaped design, it is also cylindrical along the whole nozzle. This design is equal to other previously tested geometries, but the contact area used in this experiment has not been tested before. Previously conducted tests have shown that by increasing the contact and nozzle size, a lower upstream over-pressure is required to interrupt the current. However, above a certain size, increasing the contact and nozzle does not improve the interrupting capability further \cite{AFIMVLBA}. Therefore, it is expected that the cylindrical nozzle design are going to perform almost equal as the other similar nozzle design at 630 A, but at 880 A it will probably perform better compared to the previously tested geometry with a smaller contact area. 
+
+
 %HUSK AT DU KAN BRUKE NOE AV LYSBUE SPENNIGNSDUSKUSJONEN TIL Å FORKLARE. SE NOTAT FRA NINA.
 \cleardoublepage
 
@@ -1175,7 +1192,7 @@ Den deriverte er lik for begge eksemplene!
 \end{comment}
 
 
-\section{Conclusion} %and suggestions for further work
+\section{Conclusion and further work}
 The experiment carried out for the three geometries at 630 A and 880 A showed that:
 \begin{itemize}
 \item As expected the interruption success rate increases for all the tested geometries with increasing upstream over-pressure. 
@@ -1199,15 +1216,25 @@ Based on the discussion, some important aspects for further work and evaluation 
 \begin{itemize}
 \item A short and narrow nozzle like geometry \textbf{a} or \textbf{b}, but without the funnel shape at the end should be tested. This may make it possible to investigate if the good interruption success rate for the two geometries are caused by the cylindrical section of the nozzle, or the funnel shape at the end of it. Furthermore, it might give a link over how the differences in air flow and arcing voltage observed between geometry \textbf{a} and \textbf{b}, and geometry \textbf{c} has an impact on the interruption success rate between the different nozzle designs.
 
-\item  A Rogowski coil might be applied to measure the current more accurate during the CZ and re-ignition. This might reveal more of the post-arc current, as well as better describe the current after a dielectric re-ignition.
+\item If the temperature of the arc could be measured with sufficient sampling frequency for the last microseconds before CZ, a connection between the derivative of the temperature and the outcome of the interruption might be found. It is possible that the derivative of the temperature will be larger for a successful interruption, compared to an unsuccessful one, since the "energy buffer zone" around the arc is smaller, when cooled efficiently. 
+
+\item  A Rogowski coil might be applied to measure the current more accurately during the CZ and re-ignition. This might reveal more of the post-arc current magnitude and form in the different interruption outcomes, as well as better describe the current after a re-ignition.
 \end{itemize}
 
 \cleardoublepage
 
 \begin{thebibliography}{10}
+
+\bibitem{bib:comSub} amesimpex.com, \url{http://www.amesimpex.com/images/unitised_sub_002.jpg}, 21.5.2014
+
+\bibitem{bib:StatSF6} K. L. Hansen, "Emissions from consumption of HFCs, PFCs and SF$_6$ in Norway", \textit{Statistics Norway/Department of Economic Statistics/Environmental Statistics}, 2007.
+
+\bibitem{bib:CIAMVLBS} E. Jonsson, N. S. Aanensen and M. Runde, "Current interruption in air for a medium voltage load break switch", \textit{IEEE Trans. Power Delivery}, in press 2014.
+
+\bibitem{bib:AFIMVLBA} N. S. Aanensen, E. Jonsson, and M. Runde "Air flow investigation for a medium voltage load break switch", in press 2014.
+
 \bibitem{bib:SF6PI} L.G. Christophorou, J. K. Olthoff, and R.J. Van Brunt, "Sulfur hexafluoride and the electric power industry", \textit{IEEE Electrical Insulation Magazine, vol. 13, No. 5, pp. 20-24}, Oct. 1997.
 
-\bibitem{bib:comSub} amesimpex.com, \url{http://www.amesimpex.com/images/unitised_sub_002.jpg}, 26.9.2013
 
 \bibitem{bib:HVEbreak} M. Runde, "Current interruption in power grids", Trondheim: Norwegian University of Science and Technology, 2013
 
@@ -1231,11 +1258,6 @@ Based on the discussion, some important aspects for further work and evaluation 
 
 \bibitem{bib:regSF6Miljo} regjeringen.no, \url{http://www.regjeringen.no/nb/dep/md/dok/regpubl/stmeld/2011-2012/meld-st-21-2011-2012/5/5.html?id=682932}, 21.10.2013
 
-\bibitem{bib:StatSF6} K. L. Hansen, "Emissions from consumption of HFCs, PFCs and SF$_6$ in Norway", \textit{Statistics Norway/Department of Economic Statistics/Environmental Statistics}, 2007.
-
-\bibitem{bib:AFIMVLBA} N. S. Aanensen, E. Jonsson, and M. Runde "Air flow investigation for a medium voltage load break switch", to be published.
-
-\bibitem{bib:CIAMVLBS} E. Jonsson, N. S. Aanensen and M. Runde, "Current interruption in air for a medium voltage load break switch", \textit{IEEE Trans. Power Delivery}, in press.
 
 \bibitem{bib:HallEffect} lem.com, \url{http://www.lem.com/docs/products/lt\%202000-s\%20sp42\%20e.pdf}, 14.5.2014
 
