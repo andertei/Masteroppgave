@@ -115,6 +115,17 @@
 
 \cleardoublepage
 \section*{Summary}
+Compact load break switches (LBSs) are common inside compact substation, or other places in the medium voltage distribution system where space is a limiting factor. SF$_6$ is usually applied as interruption gas due to its excellent electrical characteristics. However, because of its strong greenhouse gas potential other more environmentally benign gases, like air, is of interest to the industry.
+
+Current interruption is a complex process, and optimising the design of a medium voltage LBS is difficult. When using air instead of SF$_6$ optimisation with regard to size is important, since larger equipment wont fit in many existing installation sites. Due to the efficiency of SF$_6$, little research has been done at using air as interrupting gas in LBSs, and good simulation tools for design optimisation is jet to be developed.
+
+The scope of this master thesis covers current interruption in air at load currents with respect to different nozzle and contact geometries, and how the air flow is connected to them, as well as the possibility to use the arcing voltage as a parameter in the development of a simulation tool for predicting the outcome of the interruption. A high-speed camera has been used to film the interruption to further understand the impact the air flow has on the arc.
+
+This report consists mainly of experimental work conducted with a test switch and laboratory particularly design for parameter studies, and with test conditions similar to the one used for product testing.
+
+The results from interrupting testing shows that the minimum upstream over-pressure needed to successfully interrupt the current varies between different currents and nozzle geometries. For the 24 kV / 630 A tests a threshold value for obtaining successful interruptions seems to be down to 0.3 bar over-pressure, while at 880 A an over-pressure of at least 0.4 bar is needed.
+
+The arcing voltage was monitored for successful and unsuccessful current interruptions, but non significant difference in the arcing voltage was found between the two outcomes.
 
 \cleardoublepage
 \setcounter{page}{1}
@@ -141,7 +152,7 @@ The compact substation design is one of the most commonly used designs in the me
 
 A switchgear interrupts the current by separating two contact members. At the moment of separation, an electrical arc ignites between the two contacts, which allows the current to continue to flow. The current is successfully interrupted when the arc is quenched, and this usually occurs during one of the current zero (CZ) crossings. Most switchgear designs interrupt the current during the first or second CZ. The interruption is unsuccessful if the arc re-ignites after the CZ, since this allows the current to continue to flow. The interruption gas' job is to disperse hot gas and charge carriers during the interruption, as well as act as a good insulator when the switch is fully open, to prevent a re-ignition of the arc. %usikker på om jeg trenger dette avsnitt. Forklarer litt hva som er tanken bak interruption gas og gjør kanskje litt klarhet i arcing voltage seksjonen.
 
-SF$_6$ has been the main choice of interruption gas in switchgear since its discovery in the 1960 decennial, because of its excellent heat transfer properties and high break-down voltage. SF$_6$-based switchgears tend to be cheap to produce compared to other designs, especially vacuum-based switchgears, and the gas itself is also affordable at today's prices. The main disadvantage of SF$_6$ is that it is one of the strongest greenhouse gases, and atmospheric releases should be minimised. In Norway, most of the atmospheric releases of SF$_6$ is caused by the electric power industry \cite{bib:StatSF6}. Therefore, the development of equipment using air or other environmentally benign gases instead of SF$_6$ is of interest to the industry.
+SF$_6$ has been the main choice of interruption gas in switchgear since its discovery in the 1960 decennial, because of its excellent heat transfer properties and high break-down voltage. SF$_6$-based switchgears tend to be cheap to produce compared to other designs, especially vacuum-based switchgears, and the gas itself is also affordable at today's prices. The main disadvantage of SF$_6$ is that it is one of the strongest greenhouse gases, and atmospheric releases should be minimised. In Norway, most of the atmospheric releases of SF$_6$ is caused by the electric power industry \cite{bib:StatSF6}. Therefore, the development of equipment utilizing air or other environmentally benign gases instead of SF$_6$ is of interest to the industry.
 
 This report is a part of a larger research project, which goal is to explore the possibility of using air to interrupt load currents in a medium-voltage system. Little research has been done at using air as interrupting gas in LBSs, and due to the efficiency of SF$_6$, optimising SF$_6$-based designs have not been in focus, since they tend to work easily. To be able to develop air based compact switchgear, high demands are put on optimisation to avoid usage of unnecessary space. Accordingly, a test switch has been developed which allows adjustment of design parameters such as nozzle and contact geometry, contact movement speed, and upstream gas-pressure. Previously related work on air interruption using this test switch have been conducted by Erik Jonsson and Nina Sasaki Aanensen, and most of this work is published in the articles "Current interruption in air for a medium voltage load break switch" \cite{bib:CIAMVLBS} and "Air flow investigation for a medium voltage load break switch" \cite{bib:AFIMVLBA}. Results from these two articles will often be referred to for general comparison of the results obtained in this report.
 
@@ -170,7 +181,7 @@ Switchgear can be divided into four main categories:
 \item Earthing Switch
 \end{itemize}
 
-This report will focus on the load break switch (LBS) design. An LBS is designed to be able to interrupt currents with a magnitude equal to or less than the rated maximum continuous current at the location of the switchgear in the system. An LBS should fulfil the following demands in order to meet the requirements of the application area:
+This report will focus on the LBS design. An LBS is designed to be able to interrupt currents with a magnitude equal to or less than the rated maximum continuous current at the location of the switchgear in the system. An LBS should fulfil the following demands in order to meet the requirements of the application area:
 
 \begin{itemize}
 \item When closed:
