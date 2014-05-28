@@ -196,7 +196,7 @@ This report will focus on the LBS design. An LBS is designed to be able to inter
 	\end{itemize}
 \end{itemize}
 
-A typical opening sequence for a switch is as follows: First, a control signal enters the switch and activates the driving mechanisms. In most cases, this is a compressed spring or a hydraulic system. The contacts begin to open, and a gap forms between them. At the same time, an electrical arc ignites between the contacts, burning in the gap. The gap is filled with some kind of interrupting medium which is usually a gas. When an altering current crosses zero, this is referred to as the current zero (CZ). For an alternating current with a frequency of 50 Hz, CZ will occur 100 times per second. Direct current interruptions will not be considered in this report.
+A typical opening sequence for a switch is as follows: First, a control signal enters the switch and activates the driving mechanisms. In most cases, this is a compressed spring or a hydraulic system. The contacts begin to open, and a gap forms between them. At the same time, an electrical arc ignites between the contacts, burning in the gap. The gap is filled with some kind of interrupting medium which is usually a gas. When an altering current crosses zero it is possible to quench the arc, and interrupt the current. For an alternating current with a frequency of 50 Hz, CZ will occur 100 times per second. Direct current interruptions will not be considered in this report.
 
 %bilde som viser driving mechanisms compressed spring contacts?
 
@@ -219,7 +219,7 @@ This report is focused on LBSs, but most of the available literature is related 
 
 In order to quench the arc, several mechanisms and interrupting mediums can be applied. In a compact LBS based on SF$_6$, a puffer mechanism is often used. In order to obtain a successful interruption of an arc, the arc and interruption medium must be cooled down, and the charged particles and vaporised metal between the arcing contacts must be blown away. This is the main purpose of the puffer mechanism. The puffer mechanism is based on a piston, and it generates a gas flow in the switchgear in order to extinguish the arc. A typical design of this system consists of a fixed piston integrated inside the movable contact part. A gas reservoir trapped between the arcing contact and the piston is pushed out as the contact members move apart from each other. Figure \ref{fig:CircutBreakPuff1} displays a typical puffer design in a circuit breaker.
 
-When SF$_6$ entered the industry in the 1960 decennial, it was in the form of dual pressure breakers. The SF$_6$-based dual pressure breakers had one high pressure chamber, and one low pressure chamber. A valve from a high pressure chamber opened during opening operations, generating a high speed SF$_6$ blast, guided by a nozzle to hit the arc burning between the contacts in the low-pressure chamber. This design has two major disadvantages when using SF$_6$. The switch requires heating in order to maintain the pressure in the high-pressure chamber for preventing condensation of the SF$_6$ gas. It also uses a compressor for pumping the gas from the low-pressure chamber to the high-pressure chamber. This adds to the complexity of the switchgear, and may result in more maintenance. The double pressure design was replaced with the newer single pressure design. The single pressure design has only one pressure chamber with low pressure, except during interruptions, when the chamber itself becomes a high-pressure chamber.
+When SF$_6$ entered the industry in the 1960 decennial, it was in the form of dual pressure breakers. The SF$_6$-based dual pressure breakers had one high pressure chamber, and one low pressure chamber. A valve from a high pressure chamber opened during opening operations, generating a high speed SF$_6$ blast, guided by a nozzle to hit the arc burning between the contacts in the low-pressure chamber. This design has two major disadvantages when using SF$_6$. The switch requires heating in order to prevent condensation of the SF$_6$ gas, and maintain the pressure in the high-pressure chamber. It also uses a compressor for pumping the gas from the low-pressure chamber to the high-pressure chamber. This adds to the complexity of the switchgear, and may result in more maintenance. The double pressure design was replaced with the newer single pressure design. The single pressure design has only one pressure chamber with low pressure, except during interruptions, when the chamber itself becomes a high-pressure chamber.
 
 The single pressure design uses a puffer or the self-blast mechanism to quench the arc, or in some cases a combination of both. The self-blast mechanism is a concept that uses the expansion of the gas for creating a pressure difference and a gas flow to cool the arc. Common for both puffer and self-blast mechanisms is that they do not use a compressor to generate the gas flow, but uses the energy stored in the switching mechanisms or generated from the blast itself to interrupt the arc. These mechanisms work the same way for both circuit breakers and load break switches, but will in a load break switch be smaller and less complex. This is because the currents and voltages are smaller, and therefore a lower pressure is needed to obtain a successful interruption.
 
@@ -250,16 +250,16 @@ A good circuit breaker design is difficult to develop, and the industry needs to
 \begin{figure} [H]
 \centering
 \includegraphics[scale=0.6]{Bilder/Theory/LBSselfblastandPuffer.png}
-\caption{Schematic of a medium voltage gas puffer interrupter \cite{bib:CBAC}.} \label{fig:selfBlastandPuffer}
+\caption{Schematic of a medium voltage gas puffer interrupter \cite{bib:GFALEAPI}.} \label{fig:selfBlastandPuffer}
 \end{figure}
 
-As can been seen in figure \ref{fig:selfBlastandPuffer}, the load break switch features many of the same components as a circuit breaker, but the dimensions are scaled down. The interruption technique used is puffer based, and the operation sequence is the same as illustrated in figure \ref{fig:CircutBreakPuff1}. The article "Gas flow analysis in low energy arc puffer interrupters" \cite{bib:CBAC} presents an experiment where the the pressure in the pressure chamber of a LBS is measured during opening operation, and then is simulated, so that a comparison of the theoretical and measured pressures can be presented. In figure \ref{fig:airPressurePuffer}, the measured and simulated gas pressure from the paper are shown during a cold gas opening operation, which means that the switch was unloaded during the test. When certain loss factors have been included in the simulation, the simulation results correspond quite well with the measured pressures.
+As can been seen in figure \ref{fig:selfBlastandPuffer}, the load break switch features many of the same components as a circuit breaker, but the dimensions are scaled down. The interruption technique used is puffer based, and the operation sequence is the same as illustrated in figure \ref{fig:CircutBreakPuff1}. The article "Gas flow analysis in low energy arc puffer interrupters" \cite{bib:GFALEAPI} presents an experiment where the the pressure in the pressure chamber of a LBS is measured during opening operation, and then is simulated, so that a comparison of the theoretical and measured pressures can be presented. In figure \ref{fig:airPressurePuffer}, the measured and simulated gas pressure from the paper are shown during a cold gas opening operation, which means that the switch was unloaded during the test. When certain loss factors have been included in the simulation, the simulation results correspond quite well with the measured pressures.
 
 
 \begin{figure} [H]
 \centering
 \includegraphics[scale=0.65]{Bilder/Theory/tankPressure.png}
-\caption{Simulated pressure build up with different refill valve leakage settings compared to experimental results  \cite{bib:CBAC}.} \label{fig:airPressurePuffer}
+\caption{Simulated pressure build up with different refill valve leakage settings compared to experimental results  \cite{bib:GFALEAPI}.} \label{fig:airPressurePuffer}
 \end{figure}
 
 When introducing an arc to the system, the measured and simulated pressures change as shown in figure \ref{fig:airPressurePuffer2}. As seen in this figure, the pressure was not successfully simulated, and the difference between measured pressure and simulation results are substantial, and increases with a longer arcing time. This simulation technique has been used with success when simulating for circuit breakers. This gives reason to believe that the properties of the arc alters significantly when the current is reduced, as in a load break switch. Good simulation tools for air flows when arcs like this are present are still to be developed, which makes scaling a circuit breaker down to an LBS without the possibility to know how the arc interacts with the gas flow difficult, especially when using air as interruption medium, and not SF$_6$.
@@ -269,9 +269,10 @@ When introducing an arc to the system, the measured and simulated pressures chan
 \begin{figure} [H]
 \centering
 \includegraphics[scale=0.65]{Bilder/Theory/tankPressure2.png}
-\caption{Pressure build up for load break tests with different arcing time   \cite{bib:CBAC}.} \label{fig:airPressurePuffer2}
+\caption{Pressure build up for load break tests with different arcing time   \cite{bib:GFALEAPI}.} \label{fig:airPressurePuffer2}
 \end{figure}
 
+\newpage
 \subsection{Properties of the interrupting medium} \label{sec:propOfInt}
 %As an interruption medium air is fairly good, and has been successfully used in the past to interrupt high currents at high voltages, some air-blast breakers are still in use. Dette hører kanskje inn i en innledning.
 \subsubsection{Electrical conductivity in an arc} \label{sec:eleCondArc}
@@ -350,8 +351,8 @@ Figure \ref{fig:tempDist2} shows how the temperature distribution varies with th
 \end{figure}
 
 \newpage
-\subsection{Arcing voltage}
-Most of the information in section \ref{sec:genDes} is collected from \textit{"Current Interruption in Power Grids"} by Magne Runde \cite{bib:HVEbreak} \newline
+\subsection{Arcing voltage} \label{sec:arcingVoltageAllSEC}
+Most of the information in section \ref{sec:arcingVoltageAllSEC} is collected from \textit{"Current Interruption in Power Grids"} by Magne Runde \cite{bib:HVEbreak} \newline
 
 \subsubsection{Static arcing voltage} \label{sec:staticArcVoltage}
 It is common to distinguish the description of the arc into two different types. The most relevant and realistic is called a dynamic arc, the other a static arc. A static arc can only be established when using DC current, and after any transients have died out. Therefore, static arcs are uncommon, and in nearly all switching operations the properties of the arc are best described by the dynamic arc model.
@@ -386,7 +387,7 @@ The description above is highly general, and the voltage distribution will vary 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.7]{Bilder/Theory/threeTests.png}
+\includegraphics[scale=0.56]{Bilder/Theory/threeTests.png}
 \caption{Arcing voltage during three interruption tests. The y-axis is arcing voltage in kV and the x-axis is time in seconds from test start.} \label{fig:threeTests}
 \end{figure}
 
@@ -394,13 +395,13 @@ The average arcing voltage from these three tests is presented in figure \ref{fi
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.7]{Bilder/Theory/averageOfthreeTests.png}
+\includegraphics[scale=0.56]{Bilder/Theory/averageOfthreeTests.png}
 \caption{Average arcing voltage for three interruption tests. The y-axis is arcing voltage in kV and the x-axis is time in seconds from test start.} \label{fig:averageArcingVoltage}
 \end{figure}
 
-In both figure \ref{fig:threeTests} and \ref{fig:averageArcingVoltage}, contact separation occurs at $t \approx 0.0140$ s. The first CZ occurs at $t \approx 0.0235$ and the second CZ occurs at $t \approx 0.0335$ s. The arcing time that is the time from contact separation to the first CZ, is approximately 9.5 ms for all the three tests.
+In both figure \ref{fig:threeTests} and \ref{fig:averageArcingVoltage}, contact separation occurs at $t \approx 0.0140$ s. The first CZ occurs at $t \approx 0.0235$ and the second CZ occurs at $t \approx 0.0335$ s. The time from contact separation to the first CZ is approximately 9.5 ms for all the three tests.
 
-The length of the arc is determined by the distance between the contacts, which move apart with a constant speed of approximately 5 m$/$s. When the arc is short, most of the arcing voltage will be close to the electrodes. To establish an estimate over the voltage drop in close vicinity of the electrodes, the average voltage when the contacts were between 0.4 mm and 1.4 mm apart was calculated. Because of transients in the arcing voltage when the arc ignites, a contact gap length less than 0.4 mm was unsuited for this use. Due to the short length of the arc in this time span, the average arcing voltage in this region can represent an approximation of the voltage drop close to the electrodes. This voltage drop is estimated to 33 volts in absolute value, when using the procedure above.
+The length of the arc is determined by the distance between the contacts, which move apart with a constant speed of approximately 5.5 m$/$s. When the arc is short, most of the arcing voltage will be close to the electrodes. To establish an estimate over the voltage drop in close vicinity of the electrodes, the average voltage when the contacts were between 0.4 mm and 1.4 mm apart was calculated. Because of transients in the arcing voltage when the arc ignites, a contact gap length less than 0.4 mm was unsuited for this use. Due to the short length of the arc in this time span, the average arcing voltage in this region can represent an approximation of the voltage drop close to the electrodes. This voltage drop is estimated to 33 volts in absolute value, when using the procedure above.
 
 Then the increase in arcing voltage per millimetre is calculated. Linear regression when the arc is between 23.2 mm and 38.8 mm is used to establish the rate of rise in the arcing voltage, and thereby the increase in arcing voltage caused by elongation of the arc can be established. This rate of rise was calculated to be 2.7 V$/$mm in absolute value.
 
@@ -448,7 +449,7 @@ H$_2$ & 1 \\
 
 A gas with a low time constant is faster to cool, and thereby reduces its electric conductivity faster than a gas with a large time constant. This is an advantage during current interruption. Air has a fairly high time constant resulting in a slower cool-down time than other interrupting gases. This is closely related to the problems mentioned in section \ref{sec:HeatTransport}. 
 
-In figure \ref{fig:arcingVoltageFre}, the arcing voltage for a dynamic arc is illustrated. As shown by the figure, the arcing voltage varies both with current and frequency. In figure \ref{fig:arcingVoltageVSCurrent}, the arcing voltage with regard to current for a previously conducted interruption test is shown. As can be observed from this figure, the arcing voltage follows the same pattern as an dynamic arc burning at 50 Hz shown in figure \ref{fig:arcingVoltageFre}. Some differences in the burning conditions for the arc in figure \ref{fig:arcingVoltageFre} and \ref{fig:arcingVoltageVSCurrent} are present. In figure \ref{fig:arcingVoltageFre}, the arc is not cooled, and the contacts are stationary with a fixed gap. In figure \ref{fig:arcingVoltageVSCurrent}, the arc is cooled with a 1.0 bar upstream pressure, while elongated by the separation of the contacts.
+In figure \ref{fig:arcingVoltageFre}, the arcing voltage for a dynamic arc is illustrated. As shown by the figure, the arcing voltage varies both with current and frequency. In figure \ref{fig:arcingVoltageVSCurrent}, the arcing voltage with regard to current for a previously conducted interruption test is shown. As can be observed from this figure, the arcing voltage follows the same pattern as an dynamic arc burning at 50 Hz shown in figure \ref{fig:arcingVoltageFre}. Some differences in the burning conditions for the arc in figure \ref{fig:arcingVoltageFre} and \ref{fig:arcingVoltageVSCurrent} are present. In figure \ref{fig:arcingVoltageFre}, the arc is not cooled, and the contacts are stationary with a fixed gap. In figure \ref{fig:arcingVoltageVSCurrent}, the arc is cooled with a 1.0 bar upstream over-pressure, while elongated by the separation of the contacts.
 
 \begin{figure}[H]
 \centering
@@ -484,7 +485,7 @@ A thermal re-ignition is avoided if the PAC reaches zero, since this means that 
 \caption{The post-arc current during a successful and unsuccessful interruption \cite{bib:CIHVN}.} \label{fig:PACbreakandreIgnite}
 \end{figure}
 
-The thermal interruption success rate is partly determined by the amount of stored energy in the arc and in its surroundings. Power is the product of arcing voltage and current. The energy produced by the arc is the integral of the power during a certain time span. Research has shown that only the energy dissipated close to CZ has an effect on the interruption capabilities, and that the cooling from the air flow mainly effects the interruption rate between 50 to 100 microseconds before CZ \cite{bib:CIHVN}.
+The thermal interruption success rate is partly determined by the amount of stored energy in the arc and in its surroundings. Power is the product of arcing voltage and current and the energy produced by the arc is the integral of the power during a certain time span. Research has shown that only the energy dissipated close to CZ has an effect on the interruption capabilities, and that the cooling from the air flow mainly effects the interruption rate between 50 to 100 microseconds before CZ \cite{bib:CIHVN}.
 
 The parameter $d \mathrm{I}/d \mathrm{t}$ can be used to describe the energy losses close to CZ. In figure \ref{fig:freqComp}, two currents with the same $d \mathrm{I}/d \mathrm{t}$ close to CZ can be observed.
 
@@ -1258,35 +1259,33 @@ Based on the discussion, some important aspects for further work and evaluation 
 
 \bibitem{bib:AFIMVLBA} N. S. Aanensen, E. Jonsson, and M. Runde "Air flow investigation for a medium voltage load break switch", in press 2014.
 
-\bibitem{bib:SF6PI} L.G. Christophorou, J. K. Olthoff, and R.J. Van Brunt, "Sulfur hexafluoride and the electric power industry", \textit{IEEE Electrical Insulation Magazine, vol. 13, No. 5, pp. 20-24}, Oct. 1997.
-
-
 \bibitem{bib:HVEbreak} M. Runde, "Current interruption in power grids", Trondheim: Norwegian University of Science and Technology, 2013
-
-\bibitem{bib:GFALEAPI} E. Attar, P. Skryten, T. R. Bjortuft, P. Stoller, N. Ranjan, O. Granhaug, M. Schwinne and B. Wuethrich "Gas flow analysis in low energy arc puffer interrupters", \textit{22$^{nd}$ International Conference on Electricity Distribution CIRED, NO. 0410}, June 2013.
 
 \bibitem{bib:CBAC} W. Rieder, "Circuit breakers, physical and engineering problems, III-Arc-medium considerations", \textit{IEEE spectrum, pp. 80-84}, Sept. 1970.
 
-\bibitem{bib:IPSF6AQM} W. Hertz, H. Motschmann and H. Wittel, "Investigations of the properties of SF$_6$ as an arc quenching medium", \textit{Proceedings of The IEEE, vol. 59, NO. 4, pp. 485-492}, April 1971.
+\bibitem{bib:GFALEAPI} E. Attar, P. Skryten, T. R. Bjortuft, P. Stoller, N. Ranjan, O. Granhaug, M. Schwinne and B. Wuethrich "Gas flow analysis in low energy arc puffer interrupters", \textit{22$^{nd}$ International Conference on Electricity Distribution CIRED, NO. 0410}, June 2013.
 
 \bibitem{bib:TDCIGBB} W. Hermann, "Theoretical description of the current interruption in HV gas blast breakers", \textit{IEEE Transactions on Power Apparatus and System, vol. PAS-96, NO. 5, pp. 1546-1555}, Sept./ Oct. 1977.
 
 \bibitem{bib:CIHVN} G. Frind and B. W. Swanson "Current Interruption in High-Voltage Networks", Baden: BBC Brown, Boveri \& Company Limited, 1977
 
-\bibitem{bib:THFD} R. W. Johnson, "The handbook of fluid dynamics", Heidelberg: Springer-Verlag GmbH \& Co. KG, 1998.
-
-\bibitem{bib:TET4160HVIM} E. Ildstad, "High voltage insulation materials", Trondheim: Norwegian University of Science and Technology, 2012, August 2012.
-
-\bibitem{bib:KlimaKur2020} "KLIMAKUR2020", Oslo: Klima- og forurensningsdirektoratet, 2010
-
-\bibitem{bib:consSF6} esrl.noaa.gov, \url{http://www.esrl.noaa.gov/gmd/webdata/iadv/ccgg/graphs/pdfs/ccgg.MLO.sf6.1.none.discrete.all.pdf}, 17.10.2013
-
-\bibitem{bib:regSF6Miljo} regjeringen.no, \url{http://www.regjeringen.no/nb/dep/md/dok/regpubl/stmeld/2011-2012/meld-st-21-2011-2012/5/5.html?id=682932}, 21.10.2013
-
-
 \bibitem{bib:HallEffect} lem.com, \url{http://www.lem.com/docs/products/lt\%202000-s\%20sp42\%20e.pdf}, 14.5.2014
 
 \bibitem{bib:SwitchingImpulseCurrent} W. Limcharoen and P. Yutthagowith, "Rogowski Coil with an Active Integrator for Measurement of Switching Impulse Current", \textit{10th International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology, pp. 1-4}, May 2013.
+
+%\bibitem{bib:THFD} R. W. Johnson, "The handbook of fluid dynamics", Heidelberg: Springer-Verlag GmbH \& Co. KG, 1998.
+
+%\bibitem{bib:TET4160HVIM} E. Ildstad, "High voltage insulation materials", Trondheim: Norwegian University of Science and Technology, 2012, August 2012.
+
+%\bibitem{bib:KlimaKur2020} "KLIMAKUR2020", Oslo: Klima- og forurensningsdirektoratet, 2010
+
+%\bibitem{bib:consSF6} esrl.noaa.gov, \url{http://www.esrl.noaa.gov/gmd/webdata/iadv/ccgg/graphs/pdfs/ccgg.MLO.sf6.1.none.discrete.all.pdf}, 17.10.2013
+
+%\bibitem{bib:regSF6Miljo} regjeringen.no, \url{http://www.regjeringen.no/nb/dep/md/dok/regpubl/stmeld/2011-2012/meld-st-21-2011-2012/5/5.html?id=682932}, 21.10.2013
+
+%\bibitem{bib:SF6PI} L.G. Christophorou, J. K. Olthoff, and R.J. Van Brunt, "Sulfur hexafluoride and the electric power industry", \textit{IEEE Electrical Insulation Magazine, vol. 13, No. 5, pp. 20-24}, Oct. 1997.
+
+%\bibitem{bib:IPSF6AQM} W. Hertz, H. Motschmann and H. Wittel, "Investigations of the properties of SF$_6$ as an arc quenching medium", \textit{Proceedings of The IEEE, vol. 59, NO. 4, pp. 485-492}, April 1971.
 
 \end{thebibliography}
 
@@ -1299,8 +1298,6 @@ Based on the discussion, some important aspects for further work and evaluation 
 \end{center}
 \endgroup
 \vspace*{\fill}
-
-\cleardoublepage
 
 \section{Appendix: Picture sequece of the air blast} \label{app:SelfBlast}
 \setcounter{figure}{0}
