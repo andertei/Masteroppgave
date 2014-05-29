@@ -110,6 +110,9 @@
 \thispagestyle{empty}
 \cleardoublepage
 \section*{Acknowledgements}
+
+
+
 \setcounter{page}{1}
 \pagenumbering{roman}
 
@@ -133,11 +136,16 @@ The arcing voltage was monitored for successful and unsuccessful current interru
 \tableofcontents
 
 \cleardoublepage
-\section{List of abbreviations}
+\section{Abbreviations}
 \begin{itemize}
+\item AC -- alternating current
 \item CZ -- current zero
+\item DC -- direct current
+\item IEC -- International Electrotechnical Commission
 \item LBS -- load break switch
+\item NIR -- near-infrared
 \item PAC -- post arc current
+\item rms -- root mean square
 \end{itemize}
 
 \cleardoublepage
@@ -546,7 +554,7 @@ Figure \ref{fig:testCurcuit} displays the laboratory test circuit used for the i
 \caption{Circuit used for the interruption test \cite{bib:AFIMVLBA}.} \label{fig:testCurcuit}
 \end{figure}
 
-In table \ref{tab:testParameters}, the values of the different test circuit parameters and the corresponding currents can be observed. The test is conducted at currents with an RMS value of 630 A and 880 A. During the entire experiment, the TRV is kept constant up to and including the first voltage peak. In the case of a failed interruption, a thermal re-ignition occurs within a few microseconds after CZ.
+In table \ref{tab:testParameters}, the values of the different test circuit parameters and the corresponding currents can be observed. The test is conducted at currents with an RMS value of 630 A or 880 A. During the entire experiment, the TRV is kept constant up to and including the first voltage peak. In the case of a failed interruption, a thermal re-ignition occurs within a few microseconds after CZ.
 
 \begin{table}[H]
 \center
@@ -563,14 +571,14 @@ L$_s$ [mH] & L$_1$ [mH] & R$_1$ [$\Omega$] & C [nF] & R$_{d}$ [$\Omega$] & I [A]
 \label{tab:testParameters}
 \end{table}
 
-A resistive transducer is measuring the contact position, while a Hall Effect current transducer is measuring the current through the test switch. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test, and with an accuracy of 0.01 bar. 
+A resistive transducer is measuring the contact position, while a Hall Effect current transducer is measuring the current through the test switch with a sampling frequency of 100 kHz. The voltage between the contacts is measured with a parallel resistive / capacitive voltage divider. All measurements are transmitted through optical fibres to a 12 bit resolution transient recorder with a sampling frequency of 2.5 MHz. The pressure in the tank is only measured before each test, and with an accuracy of 0.01 bar. 
 
 A near-infrared (NIR) high-speed camera produced by Xeneth called Cheetah 1470, records the opening sequence of the switch and the arc that burns between the contacts with a frame rate of approximately 10 000 fps, with an integration time of 3.7 $\mu$s and an image resolution of $384 \times 120$. The camera lens used is a 75 mm Apochromat Kiroptik Paris Nr. 99585, with an adjustable f-number set to f/16. %In appendix \ref{app:softwareSettings} the relevant software settings for the camera can be seen.??
 
 \subsection{Contact and nozzle design} \label{sec:testSwitchandContact}
 This experiment is conducted using copper-tungsten arcing contacts, polytetraflourelthylene (PTFE) nozzles, and air as interrupting medium. Copper-tungsten arcing contacts and a PTFE nozzle is commonly applied in commercial LBSs, and is therefore used in this experiment. PTFE is also chemically stable during the arcing time, which prohibits vaporisation products from the nozzle to influence the interruption capabilities of the test object. As mentioned in section \ref{sec:InterruptCurrent}, copper-tungsten is applied because it is highly resistant from stresses from the arc. The system is an open system, with the surrounding air at atmospheric pressure, \textit{p$_0$}, and a six-litre tank with a pre-filled upstream overpressure, \textit{p$_u$}, used during the interruption process to quench the arc. It is possible to adjust the upstream pressure, contact speed, and position at current zero (CZ) independently, as well as the contact and nozzle geometry. The current and TRV can be manipulated by changing the parameters of the laboratory test circuit, as described in section \ref{sec:testCir}.
 
-Two different kinds of nozzle designs are going to be tested. One of the nozzle designs has a short nozzle with a funnel shape at the end. It consists of two different contact geometries, which are denoted \textbf{a} and \textbf{b}. The other nozzle design has a longer nozzle with a cylindrical shape, this contact geometry is denoted \textbf{c}. 
+Two different kinds of nozzle designs are going to be tested. One of the nozzle designs is a short and narrow nozzle with a funnel shape at the end. It consists of two different contact geometries, which are denoted \textbf{a} and \textbf{b}. The other nozzle design is a longer and wider nozzle with a cylindrical shape, this contact geometry is denoted \textbf{c}. 
 
 The contact position \textit{x} is defined as the axial distance between the tulip and the pin contact. At starting position, \textit{x}= -60 mm, the pin contact is acting as a plug for the tank. This makes it possible to pre-set an upstream over-pressure. The contact is held in place by an electromagnet, and is set to motion when the magnet releases a compressed spring. The spring accelerates the pin contact up to a speed of approximately 5.5 m/s at \textit{x}=0. At this position, the spring is unloaded and the pin moves with a constant speed until the contact is fully open at \textit{x}=110 mm.
 
@@ -626,7 +634,7 @@ A_\mathrm{{ring}}(x)=\pi\left( \left(\frac{2(x-10)\tan \theta + D}{2}\right)^2-\
  \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline 
 Geometry & \textit{D} & \textit{d}  & $\frac{D}{d}$ & $\mathrm{\theta}$ & $A_\mathrm{{contact}}$ & $A_\mathrm{{ring}}$  & $A_\mathrm{{nozzle}}$ & $A_\mathrm{{funnel}}$ \\
-  & [mm] &  [mm] &   &   &   [mm$^2$] &  [mm$^2$] &   [mm$^2$] &   [mm$^2$]\\
+  & [mm] &  [mm] &   & [$^{\circ}$]  &   [mm$^2$] &  [mm$^2$] &   [mm$^2$] &   [mm$^2$]\\
 \hline 
 \textbf{a} & 6.25 & 6.0 & 1.04 & 17.4 & 28.3 & 2.4 & 30.7 & 122.8\\ 
 \hline 
