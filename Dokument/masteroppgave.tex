@@ -47,6 +47,7 @@
 
 
 \begin{document}
+\begin{comment}
     \begin{titlepage}
     \begin{center}
     \ \\
@@ -105,10 +106,10 @@
     \end{center}
     \end{titlepage}
 
-%\maketitle
-%SummaryNyttige pdf-filer/SF6conduct.pdf
+
 \thispagestyle{empty}
 \cleardoublepage
+\end{comment}
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
 
@@ -145,6 +146,13 @@ The results from current interruption testing show that the minimum upstream ove
 The arcing voltage was monitored during successful and unsuccessful current interruptions, but no clear difference in the arcing voltage was found between the two outcomes. 
 
 During interruption testing, steep drops in the arcing voltage have occasionally been observed. By filming the arc it was found that these steep drops most likely were caused by the arc short circuiting itself due to unnecessary elongation.
+
+\cleardoublepage
+\section*{Sammendrag}
+\addcontentsline{toc}{section}{Sammendrag}
+Lastbrytere er vanlige i mellomspennigsnettet og strenge krav er satt til dimensjonering av dem siden plass ofte er en begrensende faktor. SF$_6$ benyttes vanligvis som brytningsgass, men siden det er en svært sterk klimagass ønsker industrien å se på mer miljøvennlige alternativer, som luft. Strømbrytning er et komplekst tema og lite forskning eksisterer på laststrømsbrytning i luft. Om luft skal erstatte SF$_6$ i en lastbryter er optimering med hensyn på størrelse viktig.
+
+Denne masteroppgaven omhandler laststrømsbrytning i luft med et utvalg av dyse- og kontaktgeometrier. De gjennomførte brytningstestene viste at de beste geometriene brøt 630 A med et overtrykk på 0,3 bar, mens for å bryte 880 A må et overtrykk på 0,4 bar benyttes. Videre ble lysbuespenningen overvåket for å kartlegge om en forskjell i den kunne benyttes som en parameter i en simuleringsmodell til å predikere utfallet av en brytning, men ingen klar forskjell i spenningen ble funnet. Lysbuen ble filmet med et høyhastighetskamera, for å bedre forstå hvordan luftstrømmen vekselvirker med lysbuen. Her ble det blant annet funnet ut at lysbuen kortslutter seg selv, som fører til raske fall i lysbuespenningen.
 
 \cleardoublepage
 \setcounter{page}{1}
@@ -277,7 +285,7 @@ A good circuit breaker design is difficult to develop, and the industry needs to
 
 \begin{figure} [H]
 \centering
-\includegraphics[scale=0.6]{Bilder/Theory/LBSselfblastandPuffer.png}
+\includegraphics[scale=0.62]{Bilder/Theory/LBSselfblastandPuffer.png}
 \caption{Schematic of a medium voltage gas puffer interrupter \cite{bib:GFALEAPI}.} \label{fig:selfBlastandPuffer}
 \end{figure}
 
@@ -360,7 +368,7 @@ There are several different thermal conduction mechanisms in an electrical arc. 
 
 Due to the nature of the different stages of the current interruption process, it is desirable to use a gas that has a thermal conductivity that suits the different stages. When the current amplitude is rising, or is high, it is preferred that the thermal conductivity is low. This means that the plasma channel does not heat its surroundings, but mainly keeps the dissipated energy stored in its core. This will result in a huge temperature rise in the plasma channel and a relatively small increase in the surroundings. As explained in section \ref{sec:eleCondArc}, a high arc temperature will result in high electrical conductivity of the arc, which gives a low arcing voltage. If the thermal conductivity is high in this region, more heating of the surrounding system will occur. This might result in a slower transition between the conductive and insulating stage of the interrupting medium, due to the stored energy in the medium and the surroundings, resulting in a higher chance of re-ignition.
 
-At the moment right before CZ, it is an advantage if the thermal conductivity of the gas is high. This will result in a short cool-down time of the plasma channel, since both the current amplitude is decreasing and the energy stored in the arc now is released to its surroundings. A gas with high thermal conductivity in this stage of the interruption process will be able to recombine from an ionised and highly conductive to a non-conductive state fast, making it more difficult for a thermal re-ignition to occur. In gases where the thermal conductivity is low, the cooling mechanisms are of great importance, since a quick recombination of ionised gas does not occur in as fast. Therefore, removal of hot gas and charge carriers must be done differently. This is described in detail in section \ref{sec:genDes}. The thermal conductivity profile of air is not well suited for current interruptions, at least compared to the one of SF$_6$. If figure \ref{fig:tempConGas} is consulted, it can be observed that air has a high thermal conductivity when the temperature is high, and a low thermal conductivity when the temperature is low. This is the opposite of the preferred characteristics. Even though air has a small peak in thermal conductivity between 3000 K and 4000 K, its thermal conductivity profile is regarded as one of the major challenges when using air as an interruption gas. 
+At the moment right before CZ, it is an advantage if the thermal conductivity of the gas is high. This will result in a short cool-down time of the plasma channel, since both the current amplitude is decreasing and the energy stored in the arc now is released to its surroundings. A gas with high thermal conductivity in this stage of the interruption process will be able to recombine from an ionised and highly conductive to a non-conductive state fast, making it more difficult for a thermal re-ignition to occur. In gases where the thermal conductivity is low, the cooling mechanisms are of great importance, since a quick recombination of ionised gas does not occur as fast. Therefore, removal of hot gas and charge carriers must be done differently. This is described in detail in section \ref{sec:genDes}. The thermal conductivity profile of air is not well suited for current interruptions, at least compared to the one of SF$_6$. If figure \ref{fig:tempConGas} is consulted, it can be observed that air has a high thermal conductivity when the temperature is high, and a low thermal conductivity when the temperature is low. This is the opposite of the preferred characteristics. Even though air has a small peak in thermal conductivity between 3000 K and 4000 K, its thermal conductivity profile is regarded as one of the major challenges when using air as an interruption gas. 
 
 The temperature distribution in a plasma channel can be divided into three regions \cite{bib:TDCIGBB}, as illustrated with figure \ref{fig:tempDist1}. Zone 1 is the highly conductive arc core and also the zone with the highest temperature. Zone 2 acts as an energy buffer during the decay of the arc, while zone 3 is the cold gas surrounding the arc. When using cooling-mechanisms to quench the arc, it is primarily the second zone of the temperature profile that is cooled. The first zone's temperature will mainly be dependent on the current passing through the arc, and will not be influenced by the cooling mechanism to the same degree. If the cooling is sufficient, the energy stored in zone 2 when the arc approaches CZ is low, and therefore its effect as an energy buffer is reduced, resulting in a rapid decline in temperature in the arc core as the current approaches zero. This makes the interrupting medium's ability to transport energy important when investigating efficient cooling methods. As figure \ref{fig:tempConGas} points out, SF$_6$ has the ability to transfer heat between zone 1 and 2 fast in the correct temperature range compared to the interrupting sequence. Air has to a smaller degree the ability to do this.
 
@@ -431,7 +439,7 @@ In both figure \ref{fig:threeTests} and \ref{fig:averageArcingVoltage}, contact 
 
 The length of the arc is determined by the distance between the contacts, which move apart with a constant speed of approximately 5.5 m$/$s. When the arc is short, most of the arcing voltage will be close to the electrodes. To establish an estimate over the voltage drop in close vicinity of the electrodes, the average voltage when the contacts were between 0.4 mm and 1.4 mm apart was calculated. Because of transients in the arcing voltage when the arc ignites, a contact gap length less than 0.4 mm was unsuited for this use. Due to the short length of the arc in this time span, the average arcing voltage in this region can represent an approximation of the voltage drop close to the electrodes. This voltage drop is estimated to 33 volts in absolute value, when using the procedure above.
 
-Then the increase in arcing voltage per millimetre is calculated. Linear regression when the arc is between 23.2 mm and 38.8 mm is used to establish the increase per length in the arcing voltage, and thereby the increase in arcing voltage caused by elongation of the arc can be established. The increase per length was then calculated to be 2.7 V$/$mm in absolute value.
+Linear regression when the arc is between 23.2 mm and 38.8 mm is used to establish the increase in arcing voltage caused by elongation of the arc. The increase per millimetre was calculated to be 2.7 V$/$mm in absolute value.
 
 The final expression in absolute value for the voltage across the arc, where x is the length of the arc in millimetres, then becomes:
 \begin{equation}
@@ -454,7 +462,7 @@ Thermal inertia causes the arc to "remember" the amplitude of the current that j
 
 \begin{table}[H]
 \center
-\caption{Time constants in a 1 A arc burning in a 19 mm tube (schematically) \cite{bib:HVEbreak}. }
+\caption{Time constants in a 1 A arc burning in a 19 mm tube \cite{bib:HVEbreak}. }
 \begin{tabular}{|c|c|}
 \hline 
 Gas & Time constant [$\mu$s] \\ 
@@ -531,7 +539,7 @@ As described in this section, the probability of thermal re-ignition depends on 
 
 
 \subsection{Air flow considerations}
-During the interruption process, a puffer based switch uses a piston to drive an air flow to quench the arc. The energy loss from the arc is transported away by this air flow as described in section \ref{sec:HeatTransport}. The efficiency of the cooling depends on the speed and mass of the air flow, as well as how the flow is guided onto the arc. In figure \ref{fig:airPressurePuffer2}, a typical pressure during interruption in the pressure chamber of an LBS is illustrated. However, in the test switch presented in section \ref{sec:testSwitchandContact} and used in the interruption tests conducted in this report, the pressure is more or less constant throughout the whole interruption process. This is because it uses a large pressure reservoir rather than a piston to drive the air flow.
+During the interruption process, a puffer based switch uses a piston to drive an air flow to quench the arc. The energy loss from the arc is transported away by this air flow as described in section \ref{sec:HeatTransport}. The efficiency of the cooling depends on the speed and mass of the air flow, as well as how the flow is guided onto the arc. In figure \ref{fig:airPressurePuffer2}, a typical pressure during interruption in the pressure chamber of an LBS is illustrated. However, in the test switch presented in section \ref{sec:sec:testCir} and used in the interruption tests conducted in this report, the pressure is more or less constant throughout the whole interruption process. This is because it uses a large pressure reservoir rather than a piston to drive the air flow.
 
 The mass flow, $\dot{m}$, of air through the nozzle can in most interruption cases be regarded as conserved, and is presented in equation \eqref{eq:massFlow}. The mass density, $\rho$, depends on pressure and temperature, while the volume flow, \textit{Q}, depends on speed and area, as presented in equation \eqref{eq:volumeFlow}.
 
@@ -543,7 +551,7 @@ The mass flow, $\dot{m}$, of air through the nozzle can in most interruption cas
 Q=\int v \ dA
 \end{equation}
 
-In equation \eqref{eq:volumeFlow}, the area, \textit{A}, is the cross-section area of the nozzle if considering the volume flow rate in a nozzle. This will vary depending on where in the nozzle the volume flow is calculated, as well as the arcing contact's position. The speed of the air flow, $v$, depends on the pressure difference, $\Delta p$, between the pressure chamber and the interruption chamber, and it will increase with an increasing pressure difference. An increase in air flow velocity will result in a greater mass flow, which if guided properly will lead to a more efficient cooling of the arc. In the test switch used during the experiments conducted in this report, the efficiency of the cooling can be set by adjusting the pressure in the pressure reservoir before interruption as described in section \ref{sec:testCir}.
+In equation \eqref{eq:volumeFlow}, the area, \textit{A}, is the cross-section area of the nozzle if considering the volume flow rate in a nozzle. This will vary depending on where in the nozzle the volume flow is calculated, as well as the arcing contact's position. The speed of the air flow, $v$, depends on the pressure difference, $\Delta p$, between the pressure chamber and the interruption chamber, and it will increase with an increasing pressure difference. An increase in air flow velocity will result in a greater mass flow, which if guided properly will lead to a more efficient cooling of the arc. In the test switch used during the experiments conducted in this report, the efficiency of the cooling can be set by adjusting the pressure in the pressure reservoir before interruption, as described in section \ref{sec:testCir}.
 
 \cleardoublepage
 \section{Method}
@@ -1100,7 +1108,7 @@ Because no clear difference in the arcing voltage between a successful and unsuc
 
 \newpage
 %\subsection{Results and discussion based on picture sequences collected with the high-speed camera}
-\subsection{Drop in arcing voltage} \label{sec:results_drop_arcing_voltage}
+\subsection{Steep drop in arcing voltage} \label{sec:results_drop_arcing_voltage}
 
 In figure \ref{fig:arcingVoltageDrop} the arcing voltage during an interruption test for geometry \textbf{b} at 880 A is presented. The arc experienced a thermal re-ignition at all three CZ crossings shown in the figure and a pre-set upstream over-pressure of 0.25 bar was used. The red square in figure \ref{fig:arcingVoltageDrop} shows a part of the graph where a steep drop in the arcing voltage occurred, this area is magnified in figure \ref{fig:arcingVoltageDrop_zoomed}. Both figures have been processed in matlab to filter out measuring noise. The filter used for noise cancelling was tuned so that it did not impact the steep drop in arcing voltage shown in the figure. It is not uncommon for steep drops in the arcing voltage to occur, and they often occur following a CZ. In appendix \ref{app:DROP_ImageSequences} another example of a voltage drop like the one presented here is shown. 
 
